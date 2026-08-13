@@ -25,7 +25,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 text-indigo-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 text-violet-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Sparkles className="w-4 h-4" />
               <span>Colección Exclusiva por Color</span>
             </div>

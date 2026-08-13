@@ -94,15 +94,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             {/* Trust Pills */}
             <div className="flex gap-3 flex-wrap mt-8">
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <Dna className="w-4 h-4 text-indigo-500" />
+                <Dna className="w-4 h-4 text-blue-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Pureza 100%</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <HeartHandshake className="w-4 h-4 text-indigo-500" />
+                <HeartHandshake className="w-4 h-4 text-rose-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Ideal para Niños</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <ShieldCheck className="w-4 h-4 text-indigo-500" />
+                <ShieldCheck className="w-4 h-4 text-amber-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Garantía Escrita</span>
               </div>
             </div>
