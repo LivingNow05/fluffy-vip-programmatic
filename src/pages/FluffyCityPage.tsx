@@ -185,7 +185,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
             {/* HISTORIA LOCAL (Dinámica) */}
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-6 mt-4 playful-card">
-              <div className="inline-block px-4 py-1.5 bg-indigo-500/10 text-indigo-500 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+              <div className="inline-block px-4 py-1.5 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
                 Historia Local
               </div>
               <p className="text-base font-medium text-gray-600 dark:text-gray-300 italic">
@@ -228,15 +228,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                   <h4 className="font-bold mb-2 text-obsidian dark:text-canvas">Exige Siempre:</h4>
                   <ul className="list-none space-y-2 text-base text-gray-600 dark:text-gray-400">
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Pruebas de ADN (Gen L4/L1)</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Pedigree Internacional</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Contrato con Garantía Congénita</span>
                     </li>
                   </ul>
@@ -257,35 +257,35 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             <div className="mt-8">
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <span className="text-indigo-500 font-bold text-sm tracking-widest uppercase mb-1 block">Sanidad Garantizada</span>
+                  <span className="text-blue-500 font-bold text-sm tracking-widest uppercase mb-1 block">Sanidad Garantizada</span>
                   <h3 className="font-header font-bold text-2xl text-obsidian dark:text-canvas">Panel de Salud y Vacunas</h3>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">VIP Verificado</span>
+                  <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">VIP Verificado</span>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg transition-all group">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Syringe className="text-indigo-500" /></div>
+                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Syringe className="text-rose-500" /></div>
                     <div>
                       <h4 className="font-bold text-sm text-obsidian dark:text-canvas">Vacunación</h4>
                       <p className="text-xs text-gray-400">Esquema Completo</p>
                     </div>
                   </div>
-                  <div className="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
+                  <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg transition-all group">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Stethoscope className="text-indigo-500" /></div>
+                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Stethoscope className="text-cyan-500" /></div>
                     <div>
                       <h4 className="font-bold text-sm text-obsidian dark:text-canvas">Examen Físico</h4>
                       <p className="text-xs text-gray-400">Veterinario Avalado</p>
                     </div>
                   </div>
-                  <div className="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
+                  <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
                 </div>
               </div>
             </div>
