@@ -32,10 +32,10 @@ export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const [cities, setCities] = useState<FluffyStoryRow[]>([]);
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
-  const [quizContext, setQuizContext] = useState<{city?: string, manto?: string}>({});
+  const [quizContext, setQuizContext] = useState<{city?: string, manto?: string, country?: string}>({});
   const [selectedMantoModal, setSelectedMantoModal] = useState<FluffyManto | null>(null);
 
-  const handleOpenQuiz = (context: {city?: string, manto?: string} = {}) => {
+  const handleOpenQuiz = (context: {city?: string, manto?: string, country?: string} = {}) => {
     setQuizContext(context);
     setQuizOpen(true);
   };
@@ -72,7 +72,10 @@ export const App: React.FC = () => {
           <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
           <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz(manto ? { manto } : undefined)} />} />
-          <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => handleOpenQuiz({ city })} />} />
+          <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => {
+            const country = cities.find(c => c.tituloH1.replace("Bulldog Francés Fluffy en ", "") === city)?.pais;
+            handleOpenQuiz({ city, country });
+          }} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
@@ -96,6 +99,7 @@ export const App: React.FC = () => {
           onClose={() => setQuizOpen(false)}
           city={quizContext.city}
           manto={quizContext.manto}
+          country={quizContext.country}
         />
 
         {selectedMantoModal && (

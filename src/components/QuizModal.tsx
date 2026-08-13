@@ -7,9 +7,10 @@ interface QuizModalProps {
   onClose: () => void;
   city?: string;
   manto?: string;
+  country?: string;
 }
 
-export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, manto }) => {
+export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, manto, country }) => {
   const [stepIndex, setStepIndex] = useState<number>(0);
   const [answers, setAnswers] = useState({
     cityPref: '',
@@ -147,9 +148,13 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">Para conectarte con el asesor de logística adecuado.</p>
                 
                 <div className="text-[13px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
-                  Hacemos entregas personales en cabina a nivel mundial.<br/>
+                  Hacemos entregas personales a nivel nacional e internacional.<br/>
                   <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-cornflower/20 inline-block text-left text-xs">
-                    ✈️ <b>Nota de logística:</b> El envío internacional VIP (traslado en cabina + trámites aduaneros) tiene un valor aproximado de <b>$1,000 USD</b>. Envíos nacionales consultar.
+                    {country === "Colombia" ? (
+                      <>🚚 <b>Nota de logística:</b> El precio de envío VIP aproximado oscila entre <b>$60.000 COP y $500.000 COP</b> dependiendo de la ciudad de destino.</>
+                    ) : (
+                      <>✈️ <b>Nota de logística:</b> El envío internacional VIP (traslado en cabina + trámites aduaneros) tiene un valor aproximado de <b>$1,000 USD</b>.</>
+                    )}
                   </div>
                 </div>
 
