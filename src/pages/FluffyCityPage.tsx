@@ -44,7 +44,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
 
   return (
-    <main className="max-w-[1100px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
+    <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       
       {/* Breadcrumbs */}
       <div className="py-3 text-sm font-medium border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 mb-4 flex gap-2">
@@ -60,7 +60,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 lg:gap-16">
           
           {/* Left Column: Typography & Content */}
-          <div className="flex-1 w-full flex flex-col justify-center">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center pr-0 lg:pr-8">
             <div className="mb-6">
               <span className="bg-[#FFB800] text-black text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 inline-block shadow-sm">
                 Disponible en {cityName}
@@ -109,7 +109,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           </div>
 
           {/* Right Column: Visual */}
-          <div className="w-full md:w-6/12 lg:w-7/12 flex-shrink-0 relative mt-6 md:-mt-12 lg:-mt-16 lg:-mr-16 z-10">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex-shrink-0 relative mt-6 md:-mt-12 lg:-mt-16 z-10">
             <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
                 src="/images/fluffy-showcase-hero-light.jpg" 
