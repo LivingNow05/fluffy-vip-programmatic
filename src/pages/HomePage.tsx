@@ -65,7 +65,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           </div>
 
           {/* Columna Derecha (Visual Showcase) */}
-          <div className="w-full md:w-6/12 lg:w-6/12 flex-shrink-0 relative">
+          <div className="w-full md:w-8/12 lg:w-8/12 flex-shrink-0 relative md:-mt-12 lg:-mt-16 z-10">
             <div className="relative aspect-[3/2] w-full rounded-3xl overflow-hidden shadow-2xl group border-4 border-white dark:border-gray-800">
               <img
                 src="/images/fluffy-showcase-hero-light.jpg"
