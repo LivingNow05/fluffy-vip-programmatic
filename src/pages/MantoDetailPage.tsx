@@ -12,7 +12,7 @@ interface Props {
   onOpenQuiz?: (manto: string) => void;
 }
 
-export const MantoDetailPage: React.FC<Props> = () => {
+export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
   const { id } = useParams<{ id: string }>();
   const manto = MANTOS_FLUFFY.find(m => m.id === id);
 
@@ -80,15 +80,13 @@ export const MantoDetailPage: React.FC<Props> = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href={"https://wa.me/573164822477?text=" + encodeURIComponent(whatsappText)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:flex-1 flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1DA851] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl text-center"
+            <button
+              onClick={() => onOpenQuiz && onOpenQuiz(manto.nombre)}
+              className="w-full sm:flex-1 flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl text-center"
             >
               <Phone className="w-5 h-5" />
               <span>Consultar Disponibilidad</span>
-            </a>
+            </button>
             <div className="text-center sm:text-left">
               <span className="text-xs text-gray-400 font-bold uppercase block">Precio Estimado</span>
               <span className="text-2xl font-black text-obsidian dark:text-canvas">${manto.precioEstimadoUSD} USD</span>
