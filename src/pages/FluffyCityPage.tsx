@@ -46,8 +46,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
   const seoTitle = `Bulldog Francés Fluffy en ${cityName} | Dinastía Fluffy VIP`;
   const seoDescription = `Criadero exclusivo de Bulldog Francés Fluffy con entrega VIP en ${cityName}, ${city.pais}. Certificados de genética L4 y logística de mascotas garantizada.`;
-  const currentUrl = `https://dinastiafluffy.com/${city.slug}`;
-  const ogImage = `https://dinastiafluffy.com/images/fluffy-showcase-hero.jpg`;
+  const currentUrl = `https://frenchbulldogfluffy.com/${city.slug}`;
+  const ogImage = `https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg`;
 
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
