@@ -12,3 +12,6 @@ yarn-error.log*
 
 services.json
 *.cjs
+token.json
+client_secrets*.json
+indexing_log.txt
