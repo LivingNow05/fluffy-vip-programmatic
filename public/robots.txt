@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://frenchbulldogfluffy.com/sitemap-index.xml
 Sitemap: https://frenchbulldogfluffy.com/sitemap.xml

@@ -8,7 +8,7 @@ CSV_PATH = os.path.join(ROOT_DIR, 'public', 'dataset_fluffy_stories.csv')
 PUBLIC_DIR = os.path.join(ROOT_DIR, 'public')
 TODAY = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
-def generate_sitemap_and_robots():
+def generate_sitemaps():
     urls = [
         {'loc': f'{DOMAIN}/', 'priority': '1.0', 'changefreq': 'daily'},
         {'loc': f'{DOMAIN}/entregas', 'priority': '0.9', 'changefreq': 'weekly'},
@@ -28,9 +28,10 @@ def generate_sitemap_and_robots():
                         'changefreq': 'weekly'
                     })
 
+    # 1. Generate sitemap.xml and sitemap-0.xml
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
     ]
 
     for u in urls:
@@ -42,23 +43,37 @@ def generate_sitemap_and_robots():
         sitemap_lines.append('  </url>')
 
     sitemap_lines.append('</urlset>')
+    sitemap_xml = '\n'.join(sitemap_lines)
 
-    sitemap_path = os.path.join(PUBLIC_DIR, 'sitemap.xml')
-    with open(sitemap_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(sitemap_lines))
+    with open(os.path.join(PUBLIC_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap_xml)
 
+    with open(os.path.join(PUBLIC_DIR, 'sitemap-0.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap_xml)
+
+    # 2. Generate sitemap-index.xml (Astro / Google standard)
+    sitemap_index = f'''<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{DOMAIN}/sitemap-0.xml</loc>
+    <lastmod>{TODAY}</lastmod>
+  </sitemap>
+</sitemapindex>
+'''
+    with open(os.path.join(PUBLIC_DIR, 'sitemap-index.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap_index)
+
+    # 3. Generate robots.txt
     robots_content = f'''User-agent: *
 Allow: /
 
+Sitemap: {DOMAIN}/sitemap-index.xml
 Sitemap: {DOMAIN}/sitemap.xml
 '''
-
-    robots_path = os.path.join(PUBLIC_DIR, 'robots.txt')
-    with open(robots_path, 'w', encoding='utf-8') as f:
+    with open(os.path.join(PUBLIC_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
         f.write(robots_content)
 
-    print(f'✅ Sitemap generado con {len(urls)} URLs en {sitemap_path}')
-    print(f'✅ Robots.txt creado en {robots_path}')
+    print(f'✅ Astro-style sitemaps generated with {len(urls)} URLs!')
 
 if __name__ == '__main__':
-    generate_sitemap_and_robots()
+    generate_sitemaps()
