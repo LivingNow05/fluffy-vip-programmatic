@@ -149,7 +149,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 
                 <div className="text-[13px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
                   Hacemos entregas personales a nivel nacional e internacional.<br/>
-                  <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-amber-500/20 inline-block text-left text-xs">
+                  <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-indigo-500/20 inline-block text-left text-xs">
                     {country === "Colombia" ? (
                       <>🚚 <b>Nota de logística:</b> El precio de envío VIP aproximado oscila entre <b>$60.000 COP y $500.000 COP</b> dependiendo de la ciudad de destino.</>
                     ) : (
@@ -189,7 +189,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-amber-500">Signature</span>
+                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Signature</span>
                       <span className="text-xs font-bold text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Desde $4,500 USD</span>
                     </div>
                     <span className="text-xs text-gray-500 dark:text-gray-400">Colores sólidos (Fawn, Black, Pied)</span>
@@ -199,9 +199,9 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     onClick={() => handleAnswer('mantoPref', 'Exotic VIP (Blue/Lilac)')}
                     className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group relative overflow-hidden"
                   >
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-amber-500/10 rounded-full blur-xl"></div>
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-indigo-500/10 rounded-full blur-xl"></div>
                     <div className="flex items-center justify-between mb-1 relative z-10">
-                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-amber-500">Exotic VIP <span className="text-[10px] bg-cornflower text-white px-1.5 py-0.5 rounded ml-1 uppercase">Popular</span></span>
+                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Exotic VIP <span className="text-[10px] bg-cornflower text-white px-1.5 py-0.5 rounded ml-1 uppercase">Popular</span></span>
                       <span className="text-xs font-bold text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Desde $6,000 USD</span>
                     </div>
                     <span className="text-xs text-gray-500 dark:text-gray-400 relative z-10">Colores exóticos con dilución (Blue, Lilac, Merle)</span>
@@ -236,18 +236,18 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
-                      <Building2 className="w-8 h-8 text-gray-400 group-hover:text-amber-500 transition-colors" />
+                      <Building2 className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                     </div>
-                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-amber-500">Apartamento</span>
+                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500">Apartamento</span>
                   </button>
                   <button 
                     onClick={() => handleAnswer('housing', 'casa')}
                     className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
-                      <Home className="w-8 h-8 text-gray-400 group-hover:text-amber-500 transition-colors" />
+                      <Home className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                     </div>
-                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-amber-500">Casa / Finca</span>
+                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500">Casa / Finca</span>
                   </button>
                 </div>
               </motion.div>
@@ -266,18 +266,18 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
-                      <Baby className="w-8 h-8 text-gray-400 group-hover:text-amber-500 transition-colors" />
+                      <Baby className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                     </div>
-                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-amber-500">Sí, hay niños</span>
+                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500">Sí, hay niños</span>
                   </button>
                   <button 
                     onClick={() => handleAnswer('kids', 'no')}
                     className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
-                      <Users className="w-8 h-8 text-gray-400 group-hover:text-amber-500 transition-colors" />
+                      <Users className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
                     </div>
-                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-amber-500">Solo adultos</span>
+                    <span className="font-bold text-gray-700 dark:text-gray-200 group-hover:text-indigo-500">Solo adultos</span>
                   </button>
                 </div>
               </motion.div>
@@ -296,13 +296,13 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Sparkles className="w-5 h-5 text-gray-400 group-hover:text-amber-500" /></div>
+                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Sparkles className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
                       <div>
-                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-amber-500">Será mi primer perro</span>
+                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Será mi primer perro</span>
                         <span className="text-xs text-gray-500">Principiante</span>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-amber-500 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1" />
                   </button>
                   
                   <button 
@@ -310,13 +310,13 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><ShieldCheck className="w-5 h-5 text-gray-400 group-hover:text-amber-500" /></div>
+                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><ShieldCheck className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
                       <div>
-                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-amber-500">Ya he tenido perros</span>
+                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Ya he tenido perros</span>
                         <span className="text-xs text-gray-500">Experiencia media</span>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-amber-500 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1" />
                   </button>
 
                   <button 
@@ -324,13 +324,13 @@ Quisiera ver fotos y conocer disponibilidad.`;
                     className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Star className="w-5 h-5 text-gray-400 group-hover:text-amber-500" /></div>
+                      <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Star className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
                       <div>
-                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-amber-500">Mucha experiencia</span>
+                        <span className="block font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Mucha experiencia</span>
                         <span className="text-xs text-gray-500">Avanzado</span>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-amber-500 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
               </motion.div>
