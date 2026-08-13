@@ -31,14 +31,14 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300 font-sans">
       {/* Top VIP Announcement Bar */}
-      <div className="bg-cornflower text-white py-2 px-4 text-xs font-semibold text-center flex items-center justify-center gap-2">
-        <Sparkles className="w-4 h-4 text-white" />
+      <div className="bg-cornflower text-white py-2 px-4 text-xs font-semibold text-center flex items-center justify-center gap-3">
+        <Sparkles className="w-4 h-4 text-white animate-pulse" />
         <span className="uppercase tracking-widest text-[10px] sm:text-xs">Criadero VIP · Envíos Aéreos a 100+ Ciudades</span>
         <button 
           onClick={onOpenQuiz} 
-          className="underline ml-2 hover:text-blue-100 transition-colors cursor-pointer"
+          className="bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full backdrop-blur-sm transition-all duration-300 text-[10px] sm:text-xs uppercase font-bold tracking-wider shadow-sm flex items-center gap-1 hover:scale-105"
         >
-          Realizar Quiz →
+          Realizar Quiz <span className="text-[10px] font-normal">→</span>
         </button>
       </div>
 
@@ -87,7 +87,8 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Megamenu Grid Dropdown */}
             {dropdownOpen && (
-              <div className="absolute top-full -left-20 w-[720px] bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl p-6 grid grid-cols-4 gap-6 shadow-xl mt-2">
+              <div className="absolute top-full -left-20 w-[720px] pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl p-6 grid grid-cols-4 gap-6 shadow-2xl">
                 {/* Column 1: Colombia */}
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
@@ -167,8 +168,9 @@ export const Header: React.FC<HeaderProps> = ({
                   </a>
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
+        </div>
 
           <a href="#calculadora-nutricion" className="hover:text-cornflower transition-colors">
             Calculadora

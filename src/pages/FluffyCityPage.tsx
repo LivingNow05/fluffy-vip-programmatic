@@ -4,7 +4,7 @@ import { FluffyStoryRow } from '../types/fluffy';
 import { ShippingAccordion } from '../components/ShippingAccordion';
 import { 
   ShieldCheck, Plane, DollarSign, Sparkles, Phone, Dna, CheckCircle2,
-  FileText, HeartHandshake, Sun, Home, AlertTriangle, Shield, Syringe, Stethoscope, Lock
+  FileText, HeartHandshake, Sun, Home, AlertTriangle, Shield, Syringe, Stethoscope, Lock, ArrowRight
 } from 'lucide-react';
 
 interface Props {
@@ -138,31 +138,31 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
         </div>
 
         {/* TAXONOMY / DATA - Bento Grid */}
-        <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-            <FileText className="w-8 h-8 text-gray-300 dark:text-gray-600 mb-3" />
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Registro</p>
-            <p className="text-lg font-bold mt-1 text-obsidian dark:text-canvas">Pedigree</p>
+        <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
+            <FileText className="w-8 h-8 text-cornflower/60 group-hover:text-cornflower mb-4 transition-colors" />
+            <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Registro</p>
+            <p className="text-lg font-black text-obsidian dark:text-canvas">Pedigree</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-            <DollarSign className="w-8 h-8 text-gray-300 dark:text-gray-600 mb-3" />
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Moneda</p>
-            <p className="text-lg font-bold mt-1 text-obsidian dark:text-canvas">{city.moneda} / USD</p>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
+            <DollarSign className="w-8 h-8 text-cornflower/60 group-hover:text-cornflower mb-4 transition-colors" />
+            <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Moneda</p>
+            <p className="text-lg font-black text-obsidian dark:text-canvas">{city.moneda} / USD</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-            <Plane className="w-8 h-8 text-gray-300 dark:text-gray-600 mb-3" />
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Envío a {cityName}</p>
-            <p className="text-lg font-bold mt-1 text-obsidian dark:text-canvas">Aéreo / VIP</p>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
+            <Plane className="w-8 h-8 text-cornflower/60 group-hover:text-cornflower mb-4 transition-colors" />
+            <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Envío a {cityName}</p>
+            <p className="text-lg font-black text-obsidian dark:text-canvas">Aéreo VIP</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-            <HeartHandshake className="w-8 h-8 text-gray-300 dark:text-gray-600 mb-3" />
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Entrega</p>
-            <p className="text-lg font-bold mt-1 text-obsidian dark:text-canvas">Personal</p>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
+            <HeartHandshake className="w-8 h-8 text-cornflower/60 group-hover:text-cornflower mb-4 transition-colors" />
+            <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Entrega</p>
+            <p className="text-lg font-black text-obsidian dark:text-canvas">Personal</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow col-span-2 sm:col-span-1 md:col-span-1">
-            <Shield className="w-8 h-8 text-gray-300 dark:text-gray-600 mb-3" />
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Garantía</p>
-            <p className="text-lg font-bold mt-1 text-obsidian dark:text-canvas">Genética L4</p>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group col-span-2 sm:col-span-1 md:col-span-1">
+            <Shield className="w-8 h-8 text-cornflower/60 group-hover:text-cornflower mb-4 transition-colors" />
+            <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Garantía</p>
+            <p className="text-lg font-black text-obsidian dark:text-canvas">Genética L4</p>
           </div>
         </div>
       </article>
@@ -300,27 +300,30 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
 
         {/* RIGHT COLUMN (Sidebar) */}
         <div className="relative">
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 sticky top-[100px] shadow-xl">
-            <h3 className="font-header font-bold text-2xl mb-2 text-obsidian dark:text-canvas">
+          <div className="bg-gradient-to-b from-white to-blue-50/50 dark:from-gray-800 dark:to-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-[2rem] p-8 sticky top-[100px] shadow-xl">
+            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6">
+              <Phone className="w-6 h-6 text-[#25D366]" />
+            </div>
+            <h3 className="font-header font-bold text-2xl mb-3 text-obsidian dark:text-canvas">
               ¿Buscas un Fluffy VIP?
             </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-              Escríbenos por WhatsApp y un especialista te enviará al instante fotos y precios de los cachorros disponibles para entrega en {cityName}.
+            <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm leading-relaxed">
+              Escríbenos y un especialista te enviará al instante fotos, videos y precios de los cachorros disponibles para entrega en <strong className="text-obsidian dark:text-canvas">{cityName}</strong>.
             </p>
             
             <a
               href={`https://wa.me/573164822477?text=${encodeURIComponent(whatsappText)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white font-bold py-4 rounded-xl transition-colors shadow-lg hover:shadow-xl"
+              className="group w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 hover:-translate-y-1"
             >
-              <Phone className="w-5 h-5" />
               <span>Contactar por WhatsApp</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             
-            <div className="mt-6 flex items-center justify-center gap-2 text-xs font-bold text-gray-400 dark:text-gray-500">
-              <Lock className="w-4 h-4" />
-              <span>Asesoría 100% Personalizada</span>
+            <div className="mt-8 flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+              <Lock className="w-3.5 h-3.5" />
+              <span>Asesoría 100% Confidencial</span>
             </div>
           </div>
         </div>

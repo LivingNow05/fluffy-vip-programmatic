@@ -30,34 +30,34 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               Ejemplares puros de alta gama con genética de pelo largo (gen L4/L1), pedigree internacional de pureza y logística de transporte VIP a más de 100 ciudades.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-5 mt-4">
               <a
                 href="#ciudades-hub"
-                className="btn-primary bg-cornflower hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all text-center flex items-center justify-center gap-2 hover:-translate-y-1"
+                className="btn-primary bg-cornflower hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-cornflower/30 hover:shadow-cornflower/50 transition-all duration-300 text-center flex items-center justify-center gap-2 hover:-translate-y-1"
               >
                 <span>Explorar por Ciudad</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
 
               <button
                 onClick={onOpenQuiz}
-                className="px-8 py-4 rounded-full border border-gray-300 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                className="group px-8 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:border-cornflower hover:text-cornflower dark:hover:border-cornflower dark:hover:text-cornflower transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-transparent hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
               >
                 Realizar Quiz Match 🐾
               </button>
             </div>
 
             {/* Badges E-E-A-T */}
-            <div className="flex gap-4 flex-wrap mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
-              <div className="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-400">
+            <div className="flex gap-3 flex-wrap mt-12 pt-8 border-t border-gray-200/60 dark:border-gray-700/60">
+              <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
                 <Dna className="w-4 h-4 text-cornflower" />
                 <span>Gen L4/L1 Verificado</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-cornflower" />
-                <span>Garantía de Salud por Escrito</span>
+                <span>Garantía de Salud Escrita</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
                 <HeartHandshake className="w-4 h-4 text-cornflower" />
                 <span>Asesoría VIP 24/7</span>
               </div>
