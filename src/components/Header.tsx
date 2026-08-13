@@ -46,12 +46,10 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="flex flex-col">
-            <h1 className="font-header text-2xl sm:text-3xl font-black leading-none tracking-tight text-obsidian dark:text-canvas">
-              Dinastía <span className="text-cornflower">Fluffy</span>
-            </h1>
-            <span className="text-xs tracking-wider uppercase font-bold text-gray-500 mt-0.5">
-              VIP Exotic Kennel
-            </span>
+            <div className="font-header text-2xl sm:text-3xl font-black leading-none tracking-tight text-obsidian dark:text-canvas">
+              Fluffy <span className="text-cornflower">VIP</span>
+              <span className="block text-[9px] sm:text-[10px] tracking-widest text-gray-500 dark:text-gray-400 font-bold uppercase mt-0.5">Criadero de Lujo</span>
+            </div>
           </div>
         </Link>
 
