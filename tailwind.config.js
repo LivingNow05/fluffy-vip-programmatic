@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        cornflower: '#6B90FF',
+        cornflower: '#00B874',
         obsidian: '#1f2937', // Softer black (gray-800)
         canvas: '#ffffff',
         carbon: '#f3f4f6', // gray-100
