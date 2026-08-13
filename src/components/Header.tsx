@@ -28,14 +28,14 @@ export const Header: React.FC<HeaderProps> = ({
   const latamCities = cities.filter(c => c.pais !== 'Colombia' && c.pais !== 'México').slice(0, 5);
 
   return (
-    <header className="sticky top-0 z-50 bg-canvas dark:bg-obsidian border-b border-obsidian/10 dark:border-canvas/10 transition-colors duration-300 font-sans">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300 font-sans">
       {/* Top VIP Announcement Bar */}
-      <div className="bg-obsidian dark:bg-canvas text-canvas dark:text-obsidian py-2 px-4 text-xs font-semibold text-center flex items-center justify-center gap-2">
-        <Sparkles className="w-4 h-4 text-electric-yellow dark:text-ember-orange" />
+      <div className="bg-cornflower text-white py-2 px-4 text-xs font-semibold text-center flex items-center justify-center gap-2">
+        <Sparkles className="w-4 h-4 text-white" />
         <span className="uppercase tracking-widest text-[10px] sm:text-xs">Criadero VIP · Envíos Aéreos a 100+ Ciudades</span>
         <button 
           onClick={onOpenQuiz} 
-          className="underline ml-2 hover:text-lavender-mist dark:hover:text-ember-orange transition-colors cursor-pointer"
+          className="underline ml-2 hover:text-blue-100 transition-colors cursor-pointer"
         >
           Realizar Quiz →
         </button>
@@ -48,25 +48,25 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={(e) => { e.preventDefault(); onSelectCityBySlug('bulldog-frances-fluffy-bogota'); }}
           className="flex items-center gap-3 group"
         >
-          <div className="w-12 h-12 rounded-pill bg-obsidian dark:bg-canvas flex items-center justify-center text-canvas dark:text-obsidian transition-colors">
+          <div className="w-12 h-12 rounded-full bg-cornflower flex items-center justify-center text-white transition-colors shadow-sm group-hover:scale-105">
             <Dog className="w-6 h-6" />
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-obsidian dark:text-canvas">
-              Dinastía <span className="text-ember-orange">Fluffy</span>
+            <span className="font-header text-xl sm:text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-100">
+              Dinastía <span className="text-cornflower">Fluffy</span>
             </span>
-            <span className="text-[10px] tracking-wider uppercase font-semibold text-ash-gray">
+            <span className="text-[10px] tracking-wider uppercase font-bold text-gray-500">
               VIP Exotic Kennel
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-obsidian dark:text-canvas">
-          <a href="#precios" className="hover:text-lavender-mist dark:hover:text-ember-orange transition-colors">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-gray-700 dark:text-gray-300">
+          <a href="#precios" className="hover:text-cornflower transition-colors">
             Precios
           </a>
-          <a href="#variedades" className="hover:text-lavender-mist dark:hover:text-ember-orange transition-colors">
+          <a href="#variedades" className="hover:text-cornflower transition-colors">
             Mantos
           </a>
 
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button 
-              className="flex items-center gap-1 hover:text-lavender-mist dark:hover:text-ember-orange transition-colors py-2 cursor-pointer"
+              className="flex items-center gap-1 hover:text-cornflower transition-colors py-2 cursor-pointer font-bold"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <MapPin className="w-4 h-4" />
@@ -87,10 +87,10 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Megamenu Grid Dropdown */}
             {dropdownOpen && (
-              <div className="absolute top-full -left-20 w-[720px] bg-canvas dark:bg-carbon border border-obsidian/10 dark:border-canvas/10 rounded-card p-6 grid grid-cols-4 gap-6 shadow-none mt-2">
+              <div className="absolute top-full -left-20 w-[720px] bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl p-6 grid grid-cols-4 gap-6 shadow-xl mt-2">
                 {/* Column 1: Colombia */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-ember-orange mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🇨🇴 Colombia
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li key={c.slug}>
                          <button
                           onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
-                          className="hover:text-lavender-mist text-obsidian dark:text-canvas block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </button>
@@ -109,7 +109,7 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Column 2: México */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-ember-orange mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🇲🇽 México
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -117,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li key={c.slug}>
                         <button
                           onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
-                          className="hover:text-lavender-mist text-obsidian dark:text-canvas block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </button>
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Column 3: Latam */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-ember-orange mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🌎 Latam
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -136,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <li key={c.slug}>
                         <button
                           onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
-                          className="hover:text-lavender-mist text-obsidian dark:text-canvas block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </button>
@@ -146,19 +146,19 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
 
                 {/* Column 4: Cobertura Global */}
-                <div className="bg-mint-cream dark:bg-obsidian p-5 rounded-card flex flex-col justify-between border border-obsidian/5 dark:border-canvas/10">
+                <div className="bg-blue-50 dark:bg-gray-700 p-5 rounded-2xl flex flex-col justify-between border border-blue-100 dark:border-gray-600">
                   <div>
-                    <span className="text-xs font-bold text-obsidian dark:text-canvas block mb-2 uppercase tracking-widest">
+                    <span className="text-xs font-bold text-gray-800 dark:text-gray-100 block mb-2 uppercase tracking-widest">
                       ✈️ Global
                     </span>
-                    <p className="text-xs text-obsidian/70 dark:text-canvas/70 leading-relaxed">
+                    <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
                       Envíos en cabina VIP con Travel Nanny.
                     </p>
                   </div>
                   <a
                     href="#ciudades-hub"
                     onClick={() => setDropdownOpen(false)}
-                    className="text-xs font-bold text-ember-orange hover:underline mt-4 block"
+                    className="text-xs font-bold text-cornflower hover:underline mt-4 block"
                   >
                     Ver 100+ Ciudades →
                   </a>
@@ -167,10 +167,10 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </div>
 
-          <a href="#calculadora-nutricion" className="hover:text-lavender-mist dark:hover:text-ember-orange transition-colors">
+          <a href="#calculadora-nutricion" className="hover:text-cornflower transition-colors">
             Calculadora
           </a>
-          <a href="#eeat-garantia" className="hover:text-lavender-mist dark:hover:text-ember-orange transition-colors">
+          <a href="#eeat-garantia" className="hover:text-cornflower transition-colors">
             Criadero
           </a>
         </nav>
@@ -182,7 +182,7 @@ export const Header: React.FC<HeaderProps> = ({
             href="https://wa.me/573164822477?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex pill-button-primary bg-[#25D366] text-white dark:bg-[#25D366] dark:text-white"
+            className="hidden sm:flex btn-primary bg-[#25D366] hover:bg-[#20b858] text-white border-transparent"
           >
             <Phone className="w-4 h-4" />
             <span>WhatsApp VIP</span>
@@ -192,10 +192,10 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={() => setDarkMode(!darkMode)}
             aria-label="Cambiar tema visual"
-            className="p-3 rounded-pill bg-mint-cream dark:bg-carbon text-obsidian dark:text-canvas hover:scale-[0.98] transition-transform cursor-pointer"
+            className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:scale-[0.98] transition-transform cursor-pointer"
           >
             {darkMode ? (
-              <Sun className="w-5 h-5 text-electric-yellow" />
+              <Sun className="w-5 h-5 text-yellow-500" />
             ) : (
               <Moon className="w-5 h-5" />
             )}
@@ -204,7 +204,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-3 rounded-pill bg-mint-cream dark:bg-carbon text-obsidian dark:text-canvas"
+            className="lg:hidden p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -213,8 +213,8 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-canvas dark:bg-carbon border-t border-obsidian/10 dark:border-canvas/10 px-4 py-6 space-y-4">
-          <div className="space-y-2 font-medium text-obsidian dark:text-canvas text-lg">
+        <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-4 py-6 space-y-4">
+          <div className="space-y-2 font-medium text-gray-800 dark:text-gray-200 text-lg">
             <a href="#precios" onClick={() => setMobileMenuOpen(false)} className="block py-2">Precios VIP</a>
             <a href="#variedades" onClick={() => setMobileMenuOpen(false)} className="block py-2">Mantos</a>
             <a href="#ciudades-hub" onClick={() => setMobileMenuOpen(false)} className="block py-2">Ciudades & Cobertura</a>
@@ -226,7 +226,7 @@ export const Header: React.FC<HeaderProps> = ({
             href="https://wa.me/573164822477"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 pill-button-primary bg-[#25D366] text-white"
+            className="w-full flex items-center justify-center gap-2 btn-primary bg-[#25D366] hover:bg-[#20b858] text-white border-transparent"
           >
             <Phone className="w-4 h-4" />
             <span>Contacto WhatsApp VIP</span>

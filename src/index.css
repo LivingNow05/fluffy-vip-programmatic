@@ -5,59 +5,37 @@
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
-    @apply bg-canvas text-obsidian dark:bg-obsidian dark:text-canvas transition-colors duration-300;
+    @apply bg-canvas text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;
   }
   
-  h1, h2, h3, h4, .font-serif {
-    font-family: 'Playfair Display', Georgia, serif;
-    letter-spacing: -0.02em;
-    line-height: 0.9;
+  h1, h2, h3, h4, .font-header {
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   /* Buttons */
-  .pill-button-primary {
-    @apply bg-obsidian text-canvas dark:bg-canvas dark:text-obsidian px-6 py-3 rounded-pill font-medium hover:scale-[0.98] transition-transform flex items-center justify-center gap-2;
+  .btn-primary {
+    @apply bg-cornflower hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all text-center flex items-center justify-center gap-2 hover:-translate-y-1;
   }
   
-  .pill-button-ghost {
-    @apply bg-transparent text-obsidian dark:text-canvas border border-obsidian dark:border-canvas px-6 py-3 rounded-pill font-medium hover:bg-obsidian hover:text-canvas dark:hover:bg-canvas dark:hover:text-obsidian transition-all;
-  }
-
-  .pill-button-accent {
-    @apply bg-lavender-mist text-obsidian px-6 py-3 rounded-pill font-medium hover:scale-[0.98] transition-transform flex items-center justify-center gap-2;
+  .btn-ghost {
+    @apply bg-white text-gray-800 border border-gray-200 px-6 py-3 rounded-full font-bold shadow-sm hover:shadow-md hover:-translate-y-1 transition-all;
   }
 
   /* Cards */
-  .editorial-card-dark {
-    @apply bg-obsidian text-canvas rounded-card-lg p-6 lg:p-10 border-none shadow-none;
-  }
-
-  .editorial-card-lavender {
-    @apply bg-lavender-mist text-obsidian rounded-card-lg p-6 lg:p-10 border-none shadow-none;
-  }
-
-  .editorial-card-light {
-    @apply bg-canvas text-obsidian dark:bg-carbon dark:text-canvas rounded-card p-6 border border-ash-gray/20 dark:border-obsidian shadow-none;
-  }
-  
-  /* Sections */
-  .section-light {
-    @apply bg-canvas text-obsidian dark:bg-obsidian dark:text-canvas w-full py-16 md:py-24;
-  }
-  
-  .section-dark {
-    @apply bg-obsidian text-canvas dark:bg-carbon dark:text-canvas w-full py-16 md:py-24;
+  .playful-card {
+    @apply bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300;
   }
 
   /* Typography */
-  .editorial-display {
-    @apply font-serif text-[48px] md:text-[80px] lg:text-[120px] leading-[0.85] tracking-tighter;
+  .display-title {
+    @apply font-header font-extrabold text-4xl sm:text-5xl md:text-6xl text-gray-800 leading-tight;
   }
 }
 
-/* Custom Scrollbar for Horizontal Scroll */
+/* Custom Scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

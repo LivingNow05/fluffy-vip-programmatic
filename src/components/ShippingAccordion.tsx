@@ -33,7 +33,7 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
   ];
 
   return (
-    <section className="section-dark">
+    <section className="py-20 bg-blue-50 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 
@@ -43,14 +43,14 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-carbon border border-canvas/20 rounded-pill text-[11px] font-bold text-electric-yellow uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full text-[11px] font-bold text-cornflower uppercase tracking-widest mb-6 shadow-sm">
             <Plane className="w-4 h-4" />
             <span>Protocolo de Entrega VIP</span>
           </div>
-          <h2 className="editorial-display text-4xl sm:text-5xl text-canvas">
+          <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
             Logística & Garantías de Traslado
           </h2>
-          <p className="text-lg text-canvas/70 font-light mt-4">
+          <p className="text-lg text-gray-600 dark:text-gray-400 font-medium mt-4">
             Envíos personalizados hacia {aeropuertoNombre} ({paisNombre}).
           </p>
         </motion.div>
@@ -67,17 +67,17 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
             return (
               <div
                 key={idx}
-                className="bg-carbon border border-canvas/10 rounded-card overflow-hidden"
+                className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl shadow-sm overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between font-serif text-xl font-bold text-canvas hover:text-ember-orange transition-colors cursor-pointer"
+                  className="w-full p-6 text-left flex items-center justify-between font-header text-xl font-bold text-gray-800 dark:text-gray-100 hover:text-cornflower transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-4">
-                    <Check className={`w-5 h-5 transition-colors ${isOpen ? 'text-ember-orange' : 'text-canvas/30'}`} />
+                    <Check className={`w-5 h-5 transition-colors ${isOpen ? 'text-cornflower' : 'text-gray-300 dark:text-gray-600'}`} />
                     {item.title}
                   </span>
-                  <ChevronDown className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-180 text-ember-orange' : 'text-canvas/50'}`} />
+                  <ChevronDown className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-180 text-cornflower' : 'text-gray-400'}`} />
                 </button>
 
                 <AnimatePresence>
@@ -89,7 +89,7 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pt-2 text-sm text-canvas/70 leading-[1.6] pl-14">
+                      <div className="px-6 pb-6 pt-2 text-sm text-gray-600 dark:text-gray-400 font-medium leading-relaxed pl-14">
                         {item.content}
                       </div>
                     </motion.div>

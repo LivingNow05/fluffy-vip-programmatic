@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { MANTOS_FLUFFY } from '../data/mantos';
-import { ChevronLeft, ChevronRight, ShieldCheck, Dna, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { FluffyManto } from '../types/fluffy';
 import { motion } from 'framer-motion';
 
@@ -23,7 +23,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
   };
 
   return (
-    <section id="variedades" className="section-dark overflow-hidden">
+    <section id="variedades" className="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header de la Sección */}
@@ -35,30 +35,30 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-carbon border border-canvas/20 rounded-pill text-[11px] font-bold text-electric-yellow uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Sparkles className="w-4 h-4" />
-              <span>Colección Exclusiva de Mantos</span>
+              <span>Colección Exclusiva</span>
             </div>
-            <h2 className="editorial-display text-4xl sm:text-5xl text-canvas">
-              Variedades Genéticas Fluffy
+            <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
+              Mantos & Genéticas
             </h2>
-            <p className="mt-4 text-lg text-canvas/70 font-light max-w-2xl leading-[1.5]">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 font-medium max-w-2xl leading-relaxed">
               Desliza horizontalmente para explorar las variantes con pelaje sedoso y portación comprobada del gen L4/L1.
             </p>
           </div>
 
-          {/* Buttons Navigation Controlls (Aceternity UI Style) */}
+          {/* Navigation Controls */}
           <div className="flex items-center gap-3 self-start md:self-auto shrink-0">
             <button
               onClick={() => scroll('left')}
-              className="p-4 rounded-full bg-transparent border border-canvas/20 hover:border-canvas hover:bg-canvas text-canvas hover:text-obsidian transition-colors cursor-pointer"
+              className="p-4 rounded-full bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-cornflower text-gray-800 dark:text-gray-100 transition-all shadow-sm hover:shadow-md cursor-pointer"
               aria-label="Anterior"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="p-4 rounded-full bg-transparent border border-canvas/20 hover:border-canvas hover:bg-canvas text-canvas hover:text-obsidian transition-colors cursor-pointer"
+              className="p-4 rounded-full bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-cornflower text-gray-800 dark:text-gray-100 transition-all shadow-sm hover:shadow-md cursor-pointer"
               aria-label="Siguiente"
             >
               <ChevronRight className="w-6 h-6" />
@@ -66,7 +66,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           </div>
         </motion.div>
 
-        {/* Aceternity Horizontal Scroll Container */}
+        {/* Horizontal Scroll Container */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -81,51 +81,30 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
               <div
                 key={manto.id}
                 onClick={() => onSelectManto(manto)}
-                className="snap-start shrink-0 w-[300px] sm:w-[380px] bg-carbon border border-canvas/10 rounded-card overflow-hidden cursor-pointer hover:border-canvas/40 transition-all duration-300 transform hover:-translate-y-2 group"
+                className="snap-start shrink-0 w-[260px] sm:w-[300px] cursor-pointer group"
               >
-                {/* Photo Showcase Container */}
-                <div className="relative h-72 bg-obsidian overflow-hidden">
-                  <img
-                    src={manto.imagen}
-                    alt={manto.nombre}
-                    className="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 right-4 bg-obsidian text-canvas text-[10px] font-bold px-4 py-1.5 rounded-pill uppercase tracking-widest border border-canvas/20">
+                {/* Photo Showcase Container (Square) */}
+                <div className="aspect-square rounded-3xl overflow-hidden mb-4 relative shadow-md">
+                  <div 
+                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${manto.imagen})` }}
+                  ></div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                  
+                  {/* Floating tags */}
+                  <div className="absolute bottom-3 left-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-800 dark:text-gray-100 shadow-sm">
+                    {manto.genetica}
+                  </div>
+                  <div className="absolute top-3 right-3 bg-cornflower text-white px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-sm">
                     {manto.popularidad}
                   </div>
                 </div>
 
-                {/* Card Body - Colors Planos */}
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-serif text-2xl font-bold text-canvas">
-                      {manto.nombre}
-                    </h3>
-                  </div>
-                  
-                  <span className="text-[11px] font-mono font-bold text-electric-yellow mb-4 block">
-                    Desde ${manto.precioEstimadoUSD} USD
-                  </span>
-
-                  <div className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-canvas/50 mb-6 font-mono bg-obsidian/50 w-fit px-3 py-1.5 rounded-pill border border-canvas/5">
-                    <Dna className="w-4 h-4 text-canvas/70" />
-                    <span>{manto.genetica}</span>
-                  </div>
-
-                  <p className="text-sm text-canvas/70 line-clamp-2 leading-[1.6] mb-8 font-light">
-                    {manto.descripcion}
-                  </p>
-
-                  <div className="pt-5 border-t border-canvas/10 flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-widest font-bold text-canvas flex items-center gap-2">
-                      <ShieldCheck className="w-5 h-5 text-ember-orange" />
-                      Pureza Certificada
-                    </span>
-                    <span className="text-sm font-bold text-canvas/50 group-hover:text-canvas transition-colors">
-                      Ver →
-                    </span>
-                  </div>
-                </div>
+                {/* Card Meta */}
+                <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 group-hover:text-cornflower transition-colors">
+                  {manto.nombre}
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Desde ${manto.precioEstimadoUSD} USD</p>
               </div>
             ))}
           </div>

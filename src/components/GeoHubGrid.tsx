@@ -25,7 +25,7 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity, onSelectCity
   const countries = Array.from(new Set(cities.map(c => c.pais))).filter(Boolean);
 
   return (
-    <section id="ciudades-hub" className="section-light">
+    <section id="ciudades-hub" className="py-20 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Hub */}
@@ -37,39 +37,39 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity, onSelectCity
           transition={{ duration: 0.8 }}
         >
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-lavender-mist dark:bg-carbon border border-obsidian/10 dark:border-canvas/10 rounded-pill text-[11px] font-bold text-obsidian dark:text-lavender-mist uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Globe className="w-4 h-4" />
-              <span>Cobertura Programática SEO GEO (102 Ciudades)</span>
+              <span>Cobertura Nacional (102 Ciudades)</span>
             </div>
-            <h2 className="editorial-display text-4xl sm:text-5xl text-obsidian dark:text-canvas">
-              Disponibilidad & Envíos por Destino
+            <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
+              Disponibilidad & Envíos
             </h2>
-            <p className="text-lg text-obsidian/70 dark:text-canvas/70 font-light mt-4 leading-[1.5]">
-              Selecciona tu ciudad para consultar historias locales, aeropuertos y precios en tu moneda local.
+            <p className="text-lg text-gray-600 dark:text-gray-400 font-medium mt-4 leading-relaxed">
+              Selecciona tu ciudad para consultar historias locales, aeropuertos y precios de envío garantizado.
             </p>
           </div>
 
           {/* Search Bar & Country Filter */}
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
             <div className="relative flex-1 sm:w-72">
-              <Search className="w-5 h-5 text-obsidian/50 dark:text-canvas/50 absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Buscar ciudad o país..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-transparent border border-obsidian/20 dark:border-canvas/20 rounded-pill text-sm font-medium text-obsidian dark:text-canvas focus:outline-none focus:border-obsidian dark:focus:border-canvas transition-colors placeholder-obsidian/40 dark:placeholder-canvas/40"
+                className="w-full pl-12 pr-6 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-bold text-gray-800 dark:text-gray-100 focus:outline-none focus:border-cornflower focus:ring-2 focus:ring-cornflower/20 transition-all shadow-sm"
               />
             </div>
 
             <select
               value={countryFilter}
               onChange={(e) => setCountryFilter(e.target.value)}
-              className="bg-transparent border border-obsidian/20 dark:border-canvas/20 rounded-pill px-6 py-4 text-sm font-bold text-obsidian dark:text-canvas focus:outline-none focus:border-obsidian dark:focus:border-canvas transition-colors appearance-none cursor-pointer"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-6 py-4 text-sm font-bold text-gray-800 dark:text-gray-100 focus:outline-none focus:border-cornflower transition-all shadow-sm appearance-none cursor-pointer"
             >
-              <option value="todos" className="text-obsidian">Todos los Países</option>
+              <option value="todos">Todos los Países</option>
               {countries.map(c => (
-                <option key={c} value={c} className="text-obsidian">{c}</option>
+                <option key={c} value={c}>{c}</option>
               ))}
             </select>
           </div>
@@ -98,24 +98,24 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity, onSelectCity
                 }}
                 key={c.slug}
                 onClick={() => onSelectCityBySlug(c.slug)}
-                className={`p-5 rounded-card border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between h-[100px] group ${
+                className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between h-[100px] group ${
                   isSelected
-                    ? 'bg-obsidian text-canvas border-obsidian dark:bg-canvas dark:text-obsidian dark:border-canvas shadow-none'
-                    : 'bg-transparent border-obsidian/10 text-obsidian dark:border-canvas/10 dark:text-canvas hover:border-obsidian/30 dark:hover:border-canvas/30'
+                    ? 'bg-cornflower text-white border-cornflower shadow-lg transform -translate-y-1'
+                    : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-800 dark:text-gray-100 hover:shadow-md hover:border-cornflower/50 hover:-translate-y-1'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
-                  <span className={`text-[9px] uppercase font-bold tracking-widest ${isSelected ? 'opacity-80' : 'opacity-50 group-hover:opacity-80'}`}>
+                  <span className={`text-[10px] uppercase font-bold tracking-wider ${isSelected ? 'text-white/90' : 'text-gray-400'}`}>
                     {c.pais}
                   </span>
-                  <MapPin className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'opacity-100 text-electric-yellow' : 'opacity-40'}`} />
+                  <MapPin className={`w-4 h-4 shrink-0 ${isSelected ? 'text-white' : 'text-cornflower/60'}`} />
                 </div>
                 
                 <div className="flex items-center justify-between w-full mt-2">
-                  <span className="text-sm font-serif font-bold truncate">
+                  <span className="text-sm font-bold truncate">
                     {ciudadNombre}
                   </span>
-                  <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? 'opacity-100' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0'}`} />
+                  <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? 'opacity-100' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-cornflower'}`} />
                 </div>
               </motion.button>
             );

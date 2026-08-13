@@ -8,30 +8,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Drop.io Theme (Flat, No transparency)
-        obsidian: '#101010',
+        cornflower: '#6B90FF',
+        obsidian: '#1f2937', // Softer black (gray-800)
         canvas: '#ffffff',
-        carbon: '#1a1a1a',
-        'mint-cream': '#e5ede4',
-        'sage-mist': '#c7d8c5',
-        'ash-gray': '#9b9b9b',
-        'lavender-mist': '#b8afda',
-        'ember-orange': '#eb652b',
-        'electric-yellow': '#f6f361',
+        carbon: '#f3f4f6', // gray-100
+        'lavender-mist': '#e0e7ff', // indigo-100
       },
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        header: ['Nunito', 'sans-serif'], // Bubbly/round font for headers
         sans: ['Inter', 'sans-serif'],
       },
-      borderRadius: {
-        'pill': '1440px',
-        'card': '16px',
-        'card-lg': '24px',
-        'card-xl': '40px',
+      animation: {
+        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+        'ping': 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
-      letterSpacing: {
-        'tighter': '-0.04em',
-        'tight': '-0.02em',
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
       }
     },
   },

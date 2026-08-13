@@ -65,134 +65,116 @@ export const App: React.FC = () => {
         onOpenQuiz={() => setQuizOpen(true)}
       />
 
-      {/* Hero Section VIP Programática (Light Section) */}
-      <section className="section-light relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
-            {/* Left Content Column */}
-            <motion.div 
-              className="lg:col-span-6 space-y-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
-              }}
-            >
-              
-              {/* Badges Fluffy VIP */}
-              <motion.div variants={fadeUpVariant} className="flex flex-wrap items-center gap-3">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-lavender-mist dark:bg-carbon rounded-pill text-[11px] font-bold text-obsidian dark:text-canvas uppercase tracking-widest border border-obsidian/10 dark:border-canvas/10">
-                  <Sparkles className="w-4 h-4 text-obsidian dark:text-electric-yellow" />
-                  <span>Genética Exclusiva L4/L1</span>
-                </div>
-                {selectedCity && (
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-transparent border border-obsidian dark:border-canvas rounded-pill text-[11px] font-bold text-obsidian dark:text-canvas uppercase tracking-widest">
-                    <Plane className="w-4 h-4 text-obsidian dark:text-canvas" />
-                    <span>{selectedCity.aeropuerto}</span>
-                  </div>
-                )}
-              </motion.div>
+      {/* Hero Section VIP Programática */}
+      <section className="relative w-full bg-blue-50 dark:bg-gray-900 py-20 px-4 md:px-0 border-b border-blue-100 dark:border-gray-800 overflow-hidden">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
+          
+          {/* Left Content Column */}
+          <motion.div 
+            className="md:w-1/2 flex flex-col items-start gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
+          >
+            {/* Ping Tag */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-gray-800 rounded-full shadow-sm text-xs font-bold text-cornflower border border-blue-100 dark:border-gray-700">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cornflower opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cornflower"></span>
+              </span>
+              Genética Exclusiva {selectedCity ? selectedCity.aeropuerto : 'VIP'}
+            </div>
 
-              {/* Dynamic H1 from CSV */}
-              <motion.h1 variants={fadeUpVariant} className="editorial-display flex flex-wrap gap-x-4 gap-y-2">
-                <span>{selectedCity ? selectedCity.tituloH1.split('Fluffy')[0] : 'Bulldog Francés '}</span>
-                <span className="text-ember-orange">Fluffy</span>
-              </motion.h1>
+            {/* Gradient Title */}
+            <h1 className="display-title">
+              {selectedCity ? selectedCity.tituloH1.split('Fluffy')[0] : 'Bulldog Francés '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cornflower to-blue-400 block sm:inline">
+                Fluffy
+              </span>
+            </h1>
 
-              {/* Dynamic Meta Description from CSV */}
-              <motion.p variants={fadeUpVariant} className="text-lg sm:text-xl text-obsidian/70 dark:text-canvas/70 font-light leading-[1.4] max-w-xl">
-                {selectedCity ? selectedCity.metaDescripcion : 'Criadero de lujo especializado en ejemplares puros de Bulldog Francés Fluffy con pelaje abundante, pedigree internacional y entrega coordinada.'}
-              </motion.p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed font-medium">
+              {selectedCity ? selectedCity.metaDescripcion : 'Criadero especializado en ejemplares de Bulldog Francés Fluffy con pedigree internacional y entrega coordinada.'}
+            </p>
 
-              {/* CTAs */}
-              <motion.div variants={fadeUpVariant} className="flex flex-wrap items-center gap-4 pt-4">
-                <a
-                  href={`https://wa.me/573164822477?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP%20sobre%20los%20cachorros%20en%20${encodeURIComponent(selectedCity?.tituloH1 || 'mi ciudad')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pill-button-primary bg-obsidian text-canvas dark:bg-canvas dark:text-obsidian text-sm sm:text-base px-8 py-4"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Consultar Disponibilidad</span>
-                </a>
-                <button
-                  onClick={() => setQuizOpen(true)}
-                  className="pill-button-ghost text-sm sm:text-base px-8 py-4"
-                >
-                  Hacer Quiz Recomendador
-                </button>
-              </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
+              <a
+                href={`https://wa.me/573164822477?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP%20sobre%20los%20cachorros%20en%20${encodeURIComponent(selectedCity?.tituloH1 || 'mi ciudad')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-full sm:w-auto"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Consultar Disponibilidad</span>
+              </a>
+              <button
+                onClick={() => setQuizOpen(true)}
+                className="btn-ghost w-full sm:w-auto"
+              >
+                Hacer Quiz
+              </button>
+            </div>
+          </motion.div>
 
-            </motion.div>
-
-            {/* Right Hero Image Card - Split Card Pair */}
-            <motion.div 
-              className="lg:col-span-6 grid grid-cols-2 gap-4 h-[500px]"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-            >
-              <div className="editorial-card-dark h-full relative overflow-hidden flex flex-col justify-end p-6">
-                 <img
-                    src="/images/fluffy-showcase-hero.jpg"
-                    alt="Fluffy VIP Showcase"
-                    className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
-                  />
-                  <div className="relative z-10">
-                    <span className="inline-block px-3 py-1 bg-canvas text-obsidian text-[10px] uppercase font-bold tracking-widest rounded-pill mb-2">
-                      Exótico
-                    </span>
-                    <h3 className="text-canvas font-serif text-2xl font-bold">Línea VIP</h3>
-                  </div>
+          {/* Right Hero Image Card */}
+          <motion.div 
+            className="md:w-1/2 relative w-full h-full min-h-[350px] md:min-h-[450px] mt-8 md:mt-0"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
+            <div className="absolute inset-0 bg-blue-200 dark:bg-cornflower/20 rounded-full blur-3xl opacity-50 transform translate-y-10 translate-x-10"></div>
+            <img
+              src="/images/fluffy-showcase-hero.jpg"
+              alt="Fluffy VIP Showcase"
+              className="absolute inset-0 w-full h-full object-cover z-10 rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800 transform -rotate-2 hover:rotate-0 transition-transform duration-500"
+            />
+            {/* Flotante de Garantía */}
+            <div className="absolute bottom-4 -left-2 sm:-left-6 right-2 sm:right-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 flex items-center gap-3 sm:gap-4 z-20 animate-fade-in-up max-w-[calc(100%-1rem)]">
+              <div className="bg-blue-100 dark:bg-blue-900/30 p-2 sm:p-3 rounded-full text-cornflower shrink-0">
+                <ShieldCheck className="w-6 h-6" />
               </div>
-              
-              <div className="editorial-card-lavender h-full relative overflow-hidden flex flex-col justify-end p-6 dark:bg-carbon dark:text-canvas">
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian/40 to-transparent"></div>
-                  <div className="relative z-10">
-                    <span className="inline-block px-3 py-1 bg-obsidian text-canvas text-[10px] uppercase font-bold tracking-widest rounded-pill mb-2">
-                      Garantía
-                    </span>
-                    <h3 className="text-obsidian dark:text-canvas font-serif text-2xl font-bold">Pureza 100%</h3>
-                  </div>
+              <div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 font-bold uppercase">Garantía Genética</p>
+                <p className="text-sm font-bold text-gray-800 dark:text-gray-100">L4/L1 100% Puros</p>
               </div>
-            </motion.div>
-
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Brand Logo Strip */}
-      <section className="py-10 border-y border-obsidian/10 dark:border-canvas/10 bg-canvas dark:bg-obsidian">
-        <div className="max-w-[1200px] mx-auto px-4 flex justify-between items-center opacity-60 dark:opacity-40 grayscale gap-8 overflow-hidden">
-          <span className="font-serif text-xl sm:text-2xl font-bold">Dinastía</span>
-          <span className="font-serif text-xl sm:text-2xl font-bold">AKC</span>
-          <span className="font-serif text-xl sm:text-2xl font-bold">FCI</span>
-          <span className="font-serif text-xl sm:text-2xl font-bold hidden sm:block">PetTravel</span>
-          <span className="font-serif text-xl sm:text-2xl font-bold hidden md:block">VetCare</span>
+      <section className="py-10 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+        <div className="max-w-[1200px] mx-auto px-4 flex justify-between items-center opacity-50 grayscale gap-8 overflow-hidden">
+          <span className="font-header text-xl sm:text-2xl font-extrabold text-gray-400">Dinastía</span>
+          <span className="font-header text-xl sm:text-2xl font-extrabold text-gray-400">AKC</span>
+          <span className="font-header text-xl sm:text-2xl font-extrabold text-gray-400">FCI</span>
+          <span className="font-header text-xl sm:text-2xl font-extrabold text-gray-400 hidden sm:block">PetTravel</span>
+          <span className="font-header text-xl sm:text-2xl font-extrabold text-gray-400 hidden md:block">VetCare</span>
         </div>
       </section>
 
-      {/* Dynamic Local Story Block (Dark Section) */}
+      {/* Dynamic Local Story Block */}
       {selectedCity && (
-        <section className="section-dark">
+        <section className="py-20 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariant}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <div className="inline-block px-4 py-2 bg-electric-yellow dark:bg-carbon text-obsidian dark:text-electric-yellow rounded-pill text-[11px] font-bold uppercase tracking-widest mb-6 border border-obsidian dark:border-electric-yellow/30">
+              <div className="inline-block px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-4">
                 Historia Local
               </div>
-              <h2 className="editorial-display flex flex-col items-center gap-2">
-                <span className="text-canvas">LA HISTORIA</span>
-                <span className="text-ember-orange">{selectedCity.tituloH1.split('Fluffy')[1] || selectedCity.pais}</span>
+              <h2 className="font-header font-bold text-3xl sm:text-4xl text-gray-800 dark:text-gray-100">
+                La historia en <span className="text-transparent bg-clip-text bg-gradient-to-r from-cornflower to-blue-400">{selectedCity.tituloH1.split('Fluffy')[1] || selectedCity.pais}</span>
               </h2>
             </motion.div>
 
@@ -203,8 +185,8 @@ export const App: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="max-w-4xl mx-auto"
             >
-              <div className="editorial-card-light bg-carbon text-canvas border-obsidian dark:bg-obsidian dark:border-canvas/20">
-                <p className="text-lg sm:text-2xl font-light leading-[1.5] text-canvas/80">
+              <div className="playful-card text-center">
+                <p className="text-lg sm:text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
                   {selectedCity.historiaLocal}
                 </p>
               </div>
