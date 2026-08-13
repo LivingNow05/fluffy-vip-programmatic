@@ -122,7 +122,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 Asesoría VIP
               </h3>
             </div>
-            <p className="text-sm text-blue-100 font-medium opacity-90 relative z-10">
+            <p className="text-sm text-cornflower font-medium opacity-90 relative z-10">
               Unos pasos para enviarte opciones exactas.
             </p>
           </div>
@@ -149,7 +149,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 
                 <div className="text-[13px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
                   Hacemos entregas personales a nivel nacional e internacional.<br/>
-                  <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-indigo-500/20 inline-block text-left text-xs">
+                  <div className="bg-cornflower/10 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-indigo-500/20 inline-block text-left text-xs">
                     {country === "Colombia" ? (
                       <>🚚 <b>Nota de logística:</b> El precio de envío VIP aproximado oscila entre <b>$60.000 COP y $500.000 COP</b> dependiendo de la ciudad de destino.</>
                     ) : (
@@ -169,7 +169,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 
                 <button 
                   onClick={handleCitySubmit}
-                  className="w-full bg-cornflower hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-cornflower/20"
+                  className="w-full bg-cornflower hover:bg-cornflower/10 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-cornflower/20"
                 >
                   Siguiente
                 </button>
@@ -186,7 +186,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => handleAnswer('mantoPref', 'Signature (Fawn/Black)')}
-                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group"
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-bold text-obsidian dark:text-canvas group-hover:text-indigo-500">Signature</span>
@@ -197,7 +197,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
 
                   <button 
                     onClick={() => handleAnswer('mantoPref', 'Exotic VIP (Blue/Lilac)')}
-                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group relative overflow-hidden"
+                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group relative overflow-hidden"
                   >
                     <div className="absolute top-0 right-0 w-16 h-16 bg-indigo-500/10 rounded-full blur-xl"></div>
                     <div className="flex items-center justify-between mb-1 relative z-10">
@@ -233,7 +233,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="grid grid-cols-2 gap-4">
                   <button 
                     onClick={() => handleAnswer('housing', 'apartamento')}
-                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
                       <Building2 className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
@@ -242,7 +242,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                   </button>
                   <button 
                     onClick={() => handleAnswer('housing', 'casa')}
-                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
                       <Home className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
@@ -263,7 +263,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="grid grid-cols-2 gap-4">
                   <button 
                     onClick={() => handleAnswer('kids', 'si')}
-                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
                       <Baby className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
@@ -272,7 +272,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                   </button>
                   <button 
                     onClick={() => handleAnswer('kids', 'no')}
-                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                    className="flex flex-col items-center justify-center gap-4 p-6 border-2 border-gray-100 dark:border-gray-700 rounded-3xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-full group-hover:scale-110 transition-transform group-hover:bg-white dark:group-hover:bg-gray-700 shadow-sm">
                       <Users className="w-8 h-8 text-gray-400 group-hover:text-indigo-500 transition-colors" />
@@ -293,7 +293,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => handleAnswer('experience', 'principiante')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
                       <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Sparkles className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
@@ -307,7 +307,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
                   
                   <button 
                     onClick={() => handleAnswer('experience', 'intermedio')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
                       <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><ShieldCheck className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
@@ -321,7 +321,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
 
                   <button 
                     onClick={() => handleAnswer('experience', 'avanzado')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
                     <div className="flex items-center gap-4">
                       <div className="bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl group-hover:bg-white dark:group-hover:bg-gray-700"><Star className="w-5 h-5 text-gray-400 group-hover:text-indigo-500" /></div>
@@ -346,30 +346,30 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => handleAnswer('gender', 'Macho')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower/20 hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Macho ♂️</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-cornflower">Macho ♂️</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-cornflower/10">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>
                   
                   <button 
                     onClick={() => handleAnswer('gender', 'Hembra')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower/20 hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Hembra ♀️</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-cornflower">Hembra ♀️</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-cornflower/10">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>
 
                   <button 
                     onClick={() => handleAnswer('gender', 'Indiferente')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower/20 hover:bg-cornflower/10 dark:hover:bg-cornflower/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Me es indiferente 🐾</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-cornflower">Me es indiferente 🐾</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-cornflower/10">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>

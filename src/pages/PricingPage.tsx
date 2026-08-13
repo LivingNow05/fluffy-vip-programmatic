@@ -84,7 +84,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
               </li>
             ))}
           </ul>
-          <button onClick={() => onOpenQuiz("Exotic VIP (Blue/Lilac)")} className="w-full py-4 rounded-2xl bg-cornflower text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-cornflower/30">
+          <button onClick={() => onOpenQuiz("Exotic VIP (Blue/Lilac)")} className="w-full py-4 rounded-2xl bg-cornflower text-white font-bold hover:bg-cornflower/10 transition-colors shadow-lg shadow-cornflower/30">
             Consultar Disponibilidad
           </button>
         </motion.div>
@@ -121,7 +121,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
       </div>
       
       {/* Footer Trust Banner */}
-      <div className="bg-blue-50/50 dark:bg-gray-800/50 border border-indigo-500/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-cornflower/10 dark:bg-gray-800/50 border border-indigo-500/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <ShieldCheck className="w-12 h-12 text-indigo-500" />
           <div>
