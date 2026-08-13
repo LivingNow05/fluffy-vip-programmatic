@@ -13,12 +13,12 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
     <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 pt-12">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
           <Sparkles className="w-4 h-4" />
           <span>Inversión Transparente</span>
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-header mb-6 leading-[1.1] text-obsidian dark:text-canvas text-balance">
-          Valor y Exclusividad <span className="text-cornflower">Garantizada</span>
+          Valor y Exclusividad <span className="text-amber-500">Garantizada</span>
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8">
           Adquirir un Fluffy no es solo comprar un perro, es integrar a un miembro VIP a tu familia. Conoce nuestras categorías genéticas.
@@ -47,7 +47,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <ul className="space-y-4 mb-8">
             {['Pedigree de pureza L4/L1', 'Garantía de salud viral (15 días)', 'Esquema de vacunas completo', 'Chip de identificación'].map((f, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                 <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{f}</span>
               </li>
             ))}
@@ -65,11 +65,11 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           className="bg-obsidian dark:bg-gray-900 rounded-3xl p-8 border border-obsidian shadow-2xl relative overflow-hidden transform md:-translate-y-4"
         >
           <div className="absolute top-0 right-0 p-4">
-            <Award className="w-6 h-6 text-cornflower" />
+            <Award className="w-6 h-6 text-amber-500" />
           </div>
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-cornflower/20 rounded-full blur-3xl"></div>
+          <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/20 rounded-full blur-3xl"></div>
           
-          <div className="inline-block px-3 py-1 bg-cornflower/20 text-cornflower rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Más Solicitado</div>
+          <div className="inline-block px-3 py-1 bg-amber-500/20 text-amber-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Más Solicitado</div>
           <h3 className="text-2xl font-bold font-header text-white mb-2">Exotic VIP</h3>
           <p className="text-sm text-gray-400 mb-6 min-h-[40px]">Colores exóticos con dilución (Blue, Lilac, Merle).</p>
           <div className="mb-8">
@@ -79,7 +79,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <ul className="space-y-4 mb-8">
             {['Todo lo del plan Signature', 'Exámenes de ADN estructural', 'Garantía congénita extendida (1 año)', 'Traslado aéreo nacional VIP (Cabina)'].map((f, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                 <span className="text-sm text-gray-300 font-medium">{f}</span>
               </li>
             ))}
@@ -108,7 +108,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <ul className="space-y-4 mb-8">
             {['Todo lo del plan Exotic VIP', 'Selección prioritaria de camada', 'Kit de bienvenida Premium', 'Trámite de exportación internacional'].map((f, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                 <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{f}</span>
               </li>
             ))}
@@ -121,9 +121,9 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
       </div>
       
       {/* Footer Trust Banner */}
-      <div className="bg-blue-50/50 dark:bg-gray-800/50 border border-cornflower/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-blue-50/50 dark:bg-gray-800/50 border border-amber-500/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <ShieldCheck className="w-12 h-12 text-cornflower" />
+          <ShieldCheck className="w-12 h-12 text-amber-500" />
           <div>
             <h4 className="font-bold text-obsidian dark:text-canvas text-lg">Pagos Seguros y Flexibles</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">Aceptamos transferencias internacionales, Zelle y tarjetas de crédito.</p>

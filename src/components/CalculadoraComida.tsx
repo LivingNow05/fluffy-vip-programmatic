@@ -47,7 +47,7 @@ export const CalculadoraComida: React.FC = () => {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
             }}
           >
-            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-cornflower uppercase tracking-widest shadow-sm">
+            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-amber-500 uppercase tracking-widest shadow-sm">
               <Utensils className="w-4 h-4" />
               <span>Nutrición Especializada Fluffy</span>
             </motion.div>
@@ -62,13 +62,13 @@ export const CalculadoraComida: React.FC = () => {
 
             <motion.div variants={fadeUpVariant} className="space-y-4 pt-4">
               <div className="flex items-start gap-4 p-5 playful-card">
-                <CheckCircle2 className="w-6 h-6 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-6 h-6 text-amber-500 shrink-0" />
                 <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   <strong className="block text-gray-800 dark:text-gray-100 font-bold mb-1">Refuerzo Capilar:</strong> Ración rica en salmón y aceite de coco para estimular el crecimiento sano del folículo L4.
                 </div>
               </div>
               <div className="flex items-start gap-4 p-5 playful-card">
-                <CheckCircle2 className="w-6 h-6 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-6 h-6 text-amber-500 shrink-0" />
                 <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   <strong className="block text-gray-800 dark:text-gray-100 font-bold mb-1">Control Digestivo:</strong> Croqueta hidráulica o Dieta BARF adaptada a la mandíbula braquiocefálica.
                 </div>
@@ -86,7 +86,7 @@ export const CalculadoraComida: React.FC = () => {
           >
             <div className="playful-card p-8 sm:p-10">
               <h3 className="font-header text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800 dark:text-gray-100">
-                <Scale className="w-6 h-6 text-cornflower" />
+                <Scale className="w-6 h-6 text-amber-500" />
                 Calcula la Ración Diaria
               </h3>
 
@@ -95,7 +95,7 @@ export const CalculadoraComida: React.FC = () => {
                 <div>
                   <div className="flex justify-between text-sm font-bold mb-4 uppercase tracking-wider">
                     <span className="text-gray-500 dark:text-gray-400">Peso del Fluffy</span>
-                    <span className="text-cornflower dark:text-cornflower">{peso} kg</span>
+                    <span className="text-amber-500 dark:text-amber-500">{peso} kg</span>
                   </div>
                   <input
                     type="range"
@@ -112,7 +112,7 @@ export const CalculadoraComida: React.FC = () => {
                 <div>
                   <div className="flex justify-between text-sm font-bold mb-4 uppercase tracking-wider">
                     <span className="text-gray-500 dark:text-gray-400">Edad del Cachorro/Adulto</span>
-                    <span className="text-cornflower dark:text-cornflower">{edadMeses} meses</span>
+                    <span className="text-amber-500 dark:text-amber-500">{edadMeses} meses</span>
                   </div>
                   <input
                     type="range"

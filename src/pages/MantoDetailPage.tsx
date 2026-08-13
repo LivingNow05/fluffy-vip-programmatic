@@ -32,11 +32,11 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
   return (
     <main className="max-w-[1100px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       <div className="py-3 text-sm font-medium border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 mb-6 flex gap-2 items-center">
-        <Link to="/" className="hover:text-cornflower transition-colors">Inicio</Link>
+        <Link to="/" className="hover:text-amber-500 transition-colors">Inicio</Link>
         <span>/</span>
         <span className="text-gray-400">Mantos & Variedades</span>
         <span>/</span>
-        <span className="text-cornflower font-bold">{manto.nombre}</span>
+        <span className="text-amber-500 font-bold">{manto.nombre}</span>
       </div>
 
       <article className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
@@ -52,7 +52,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
         </div>
 
         <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-cornflower/20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-amber-500/20">
             <Dna className="w-4 h-4" />
             <span>Genética Exótica Certificada</span>
           </div>
@@ -61,7 +61,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
             {manto.nombre}
           </h1>
 
-          <div className="inline-block bg-lavender-mist dark:bg-gray-800 text-cornflower dark:text-blue-300 font-mono font-bold text-sm px-4 py-2 rounded-xl mb-6 border border-cornflower/20">
+          <div className="inline-block bg-lavender-mist dark:bg-gray-800 text-amber-500 dark:text-blue-300 font-mono font-bold text-sm px-4 py-2 rounded-xl mb-6 border border-amber-500/20">
             {manto.genetica}
           </div>
 
@@ -73,7 +73,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
             <h3 className="text-xs font-bold uppercase text-gray-400 tracking-wider mb-4">Especificaciones de la Raza:</h3>
             {manto.caracteristicas.map((c, idx) => (
               <div key={idx} className="flex items-center gap-3 text-base font-bold text-obsidian dark:text-canvas">
-                <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                 <span>{c}</span>
               </div>
             ))}
@@ -97,7 +97,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
 
       <section className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-8 sm:p-12 mb-16 shadow-sm">
         <div className="max-w-3xl mb-8">
-          <span className="text-xs font-bold text-cornflower uppercase tracking-widest block mb-2">Conocimiento de Raza</span>
+          <span className="text-xs font-bold text-amber-500 uppercase tracking-widest block mb-2">Conocimiento de Raza</span>
           <h2 className="text-3xl font-header font-bold text-obsidian dark:text-canvas mb-4">
             Cuidados y Estándar Genético de la variedad {manto.nombre}
           </h2>
@@ -108,17 +108,17 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
 
         <div className="grid sm:grid-cols-3 gap-6">
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-            <Award className="w-8 h-8 text-cornflower mb-3" />
+            <Award className="w-8 h-8 text-amber-500 mb-3" />
             <h4 className="font-bold text-base mb-1 text-obsidian dark:text-canvas">Pedigree Oficial</h4>
             <p className="text-xs text-gray-500 dark:text-gray-400">Registro genealógico de pureza de sangre garantizado.</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-            <ShieldCheck className="w-8 h-8 text-cornflower mb-3" />
+            <ShieldCheck className="w-8 h-8 text-amber-500 mb-3" />
             <h4 className="font-bold text-base mb-1 text-obsidian dark:text-canvas">Salud Certificada</h4>
             <p className="text-xs text-gray-500 dark:text-gray-400">Esquema de vacunas completas y prueba libre de patologías congénitas.</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
-            <HeartHandshake className="w-8 h-8 text-cornflower mb-3" />
+            <HeartHandshake className="w-8 h-8 text-amber-500 mb-3" />
             <h4 className="font-bold text-base mb-1 text-obsidian dark:text-canvas">Acompañamiento VIP</h4>
             <p className="text-xs text-gray-500 dark:text-gray-400">Asesoría continua sobre nutrición y mantenimiento del pelo largo.</p>
           </div>
@@ -128,10 +128,10 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
       <section className="mt-16">
         <div className="flex justify-between items-end mb-8">
           <div>
-            <span className="text-xs font-bold text-cornflower uppercase tracking-widest block mb-1">Colección Fluffy</span>
+            <span className="text-xs font-bold text-amber-500 uppercase tracking-widest block mb-1">Colección Fluffy</span>
             <h3 className="text-3xl font-header font-bold text-obsidian dark:text-canvas">Otras Variedades Populares</h3>
           </div>
-          <Link to="/" className="text-cornflower font-bold text-sm hover:underline flex items-center gap-1">
+          <Link to="/" className="text-amber-500 font-bold text-sm hover:underline flex items-center gap-1">
             <span>Ver Todo</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
@@ -147,7 +147,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <h4 className="font-bold text-base text-obsidian dark:text-canvas group-hover:text-cornflower transition-colors">
+              <h4 className="font-bold text-base text-obsidian dark:text-canvas group-hover:text-amber-500 transition-colors">
                 {m.nombre}
               </h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{m.genetica.split("+")[0]}</p>

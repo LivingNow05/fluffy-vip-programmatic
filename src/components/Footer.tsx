@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
                 <Dog className="w-6 h-6" />
               </div>
               <span className="font-header text-xl sm:text-2xl leading-none font-bold">
-                Dinastía <br/><span className="text-cornflower">Fluffy</span>
+                Dinastía <br/><span className="text-amber-500">Fluffy</span>
               </span>
             </div>
             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -29,11 +29,11 @@ export const Footer: React.FC = () => {
               Variedades Exóticas
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600 dark:text-gray-400">
-              <li><a href="#variedades" className="hover:text-cornflower transition-colors">Isabella Fluffy</a></li>
-              <li><a href="#variedades" className="hover:text-cornflower transition-colors">Blue Fluffy Signature</a></li>
-              <li><a href="#variedades" className="hover:text-cornflower transition-colors">Fluffy Cocoa Velvet</a></li>
-              <li><a href="#variedades" className="hover:text-cornflower transition-colors">Lilac Fluffy Imperial</a></li>
-              <li><a href="#variedades" className="hover:text-cornflower transition-colors">Fluffy Merle Exotic</a></li>
+              <li><a href="#variedades" className="hover:text-amber-500 transition-colors">Isabella Fluffy</a></li>
+              <li><a href="#variedades" className="hover:text-amber-500 transition-colors">Blue Fluffy Signature</a></li>
+              <li><a href="#variedades" className="hover:text-amber-500 transition-colors">Fluffy Cocoa Velvet</a></li>
+              <li><a href="#variedades" className="hover:text-amber-500 transition-colors">Lilac Fluffy Imperial</a></li>
+              <li><a href="#variedades" className="hover:text-amber-500 transition-colors">Fluffy Merle Exotic</a></li>
             </ul>
           </div>
 
@@ -43,10 +43,10 @@ export const Footer: React.FC = () => {
               Herramientas & Salud
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600 dark:text-gray-400">
-              <li><a href="#calculadora-nutricion" className="hover:text-cornflower transition-colors">Calculadora Nutricional</a></li>
-              <li><a href="#eeat-garantia" className="hover:text-cornflower transition-colors">Garantía Veterinaria & ADN</a></li>
-              <li><a href="#ciudades-hub" className="hover:text-cornflower transition-colors">Destinos & Aeropuertos</a></li>
-              <li><a href="#precios" className="hover:text-cornflower transition-colors">Precios VIP</a></li>
+              <li><a href="#calculadora-nutricion" className="hover:text-amber-500 transition-colors">Calculadora Nutricional</a></li>
+              <li><a href="#eeat-garantia" className="hover:text-amber-500 transition-colors">Garantía Veterinaria & ADN</a></li>
+              <li><a href="#ciudades-hub" className="hover:text-amber-500 transition-colors">Destinos & Aeropuertos</a></li>
+              <li><a href="#precios" className="hover:text-amber-500 transition-colors">Precios VIP</a></li>
             </ul>
           </div>
 

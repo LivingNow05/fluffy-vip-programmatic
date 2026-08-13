@@ -43,7 +43,7 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full text-[11px] font-bold text-cornflower uppercase tracking-widest mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full text-[11px] font-bold text-amber-500 uppercase tracking-widest mb-6 shadow-sm">
             <Plane className="w-4 h-4" />
             <span>Protocolo de Entrega VIP</span>
           </div>
@@ -71,7 +71,7 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between font-header text-xl font-bold text-gray-800 dark:text-gray-100 hover:text-cornflower transition-colors cursor-pointer"
+                  className="w-full p-6 text-left flex items-center justify-between font-header text-xl font-bold text-gray-800 dark:text-gray-100 hover:text-amber-500 transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-4">
                     <Check className={`w-5 h-5 transition-colors ${isOpen ? 'text-cornflower' : 'text-gray-300 dark:text-gray-600'}`} />

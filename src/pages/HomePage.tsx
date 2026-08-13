@@ -17,13 +17,13 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           
           {/* Columna Izquierda */}
           <div className="w-full md:w-7/12 lg:w-7/12 text-left pr-0 lg:pr-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-cornflower/20">
-              <Sparkles className="w-4 h-4 text-cornflower" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-amber-500/20">
+              <Sparkles className="w-4 h-4 text-amber-500" />
               <span>Criadero VIP Especializado</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-header mb-6 leading-[1.1] text-obsidian dark:text-canvas text-balance">
-              Bulldog Francés <span className="text-cornflower">Fluffy</span>
+              Bulldog Francés <span className="text-amber-500">Fluffy</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 max-w-xl">
@@ -41,7 +41,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
               <button
                 onClick={onOpenQuiz}
-                className="group px-8 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:border-cornflower hover:text-cornflower dark:hover:border-cornflower dark:hover:text-cornflower transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-transparent hover:bg-blue-50/50 dark:hover:bg-blue-900/10 whitespace-nowrap"
+                className="group px-8 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:border-cornflower hover:text-amber-500 dark:hover:border-cornflower dark:hover:text-amber-500 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-transparent hover:bg-blue-50/50 dark:hover:bg-blue-900/10 whitespace-nowrap"
               >
                 Realizar Quiz Match 🐾
               </button>
@@ -50,15 +50,15 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             {/* Badges E-E-A-T */}
             <div className="flex gap-3 flex-wrap mt-12 pt-8 border-t border-gray-200/60 dark:border-gray-700/60">
               <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
-                <Dna className="w-4 h-4 text-cornflower" />
+                <Dna className="w-4 h-4 text-amber-500" />
                 <span>Gen L4/L1 Verificado</span>
               </div>
               <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-cornflower" />
+                <ShieldCheck className="w-4 h-4 text-amber-500" />
                 <span>Garantía de Salud Escrita</span>
               </div>
               <div className="flex items-center gap-2.5 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200/50 dark:border-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 shadow-sm">
-                <HeartHandshake className="w-4 h-4 text-cornflower" />
+                <HeartHandshake className="w-4 h-4 text-amber-500" />
                 <span>Asesoría VIP 24/7</span>
               </div>
             </div>

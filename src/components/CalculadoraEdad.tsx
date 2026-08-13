@@ -35,7 +35,7 @@ export const CalculadoraEdad: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             
             <div className="md:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 rounded-full text-[11px] font-bold text-cornflower uppercase tracking-widest shadow-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 rounded-full text-[11px] font-bold text-amber-500 uppercase tracking-widest shadow-sm">
                 <Clock className="w-4 h-4" />
                 <span>Etapas de Desarrollo Fluffy</span>
               </div>
@@ -81,7 +81,7 @@ export const CalculadoraEdad: React.FC = () => {
               <span className="text-[11px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-300 block mb-4">
                 Edad Humana Equivalente
               </span>
-              <span className="text-6xl font-header font-extrabold text-cornflower block mb-6">
+              <span className="text-6xl font-header font-extrabold text-amber-500 block mb-6">
                 ~{edadHumana} <span className="text-3xl text-gray-400 dark:text-gray-400">Años</span>
               </span>
               <p className="text-sm font-medium text-gray-600 dark:text-gray-300 leading-relaxed">

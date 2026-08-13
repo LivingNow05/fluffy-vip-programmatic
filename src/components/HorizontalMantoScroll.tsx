@@ -25,7 +25,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Sparkles className="w-4 h-4" />
               <span>Colección Exclusiva por Color</span>
             </div>
@@ -73,7 +73,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
                 </div>
 
                 {/* Card Meta */}
-                <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 group-hover/card:text-cornflower transition-colors">
+                <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 group-hover/card:text-amber-500 transition-colors">
                   {manto.nombre}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Desde ${manto.precioEstimadoUSD} USD</p>
@@ -105,7 +105,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
                   </div>
                 </div>
 
-                <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 group-hover/card:text-cornflower transition-colors">
+                <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 group-hover/card:text-amber-500 transition-colors">
                   {manto.nombre}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Desde ${manto.precioEstimadoUSD} USD</p>
