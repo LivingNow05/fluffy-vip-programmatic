@@ -36,7 +36,23 @@ export const App: React.FC = () => {
   const [selectedMantoModal, setSelectedMantoModal] = useState<FluffyManto | null>(null);
 
   const handleOpenQuiz = (context: {city?: string, manto?: string, country?: string} = {}) => {
-    setQuizContext(context);
+    let inferredCity = context.city;
+    let inferredCountry = context.country;
+    
+    if (!inferredCity) {
+      const slug = window.location.pathname.slice(1);
+      const currentCityData = cities.find(c => c.slug === slug);
+      if (currentCityData) {
+        inferredCity = currentCityData.tituloH1.replace("Bulldog Francés Fluffy en ", "");
+        inferredCountry = currentCityData.pais;
+      }
+    }
+
+    setQuizContext({
+      ...context,
+      city: inferredCity,
+      country: inferredCountry
+    });
     setQuizOpen(true);
   };
 
