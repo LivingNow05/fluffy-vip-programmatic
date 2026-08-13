@@ -10,6 +10,7 @@ import { QuizModal } from './components/QuizModal';
 import { EeatSection } from './components/EeatSection';
 import { GeoHubGrid } from './components/GeoHubGrid';
 import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
 import { FluffyCityPage } from './pages/FluffyCityPage';
 import { motion } from 'framer-motion';
 import { Phone, CheckCircle2, X } from 'lucide-react';
@@ -48,7 +49,7 @@ export const App: React.FC = () => {
         />
 
         <Routes>
-          <Route path="/" element={<FluffyCityPage cities={cities} />} />
+          <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => setQuizOpen(true)} />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
@@ -115,7 +116,7 @@ export const App: React.FC = () => {
               </div>
 
               <a
-                href={`https://wa.me/573164822477?text=Hola,%20me%20interesa%20la%20variedad%20${encodeURIComponent(selectedMantoModal.nombre)}`}
+                href={'https://wa.me/573164822477?text=Hola,%20me%20interesa%20la%20variedad%20' + encodeURIComponent(selectedMantoModal.nombre)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full bg-[#25D366] hover:bg-[#1DA851] border-none text-white text-center justify-center"
