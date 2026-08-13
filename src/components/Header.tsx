@@ -57,10 +57,10 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-gray-700 dark:text-gray-300">
-          <Link to="/precios" className="hover:text-indigo-500 transition-colors">
+          <Link to="/precios" className="hover:text-cornflower transition-colors">
             Precios
           </Link>
-          <a href="#variedades" className="hover:text-indigo-500 transition-colors">
+          <a href="#variedades" className="hover:text-cornflower transition-colors">
             Mantos
           </a>
 
@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button 
-              className="flex items-center gap-1 hover:text-indigo-500 transition-colors py-2 cursor-pointer font-bold"
+              className="flex items-center gap-1 hover:text-cornflower transition-colors py-2 cursor-pointer font-bold"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <MapPin className="w-4 h-4" />
@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl p-6 grid grid-cols-4 gap-6 shadow-2xl">
                 {/* Column 1: Colombia */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🇨🇴 Colombia
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -94,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <Link
                           to={`/${c.slug}`}
                           onClick={() => setDropdownOpen(false)}
-                          className="hover:text-indigo-500 text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </Link>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Column 2: México */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🇲🇽 México
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -114,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <Link
                           to={`/${c.slug}`}
                           onClick={() => setDropdownOpen(false)}
-                          className="hover:text-indigo-500 text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </Link>
@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Column 3: Latam */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-3 flex items-center gap-1">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-cornflower mb-3 flex items-center gap-1">
                     🌎 Latam
                   </h4>
                   <ul className="space-y-3 text-sm font-medium">
@@ -134,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({
                         <Link
                           to={`/${c.slug}`}
                           onClick={() => setDropdownOpen(false)}
-                          className="hover:text-indigo-500 text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
+                          className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
                         </Link>
@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <a
                     href="#ciudades-hub"
                     onClick={() => setDropdownOpen(false)}
-                    className="text-xs font-bold text-indigo-500 hover:underline mt-4 block"
+                    className="text-xs font-bold text-cornflower hover:underline mt-4 block"
                   >
                     Ver 100+ Ciudades →
                   </a>
@@ -166,10 +166,10 @@ export const Header: React.FC<HeaderProps> = ({
           )}
         </div>
 
-          <a href="#calculadora-nutricion" className="hover:text-indigo-500 transition-colors">
+          <a href="#calculadora-nutricion" className="hover:text-cornflower transition-colors">
             Calculadora
           </a>
-          <a href="#eeat-garantia" className="hover:text-indigo-500 transition-colors">
+          <a href="#eeat-garantia" className="hover:text-cornflower transition-colors">
             Criadero
           </a>
         </nav>
