@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           {/* Col 1 */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <span className="font-header text-xl sm:text-2xl leading-none font-bold">
+              <span className="font-header text-3xl sm:text-4xl leading-none font-bold">
                 Dinastía <br/><span className="text-cornflower">Fluffy</span>
               </span>
             </div>
