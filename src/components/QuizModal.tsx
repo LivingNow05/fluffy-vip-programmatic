@@ -100,7 +100,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="bg-canvas dark:bg-carbon rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl relative border border-obsidian/10 dark:border-canvas/10 flex flex-col max-h-[90vh]"
+          className="bg-canvas dark:bg-obsidian rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl relative border border-obsidian/10 dark:border-canvas/10 flex flex-col max-h-[90vh]"
           onClick={handleModalClick}
         >
           {/* Header */}
