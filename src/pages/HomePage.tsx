@@ -12,7 +12,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       {/* HERO PRINCIPAL GENERAL */}
-      <section className="relative rounded-3xl bg-gradient-to-br from-blue-50/80 via-white to-cornflower/10 dark:from-gray-800 dark:via-gray-900 dark:to-blue-950/40 p-8 sm:p-12 md:p-16 border border-blue-100 dark:border-gray-800 mb-16 overflow-hidden shadow-xl">
+      <section className="relative rounded-3xl bg-gray-50 dark:bg-gray-800/50 p-8 sm:p-12 md:p-16 border border-gray-100 dark:border-gray-800 mb-16 overflow-hidden shadow-xl">
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 lg:gap-12 relative z-10">
           
           {/* Columna Izquierda */}
@@ -77,7 +77,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                 alt="Bulldog Francés Fluffy VIP"
                 className="hidden dark:block absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
             </div>
           </div>
 

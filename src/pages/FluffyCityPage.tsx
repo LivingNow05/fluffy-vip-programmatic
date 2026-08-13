@@ -121,7 +121,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                 alt="Bulldog Fluffy"
                 className="hidden dark:block absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-black/10"></div>
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-gray-100 dark:border-gray-700 hidden md:block z-10">
@@ -301,7 +301,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
         {/* RIGHT COLUMN (Sidebar) */}
         <div className="relative">
-          <div className="bg-gradient-to-b from-white to-amber-50/50 dark:from-gray-800 dark:to-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-[2rem] p-8 sticky top-[100px] shadow-xl">
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-[2rem] p-8 sticky top-[100px] shadow-xl">
             <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6">
               <Phone className="w-6 h-6 text-indigo-500" />
             </div>

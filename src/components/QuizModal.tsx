@@ -104,7 +104,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
           onClick={handleModalClick}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-cornflower to-blue-600 p-6 relative overflow-hidden shrink-0">
+          <div className="bg-cornflower p-6 relative overflow-hidden shrink-0">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
             
             <button 
