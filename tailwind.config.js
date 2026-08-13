@@ -15,8 +15,9 @@ export default {
         'lavender-mist': '#e0e7ff', // indigo-100
       },
       fontFamily: {
-        header: ['Nunito', 'sans-serif'], // Bubbly/round font for headers
+        header: ['Poppins', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
+        serif: ['Poppins', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
