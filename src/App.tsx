@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { parseFluffyCSV } from './utils/csvParser';
-import { FluffyStoryRow, FluffyManto } from './types/fluffy';
-import { Header } from './components/Header';
-import { HorizontalMantoScroll } from './components/HorizontalMantoScroll';
-import { CalculadoraComida } from './components/CalculadoraComida';
-import { CalculadoraEdad } from './components/CalculadoraEdad';
-import { QuizModal } from './components/QuizModal';
-import { EeatSection } from './components/EeatSection';
-import { GeoHubGrid } from './components/GeoHubGrid';
-import { Footer } from './components/Footer';
-import { HomePage } from './pages/HomePage';
-import { FluffyCityPage } from './pages/FluffyCityPage';
-import { motion } from 'framer-motion';
-import { Phone, CheckCircle2, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { parseFluffyCSV } from "./utils/csvParser";
+import { FluffyStoryRow, FluffyManto } from "./types/fluffy";
+import { Header } from "./components/Header";
+import { HorizontalMantoScroll } from "./components/HorizontalMantoScroll";
+import { CalculadoraComida } from "./components/CalculadoraComida";
+import { CalculadoraEdad } from "./components/CalculadoraEdad";
+import { QuizModal } from "./components/QuizModal";
+import { EeatSection } from "./components/EeatSection";
+import { GeoHubGrid } from "./components/GeoHubGrid";
+import { Footer } from "./components/Footer";
+import { HomePage } from "./pages/HomePage";
+import { FluffyCityPage } from "./pages/FluffyCityPage";
+import { MantoDetailPage } from "./pages/MantoDetailPage";
+import { motion } from "framer-motion";
+import { Phone, CheckCircle2, X } from "lucide-react";
 
 export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -23,9 +24,9 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
 
@@ -50,6 +51,7 @@ export const App: React.FC = () => {
 
         <Routes>
           <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => setQuizOpen(true)} />} />
+          <Route path="/manto/:id" element={<MantoDetailPage cities={cities} />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
@@ -116,7 +118,7 @@ export const App: React.FC = () => {
               </div>
 
               <a
-                href={'https://wa.me/573164822477?text=Hola,%20me%20interesa%20la%20variedad%20' + encodeURIComponent(selectedMantoModal.nombre)}
+                href={"https://wa.me/573164822477?text=Hola,%20me%20interesa%20la%20variedad%20" + encodeURIComponent(selectedMantoModal.nombre)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full bg-[#25D366] hover:bg-[#1DA851] border-none text-white text-center justify-center"

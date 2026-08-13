@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
-import { MANTOS_FLUFFY } from '../data/mantos';
-import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
-import { FluffyManto } from '../types/fluffy';
-import { motion } from 'framer-motion';
+import React, { useRef } from "react";
+import { MANTOS_FLUFFY } from "../data/mantos";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { FluffyManto } from "../types/fluffy";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface Props {
   onSelectManto: (manto: FluffyManto) => void;
@@ -11,13 +12,13 @@ interface Props {
 export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
       const scrollAmount = clientWidth * 0.75;
       scrollRef.current.scrollTo({
-        left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-        behavior: 'smooth',
+        left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+        behavior: "smooth",
       });
     }
   };
@@ -37,27 +38,27 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Sparkles className="w-4 h-4" />
-              <span>Colección Exclusiva</span>
+              <span>Colección Exclusiva por Color</span>
             </div>
             <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
-              Mantos & Genéticas
+              Mantos & Variedades
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 font-medium max-w-2xl leading-relaxed">
-              Desliza horizontalmente para explorar las variantes con pelaje sedoso y portación comprobada del gen L4/L1.
+              Haz clic en cualquier variedad para ver su ficha genética detallada, estándar E-E-A-T y disponibilidad.
             </p>
           </div>
 
           {/* Navigation Controls */}
           <div className="flex items-center gap-3 self-start md:self-auto shrink-0">
             <button
-              onClick={() => scroll('left')}
+              onClick={() => scroll("left")}
               className="p-4 rounded-full bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-cornflower text-gray-800 dark:text-gray-100 transition-all shadow-sm hover:shadow-md cursor-pointer"
               aria-label="Anterior"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              onClick={() => scroll('right')}
+              onClick={() => scroll("right")}
               className="p-4 rounded-full bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:border-cornflower text-gray-800 dark:text-gray-100 transition-all shadow-sm hover:shadow-md cursor-pointer"
               aria-label="Siguiente"
             >
@@ -78,10 +79,10 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
             className="flex gap-6 overflow-x-auto no-scrollbar pb-8 pt-2 snap-x snap-mandatory"
           >
             {MANTOS_FLUFFY.map((manto) => (
-              <div
+              <Link
                 key={manto.id}
-                onClick={() => onSelectManto(manto)}
-                className="snap-start shrink-0 w-[260px] sm:w-[300px] cursor-pointer group"
+                to={"/manto/" + manto.id}
+                className="snap-start shrink-0 w-[260px] sm:w-[300px] cursor-pointer group block"
               >
                 {/* Photo Showcase Container (Square) */}
                 <div className="aspect-square rounded-3xl overflow-hidden mb-4 relative shadow-md">
@@ -105,7 +106,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
                   {manto.nombre}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Desde ${manto.precioEstimadoUSD} USD</p>
-              </div>
+              </Link>
             ))}
           </div>
         </motion.div>
