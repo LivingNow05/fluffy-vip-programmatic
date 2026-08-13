@@ -183,15 +183,13 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Action Controls & Theme Toggle */}
         <div className="flex items-center gap-3">
           {/* WhatsApp CTA Button */}
-          <a
-            href="https://wa.me/573164822477?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={onOpenQuiz}
             className="hidden sm:flex btn-primary bg-[#25D366] hover:bg-[#20b858] text-white border-transparent"
           >
             <Phone className="w-4 h-4" />
             <span>WhatsApp VIP</span>
-          </a>
+          </button>
 
           {/* Theme Toggle Button */}
           <button
@@ -227,15 +225,16 @@ export const Header: React.FC<HeaderProps> = ({
             <a href="#eeat-garantia" onClick={() => setMobileMenuOpen(false)} className="block py-2">Garantía Criadero</a>
           </div>
 
-          <a
-            href="https://wa.me/573164822477"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              onOpenQuiz();
+            }}
             className="w-full flex items-center justify-center gap-2 btn-primary bg-[#25D366] hover:bg-[#20b858] text-white border-transparent"
           >
             <Phone className="w-4 h-4" />
             <span>Contacto WhatsApp VIP</span>
-          </a>
+          </button>
         </div>
       )}
     </header>
