@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { parseFluffyCSV } from "./utils/csvParser";
 import { FluffyStoryRow, FluffyManto } from "./types/fluffy";
 import { Header } from "./components/Header";
@@ -16,6 +16,15 @@ import { FluffyCityPage } from "./pages/FluffyCityPage";
 import { MantoDetailPage } from "./pages/MantoDetailPage";
 import { motion } from "framer-motion";
 import { Phone, CheckCircle2, X } from "lucide-react";
+
+
+const ConditionalMantoScroll = ({ onSelectManto }: { onSelectManto: (m: FluffyManto) => void }) => {
+  const location = useLocation();
+  if (location.pathname.startsWith("/manto/")) {
+    return null;
+  }
+  return <HorizontalMantoScroll onSelectManto={onSelectManto} />;
+};
 
 export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -58,7 +67,7 @@ export const App: React.FC = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
-        <HorizontalMantoScroll onSelectManto={(m) => setSelectedMantoModal(m)} />
+        <ConditionalMantoScroll onSelectManto={(m) => setSelectedMantoModal(m)} />
         <CalculadoraComida />
         <CalculadoraEdad />
         <EeatSection />
