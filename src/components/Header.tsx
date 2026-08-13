@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sun, Moon, Menu, X, ChevronDown, Phone, MapPin, Sparkles, Dog } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { FluffyStoryRow } from '../types/fluffy';
 
 interface HeaderProps {
@@ -43,9 +44,8 @@ export const Header: React.FC<HeaderProps> = ({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <a 
-          href="#" 
-          onClick={(e) => { e.preventDefault(); onSelectCityBySlug('bulldog-frances-fluffy-bogota'); }}
+        <Link 
+          to="/"
           className="flex items-center gap-3 group"
         >
           <div className="w-12 h-12 rounded-full bg-cornflower flex items-center justify-center text-white transition-colors shadow-sm group-hover:scale-105">
@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({
               VIP Exotic Kennel
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-gray-700 dark:text-gray-300">
@@ -96,12 +96,13 @@ export const Header: React.FC<HeaderProps> = ({
                   <ul className="space-y-3 text-sm font-medium">
                     {colombiaCities.map(c => (
                       <li key={c.slug}>
-                         <button
-                          onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
+                        <Link
+                          to={`/${c.slug}`}
+                          onClick={() => setDropdownOpen(false)}
                           className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
-                        </button>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -115,12 +116,13 @@ export const Header: React.FC<HeaderProps> = ({
                   <ul className="space-y-3 text-sm font-medium">
                     {mexicoCities.map(c => (
                       <li key={c.slug}>
-                        <button
-                          onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
+                        <Link
+                          to={`/${c.slug}`}
+                          onClick={() => setDropdownOpen(false)}
                           className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
-                        </button>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -134,12 +136,13 @@ export const Header: React.FC<HeaderProps> = ({
                   <ul className="space-y-3 text-sm font-medium">
                     {latamCities.map(c => (
                       <li key={c.slug}>
-                        <button
-                          onClick={() => { onSelectCityBySlug(c.slug); setDropdownOpen(false); }}
+                        <Link
+                          to={`/${c.slug}`}
+                          onClick={() => setDropdownOpen(false)}
                           className="hover:text-cornflower text-gray-700 dark:text-gray-300 block text-left transition-colors cursor-pointer"
                         >
                           {c.tituloH1.replace('Bulldog Francés Fluffy en ', '')}
-                        </button>
+                        </Link>
                       </li>
                     ))}
                   </ul>

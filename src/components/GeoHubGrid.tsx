@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Search, Globe, ChevronRight } from 'lucide-react';
 import { FluffyStoryRow } from '../types/fluffy';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface Props {
   cities: FluffyStoryRow[];
@@ -9,7 +10,7 @@ interface Props {
   onSelectCityBySlug: (slug: string) => void;
 }
 
-export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity, onSelectCityBySlug }) => {
+export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [countryFilter, setCountryFilter] = useState('todos');
 
@@ -91,40 +92,45 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity, onSelectCity
             const ciudadNombre = c.tituloH1.replace('Bulldog Francés Fluffy en ', '');
 
             return (
-              <motion.button
+              <motion.div
                 variants={{
                   hidden: { opacity: 0, scale: 0.95 },
                   visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } }
                 }}
                 key={c.slug}
-                onClick={() => onSelectCityBySlug(c.slug)}
-                className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between h-[100px] group ${
-                  isSelected
-                    ? 'bg-cornflower text-white border-cornflower shadow-lg transform -translate-y-1'
-                    : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-800 dark:text-gray-100 hover:shadow-md hover:border-cornflower/50 hover:-translate-y-1'
-                }`}
               >
-                <div className="flex items-center justify-between w-full">
-                  <span className={`text-[10px] uppercase font-bold tracking-wider ${isSelected ? 'text-white/90' : 'text-gray-400'}`}>
-                    {c.pais}
-                  </span>
-                  <MapPin className={`w-4 h-4 shrink-0 ${isSelected ? 'text-white' : 'text-cornflower/60'}`} />
-                </div>
-                
-                <div className="flex items-center justify-between w-full mt-2">
-                  <span className="text-sm font-bold truncate">
-                    {ciudadNombre}
-                  </span>
-                  <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? 'opacity-100' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-cornflower'}`} />
-                </div>
-              </motion.button>
+                <Link
+                  to={`/${c.slug}`}
+                  className={`block p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer h-[100px] group ${
+                    isSelected
+                      ? 'bg-cornflower text-white border-cornflower shadow-lg transform -translate-y-1'
+                      : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-800 dark:text-gray-100 hover:shadow-md hover:border-cornflower/50 hover:-translate-y-1'
+                  }`}
+                >
+                  <div className="flex flex-col justify-between h-full">
+                    <div className="flex items-center justify-between w-full">
+                      <span className={`text-[10px] uppercase font-bold tracking-wider ${isSelected ? 'text-white/90' : 'text-gray-400'}`}>
+                        {c.pais}
+                      </span>
+                      <MapPin className={`w-4 h-4 shrink-0 ${isSelected ? 'text-white' : 'text-cornflower/60'}`} />
+                    </div>
+                    
+                    <div className="flex items-center justify-between w-full mt-2">
+                      <span className="text-sm font-bold truncate">
+                        {ciudadNombre}
+                      </span>
+                      <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? 'opacity-100' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-cornflower'}`} />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
             );
           })}
         </motion.div>
 
         {filteredCities.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-lg text-obsidian/50 dark:text-canvas/50 font-serif italic">
+            <p className="text-lg text-gray-500 dark:text-gray-400 font-medium">
               No se encontraron ciudades con la búsqueda "{searchTerm}".
             </p>
           </div>
