@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { parseFluffyCSV } from "./utils/csvParser";
 import { FluffyStoryRow, FluffyManto } from "./types/fluffy";
 import { Header } from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
 import { HorizontalMantoScroll } from "./components/HorizontalMantoScroll";
 import { CalculadoraComida } from "./components/CalculadoraComida";
 import { CalculadoraEdad } from "./components/CalculadoraEdad";
@@ -38,6 +39,7 @@ export const App: React.FC = () => {
 
   return (
     <BrowserRouter>
+        <ScrollToTop />
       <div className="min-h-screen bg-canvas dark:bg-obsidian text-obsidian dark:text-canvas transition-colors duration-300 font-sans">
         
         <Header
