@@ -68,9 +68,14 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           <div className="w-full md:w-6/12 lg:w-6/12 flex-shrink-0 relative">
             <div className="relative aspect-[3/2] w-full rounded-3xl overflow-hidden shadow-2xl group border-4 border-white dark:border-gray-800">
               <img
+                src="/images/fluffy-showcase-hero-light.jpg"
+                alt="Bulldog Francés Fluffy VIP"
+                className="dark:hidden absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <img
                 src="/images/fluffy-showcase-hero.jpg"
                 alt="Bulldog Francés Fluffy VIP"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="hidden dark:block absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
