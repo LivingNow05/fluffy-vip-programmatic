@@ -13,6 +13,7 @@ import { EeatSection } from "./components/EeatSection";
 import { GeoHubGrid } from "./components/GeoHubGrid";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
+import { PricingPage } from "./pages/PricingPage";
 import { FluffyCityPage } from "./pages/FluffyCityPage";
 import { MantoDetailPage } from "./pages/MantoDetailPage";
 import { motion } from "framer-motion";
@@ -70,6 +71,7 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
+          <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => handleOpenQuiz({ city })} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

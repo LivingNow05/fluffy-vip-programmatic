@@ -63,9 +63,9 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-gray-700 dark:text-gray-300">
-          <a href="#precios" className="hover:text-cornflower transition-colors">
+          <Link to="/precios" className="hover:text-cornflower transition-colors">
             Precios
-          </a>
+          </Link>
           <a href="#variedades" className="hover:text-cornflower transition-colors">
             Mantos
           </a>
@@ -220,7 +220,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-4 py-6 space-y-4">
           <div className="space-y-2 font-medium text-gray-800 dark:text-gray-200 text-lg">
-            <a href="#precios" onClick={() => setMobileMenuOpen(false)} className="block py-2">Precios VIP</a>
+            <Link to="/precios" onClick={() => setMobileMenuOpen(false)} className="block py-2">Precios VIP</Link>
             <a href="#variedades" onClick={() => setMobileMenuOpen(false)} className="block py-2">Mantos</a>
             <a href="#ciudades-hub" onClick={() => setMobileMenuOpen(false)} className="block py-2">Ciudades & Cobertura</a>
             <a href="#calculadora-nutricion" onClick={() => setMobileMenuOpen(false)} className="block py-2">Calculadora Nutricional</a>
