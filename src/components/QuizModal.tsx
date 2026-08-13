@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, MessageCircle, Home, Building2, Baby, Users, ArrowRight, ShieldCheck, Star, Zap, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, MessageCircle, Home, Building2, Baby, Users, ArrowRight, ShieldCheck, Star, Sparkles, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface QuizModalProps {
@@ -10,27 +10,51 @@ interface QuizModalProps {
 }
 
 export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, manto }) => {
-  const [step, setStep] = useState<number>(1);
+  const [stepIndex, setStepIndex] = useState<number>(0);
   const [answers, setAnswers] = useState({
+    mantoPref: '',
     housing: '',
     kids: '',
     experience: '',
     gender: ''
   });
 
+  // Reset state when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      setStepIndex(0);
+      setAnswers({
+        mantoPref: manto || '',
+        housing: '',
+        kids: '',
+        experience: '',
+        gender: ''
+      });
+    }
+  }, [isOpen, manto]);
+
   if (!isOpen) return null;
 
   const phoneNumber = "573164822477";
+
+  const stepsConfig = [];
+  if (!manto) {
+    stepsConfig.push('manto');
+  }
+  stepsConfig.push('housing', 'kids', 'experience', 'gender');
+
+  const currentStepId = stepsConfig[stepIndex];
+  const totalSteps = stepsConfig.length;
 
   const handleAnswer = (key: string, value: string) => {
     const finalAnswers = { ...answers, [key]: value };
     setAnswers(finalAnswers);
     
-    if (step < 4) {
-      setStep(prev => prev + 1);
+    if (stepIndex < totalSteps - 1) {
+      setStepIndex(prev => prev + 1);
     } else {
       // Build WhatsApp message
-      const mantoText = manto ? ` variedad ${manto}` : '';
+      const mantoText = finalAnswers.mantoPref ? ` variedad ${finalAnswers.mantoPref}` : '';
       const cityText = city ? ` con envío a ${city}` : '';
       const text = `¡Hola! Me interesa un cachorro Fluffy VIP${mantoText}${cityText}.
       
@@ -45,11 +69,8 @@ Quisiera ver fotos y conocer disponibilidad.`;
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
       
-      // Reset after tiny delay
       setTimeout(() => {
         onClose();
-        setStep(1);
-        setAnswers({ housing: '', kids: '', experience: '', gender: '' });
       }, 500);
     }
   };
@@ -66,11 +87,11 @@ Quisiera ver fotos y conocer disponibilidad.`;
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="bg-canvas dark:bg-carbon rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl relative border border-obsidian/10 dark:border-canvas/10"
+          className="bg-canvas dark:bg-carbon rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl relative border border-obsidian/10 dark:border-canvas/10 flex flex-col max-h-[90vh]"
           onClick={handleModalClick}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-cornflower to-blue-600 p-6 md:p-8 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-cornflower to-blue-600 p-6 relative overflow-hidden shrink-0">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
             
             <button 
@@ -80,7 +101,7 @@ Quisiera ver fotos y conocer disponibilidad.`;
               <X className="w-5 h-5" />
             </button>
             
-            <div className="flex items-center gap-3 mb-3 relative z-10">
+            <div className="flex items-center gap-3 mb-2 relative z-10">
               <div className="bg-white/20 p-2.5 rounded-2xl backdrop-blur-md border border-white/20">
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
@@ -89,25 +110,82 @@ Quisiera ver fotos y conocer disponibilidad.`;
               </h3>
             </div>
             <p className="text-sm text-blue-100 font-medium opacity-90 relative z-10">
-              4 preguntas rápidas para que un especialista te envíe opciones exactas al instante.
+              Unos pasos para enviarte opciones exactas.
             </p>
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full bg-gray-100 dark:bg-gray-800 h-1.5 relative overflow-hidden">
+          <div className="w-full bg-gray-100 dark:bg-gray-800 h-1.5 relative overflow-hidden shrink-0">
             <div 
               className="bg-cornflower h-full transition-all duration-500 ease-out absolute left-0 top-0" 
-              style={{ width: `${(step / 4) * 100}%` }}
+              style={{ width: `${((stepIndex + 1) / totalSteps) * 100}%` }}
             ></div>
           </div>
 
-          {/* Content */}
-          <div className="p-6 md:p-8">
+          {/* Scrollable Content */}
+          <div className="p-6 overflow-y-auto">
             
-            {/* STEP 1: HOUSING */}
-            {step === 1 && (
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso 1 de 4</span>
+            {/* Shipping Note on Step 1 */}
+            {stepIndex === 0 && (
+              <div className="text-[12px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
+                Hacemos entregas personales en cabina a nivel mundial.<br/>
+                <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-cornflower/20 inline-block text-left text-xs">
+                  ✈️ <b>Nota de logística:</b> El envío internacional VIP (traslado en cabina + trámites) tiene un valor aproximado de <b>$1,000 USD</b>. Envíos nacionales consultar.
+                </div>
+              </div>
+            )}
+
+            {/* STEP: MANTO */}
+            {currentStepId === 'manto' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="manto">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso {stepIndex + 1} de {totalSteps}</span>
+                <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-4">
+                  ¿Qué variedad de manto prefieres?
+                </h4>
+                <div className="flex flex-col gap-3">
+                  <button 
+                    onClick={() => handleAnswer('mantoPref', 'Signature (Fawn/Black)')}
+                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-cornflower">Signature</span>
+                      <span className="text-xs font-bold text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Desde $4,500 USD</span>
+                    </div>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">Colores sólidos (Fawn, Black, Pied)</span>
+                  </button>
+
+                  <button 
+                    onClick={() => handleAnswer('mantoPref', 'Exotic VIP (Blue/Lilac)')}
+                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-cornflower hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all group relative overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-cornflower/10 rounded-full blur-xl"></div>
+                    <div className="flex items-center justify-between mb-1 relative z-10">
+                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-cornflower">Exotic VIP <span className="text-[10px] bg-cornflower text-white px-1.5 py-0.5 rounded ml-1 uppercase">Popular</span></span>
+                      <span className="text-xs font-bold text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Desde $6,000 USD</span>
+                    </div>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 relative z-10">Colores exóticos con dilución (Blue, Lilac, Merle)</span>
+                  </button>
+
+                  <button 
+                    onClick={() => handleAnswer('mantoPref', 'Ultra Rare (Isabella/Rojo)')}
+                    className="flex flex-col text-left p-4 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-yellow-400 hover:bg-yellow-50/50 dark:hover:bg-yellow-900/10 transition-all group"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-bold text-obsidian dark:text-canvas group-hover:text-yellow-600 dark:group-hover:text-yellow-400 flex items-center gap-1">
+                        Ultra Rare <Star className="w-3 h-3 text-yellow-400" />
+                      </span>
+                      <span className="text-xs font-bold text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Desde $8,500 USD</span>
+                    </div>
+                    <span className="text-xs text-gray-500 dark:text-gray-400">Isabella, Rojo Intenso y New Shade</span>
+                  </button>
+                </div>
+              </motion.div>
+            )}
+            
+            {/* STEP: HOUSING */}
+            {currentStepId === 'housing' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="housing">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso {stepIndex + 1} de {totalSteps}</span>
                 <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-6">
                   ¿Dónde vivirá el cachorro?
                 </h4>
@@ -134,10 +212,10 @@ Quisiera ver fotos y conocer disponibilidad.`;
               </motion.div>
             )}
 
-            {/* STEP 2: KIDS */}
-            {step === 2 && (
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso 2 de 4</span>
+            {/* STEP: KIDS */}
+            {currentStepId === 'kids' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="kids">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso {stepIndex + 1} de {totalSteps}</span>
                 <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-6">
                   ¿Hay niños pequeños en casa?
                 </h4>
@@ -164,10 +242,10 @@ Quisiera ver fotos y conocer disponibilidad.`;
               </motion.div>
             )}
 
-            {/* STEP 3: EXPERIENCE */}
-            {step === 3 && (
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso 3 de 4</span>
+            {/* STEP: EXPERIENCE */}
+            {currentStepId === 'experience' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="experience">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso {stepIndex + 1} de {totalSteps}</span>
                 <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-6">
                   Tu experiencia con perros
                 </h4>
@@ -217,9 +295,9 @@ Quisiera ver fotos y conocer disponibilidad.`;
               </motion.div>
             )}
 
-            {/* STEP 4: GENDER */}
-            {step === 4 && (
-              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+            {/* STEP: GENDER */}
+            {currentStepId === 'gender' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="gender">
                 <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso Final</span>
                 <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-6">
                   ¿Macho o Hembra?
