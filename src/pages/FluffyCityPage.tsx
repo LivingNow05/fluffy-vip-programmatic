@@ -109,7 +109,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           </div>
 
           {/* Right Column: Visual */}
-          <div className="w-full md:w-8/12 lg:w-8/12 flex-shrink-0 relative mt-6 md:-mt-12 lg:-mt-16 z-10">
+          <div className="w-full md:w-6/12 lg:w-7/12 flex-shrink-0 relative mt-6 md:-mt-12 lg:-mt-16 lg:-mr-16 z-10">
             <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
                 src="/images/fluffy-showcase-hero-light.jpg" 
