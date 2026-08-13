@@ -71,7 +71,7 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
-          <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
+          <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz(manto ? { manto } : undefined)} />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => handleOpenQuiz({ city })} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

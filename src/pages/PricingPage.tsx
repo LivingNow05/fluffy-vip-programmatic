@@ -5,7 +5,7 @@ import { FluffyStoryRow } from '../types/fluffy';
 
 interface Props {
   cities: FluffyStoryRow[];
-  onOpenQuiz: () => void;
+  onOpenQuiz: (manto?: string) => void;
 }
 
 export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
@@ -52,7 +52,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
               </li>
             ))}
           </ul>
-          <button onClick={onOpenQuiz} className="w-full py-4 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold hover:bg-cornflower hover:text-white transition-colors">
+          <button onClick={() => onOpenQuiz("Signature (Fawn/Black)")} className="w-full py-4 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold hover:bg-cornflower hover:text-white transition-colors">
             Consultar Disponibilidad
           </button>
         </motion.div>
@@ -84,7 +84,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
               </li>
             ))}
           </ul>
-          <button onClick={onOpenQuiz} className="w-full py-4 rounded-2xl bg-cornflower text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-cornflower/30">
+          <button onClick={() => onOpenQuiz("Exotic VIP (Blue/Lilac)")} className="w-full py-4 rounded-2xl bg-cornflower text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-cornflower/30">
             Consultar Disponibilidad
           </button>
         </motion.div>
@@ -113,7 +113,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
               </li>
             ))}
           </ul>
-          <button onClick={onOpenQuiz} className="w-full py-4 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold hover:bg-cornflower hover:text-white transition-colors">
+          <button onClick={() => onOpenQuiz("Ultra Rare (Isabella/Rojo)")} className="w-full py-4 rounded-2xl bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold hover:bg-cornflower hover:text-white transition-colors">
             Consultar Disponibilidad
           </button>
         </motion.div>
@@ -129,7 +129,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
             <p className="text-sm text-gray-600 dark:text-gray-400">Aceptamos transferencias internacionales, Zelle y tarjetas de crédito.</p>
           </div>
         </div>
-        <button onClick={onOpenQuiz} className="px-8 py-3 rounded-full border-2 border-obsidian dark:border-gray-600 text-obsidian dark:text-canvas font-bold hover:bg-obsidian hover:text-white dark:hover:bg-gray-700 transition-colors shrink-0">
+        <button onClick={() => onOpenQuiz()} className="px-8 py-3 rounded-full border-2 border-obsidian dark:border-gray-600 text-obsidian dark:text-canvas font-bold hover:bg-obsidian hover:text-white dark:hover:bg-gray-700 transition-colors shrink-0">
           Hablar con Asesor
         </button>
       </div>
