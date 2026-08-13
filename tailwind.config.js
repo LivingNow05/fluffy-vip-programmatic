@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         cornflower: '#00B874',
-        obsidian: '#1f2937', // Softer black (gray-800)
+        obsidian: '#0B1411', // Deep teal-black for dark mode
         canvas: '#ffffff',
         carbon: '#f3f4f6', // gray-100
         'lavender-mist': '#e0e7ff', // indigo-100
