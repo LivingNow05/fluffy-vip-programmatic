@@ -12,18 +12,22 @@ interface QuizModalProps {
 export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, manto }) => {
   const [stepIndex, setStepIndex] = useState<number>(0);
   const [answers, setAnswers] = useState({
+    cityPref: '',
     mantoPref: '',
     housing: '',
     kids: '',
     experience: '',
     gender: ''
   });
+  const [cityInput, setCityInput] = useState('');
 
   // Reset state when modal opens
   useEffect(() => {
     if (isOpen) {
       setStepIndex(0);
+      setCityInput(city || '');
       setAnswers({
+        cityPref: city || '',
         mantoPref: manto || '',
         housing: '',
         kids: '',
@@ -31,13 +35,13 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, man
         gender: ''
       });
     }
-  }, [isOpen, manto]);
+  }, [isOpen, city, manto]);
 
   if (!isOpen) return null;
 
   const phoneNumber = "573164822477";
 
-  const stepsConfig = [];
+  const stepsConfig = ['city'];
   if (!manto) {
     stepsConfig.push('manto');
   }
@@ -55,7 +59,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, man
     } else {
       // Build WhatsApp message
       const mantoText = finalAnswers.mantoPref ? ` variedad ${finalAnswers.mantoPref}` : '';
-      const cityText = city ? ` con envío a ${city}` : '';
+      const cityText = finalAnswers.cityPref ? ` con envío a ${finalAnswers.cityPref}` : '';
       const text = `¡Hola! Me interesa un cachorro Fluffy VIP${mantoText}${cityText}.
       
 *Mi perfil:*
@@ -72,6 +76,14 @@ Quisiera ver fotos y conocer disponibilidad.`;
       setTimeout(() => {
         onClose();
       }, 500);
+    }
+  };
+
+  const handleCitySubmit = () => {
+    if (cityInput.trim()) {
+      handleAnswer('cityPref', cityInput.trim());
+    } else {
+      handleAnswer('cityPref', 'No indicada');
     }
   };
 
@@ -124,15 +136,39 @@ Quisiera ver fotos y conocer disponibilidad.`;
 
           {/* Scrollable Content */}
           <div className="p-6 overflow-y-auto">
-            
-            {/* Shipping Note on Step 1 */}
-            {stepIndex === 0 && (
-              <div className="text-[12px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
-                Hacemos entregas personales en cabina a nivel mundial.<br/>
-                <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-cornflower/20 inline-block text-left text-xs">
-                  ✈️ <b>Nota de logística:</b> El envío internacional VIP (traslado en cabina + trámites) tiene un valor aproximado de <b>$1,000 USD</b>. Envíos nacionales consultar.
+
+            {/* STEP: CITY & SHIPPING INFO */}
+            {currentStepId === 'city' && (
+              <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key="city">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Paso {stepIndex + 1} de {totalSteps}</span>
+                <h4 className="font-header font-bold text-2xl text-obsidian dark:text-canvas mb-2">
+                  ¿A dónde viajaría el cachorro?
+                </h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">Para conectarte con el asesor de logística adecuado.</p>
+                
+                <div className="text-[13px] text-center text-gray-500 dark:text-gray-400 mb-6 leading-snug">
+                  Hacemos entregas personales en cabina a nivel mundial.<br/>
+                  <div className="bg-blue-50/50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-lg mt-3 border border-cornflower/20 inline-block text-left text-xs">
+                    ✈️ <b>Nota de logística:</b> El envío internacional VIP (traslado en cabina + trámites aduaneros) tiene un valor aproximado de <b>$1,000 USD</b>. Envíos nacionales consultar.
+                  </div>
                 </div>
-              </div>
+
+                <input 
+                  type="text" 
+                  placeholder="Ej: Bogotá, Miami, Madrid..." 
+                  value={cityInput}
+                  onChange={(e) => setCityInput(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === 'Enter') handleCitySubmit(); }}
+                  className="w-full border-2 border-gray-200 dark:border-gray-700 rounded-2xl px-5 py-3 text-obsidian dark:text-canvas bg-white dark:bg-gray-800 text-base focus:border-cornflower focus:outline-none mb-4 transition-colors"
+                />
+                
+                <button 
+                  onClick={handleCitySubmit}
+                  className="w-full bg-cornflower hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-cornflower/20"
+                >
+                  Siguiente
+                </button>
+              </motion.div>
             )}
 
             {/* STEP: MANTO */}
