@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* WhatsApp CTA Button */}
           <button
             onClick={onOpenQuiz}
-            className="hidden sm:flex btn-primary bg-[#25D366] hover:bg-[#20b858] text-white border-transparent"
+            className="hidden sm:flex bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-2 px-5 rounded-full shadow-sm transition-all text-center items-center justify-center gap-2 hover:-translate-y-0.5 text-sm"
           >
             <Phone className="w-4 h-4" />
             <span>WhatsApp VIP</span>
