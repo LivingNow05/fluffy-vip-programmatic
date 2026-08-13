@@ -108,7 +108,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
 
           {/* Right Column: Visual */}
           <div className="w-full md:w-5/12 flex-shrink-0 relative mt-4 md:mt-0">
-            <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
+            <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
                 src="/images/fluffy-showcase-hero.jpg" 
                 alt="Bulldog Fluffy"
