@@ -27,7 +27,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 max-w-xl">
-              <strong className="font-semibold text-gray-800 dark:text-gray-200">Fluffy VIP es un criadero especializado en cachorros Bulldog Francés de pelo largo (Fluffy).</strong> Entregamos ejemplares puros con genética certificada (gen L4/L1), pedigree internacional y logística de transporte VIP a más de 100 ciudades.
+              <strong className="font-semibold text-gray-800 dark:text-gray-200">Dinastía Fluffy VIP es un criadero especializado en cachorros Bulldog Francés de pelo largo (Fluffy).</strong> Entregamos ejemplares puros con genética certificada (gen L4/L1), pedigree internacional y logística de transporte VIP a más de 100 ciudades.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-4">

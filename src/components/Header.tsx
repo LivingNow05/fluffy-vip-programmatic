@@ -60,6 +60,9 @@ export const Header: React.FC<HeaderProps> = ({
           <Link to="/precios" className="hover:text-cornflower transition-colors">
             Precios
           </Link>
+          <Link to="/entregas" className="hover:text-cornflower transition-colors">
+            Entregas
+          </Link>
           <a href="#variedades" className="hover:text-cornflower transition-colors">
             Mantos
           </a>
@@ -213,6 +216,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-4 py-6 space-y-4">
           <div className="space-y-2 font-medium text-gray-800 dark:text-gray-200 text-lg">
             <Link to="/precios" onClick={() => setMobileMenuOpen(false)} className="block py-2">Precios VIP</Link>
+            <Link to="/entregas" onClick={() => setMobileMenuOpen(false)} className="block py-2">Entregas</Link>
             <a href="#variedades" onClick={() => setMobileMenuOpen(false)} className="block py-2">Mantos</a>
             <a href="#ciudades-hub" onClick={() => setMobileMenuOpen(false)} className="block py-2">Ciudades & Cobertura</a>
             <a href="#calculadora-nutricion" onClick={() => setMobileMenuOpen(false)} className="block py-2">Calculadora Nutricional</a>

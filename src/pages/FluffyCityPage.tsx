@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { FluffyStoryRow } from '../types/fluffy';
 import { ShippingAccordion } from '../components/ShippingAccordion';
 import { 
@@ -43,8 +44,59 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const cityName = rawCity.replace(/^en\s+/i, '').trim();
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
 
+  const seoTitle = `Bulldog Francés Fluffy en ${cityName} | Dinastía Fluffy VIP`;
+  const seoDescription = `Criadero exclusivo de Bulldog Francés Fluffy con entrega VIP en ${cityName}, ${city.pais}. Certificados de genética L4 y logística de mascotas garantizada.`;
+  const currentUrl = `https://dinastiafluffy.com/${city.slug}`;
+  const ogImage = `https://dinastiafluffy.com/images/fluffy-showcase-hero.jpg`;
+
+  const schemaOrgJSONLD = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": `Bulldog Francés Fluffy en ${cityName}`,
+    "image": ogImage,
+    "description": seoDescription,
+    "brand": {
+      "@type": "Brand",
+      "name": "Dinastía Fluffy VIP"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "4500",
+      "availability": "https://schema.org/InStock",
+      "url": currentUrl
+    }
+  };
+
   return (
-    <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
+    <>
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <link rel="canonical" href={currentUrl} />
+
+        {/* Open Graph / Facebook / WhatsApp */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:image" content={ogImage} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={currentUrl} />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta name="twitter:image" content={ogImage} />
+
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
+      </Helmet>
+
+      <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       
       {/* Breadcrumbs */}
       <div className="py-3 text-sm font-medium border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 mb-4 flex gap-2">
@@ -343,5 +395,6 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         </div>
       </div>
     </main>
+    </>
   );
 };

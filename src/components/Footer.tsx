@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dog, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
@@ -43,7 +44,8 @@ export const Footer: React.FC = () => {
               <li><a href="#calculadora-nutricion" className="hover:text-indigo-500 transition-colors">Calculadora Nutricional</a></li>
               <li><a href="#eeat-garantia" className="hover:text-indigo-500 transition-colors">Garantía Veterinaria & ADN</a></li>
               <li><a href="#ciudades-hub" className="hover:text-indigo-500 transition-colors">Destinos & Aeropuertos</a></li>
-              <li><a href="#precios" className="hover:text-indigo-500 transition-colors">Precios VIP</a></li>
+              <li><Link to="/precios" className="hover:text-indigo-500 transition-colors">Precios VIP</Link></li>
+              <li><Link to="/entregas" className="hover:text-indigo-500 transition-colors">Logística & Entregas</Link></li>
             </ul>
           </div>
 
