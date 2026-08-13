@@ -8,6 +8,7 @@ import { HorizontalMantoScroll } from "./components/HorizontalMantoScroll";
 import { CalculadoraComida } from "./components/CalculadoraComida";
 import { CalculadoraEdad } from "./components/CalculadoraEdad";
 import { QuizModal } from "./components/QuizModal";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { EeatSection } from "./components/EeatSection";
 import { GeoHubGrid } from "./components/GeoHubGrid";
 import { Footer } from "./components/Footer";
@@ -30,7 +31,13 @@ export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const [cities, setCities] = useState<FluffyStoryRow[]>([]);
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
+  const [quizContext, setQuizContext] = useState<{city?: string, manto?: string}>({});
   const [selectedMantoModal, setSelectedMantoModal] = useState<FluffyManto | null>(null);
+
+  const handleOpenQuiz = (context: {city?: string, manto?: string} = {}) => {
+    setQuizContext(context);
+    setQuizOpen(true);
+  };
 
   useEffect(() => {
     if (darkMode) {
@@ -57,13 +64,13 @@ export const App: React.FC = () => {
           cities={cities}
           selectedCity={cities[0] || null}
           onSelectCityBySlug={() => {}}
-          onOpenQuiz={() => setQuizOpen(true)}
+          onOpenQuiz={() => handleOpenQuiz()}
         />
 
         <Routes>
-          <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => setQuizOpen(true)} />} />
-          <Route path="/manto/:id" element={<MantoDetailPage cities={cities} />} />
-          <Route path="/:slug" element={<FluffyCityPage cities={cities} />} />
+          <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
+          <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
+          <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => handleOpenQuiz({ city })} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
@@ -80,10 +87,13 @@ export const App: React.FC = () => {
 
         <Footer />
 
+        <FloatingWhatsApp onClick={() => handleOpenQuiz()} />
+
         <QuizModal
           isOpen={quizOpen}
           onClose={() => setQuizOpen(false)}
-          onSelectManto={(m) => setSelectedMantoModal(m)}
+          city={quizContext.city}
+          manto={quizContext.manto}
         />
 
         {selectedMantoModal && (
@@ -128,15 +138,16 @@ export const App: React.FC = () => {
                 ))}
               </div>
 
-              <a
-                href={"https://wa.me/573164822477?text=Hola,%20me%20interesa%20la%20variedad%20" + encodeURIComponent(selectedMantoModal.nombre)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => {
+                  setSelectedMantoModal(null);
+                  handleOpenQuiz({ manto: selectedMantoModal.nombre });
+                }}
                 className="btn-primary w-full bg-[#25D366] hover:bg-[#1DA851] border-none text-white text-center justify-center"
               >
                 <Phone className="w-4 h-4" />
                 <span>Consultar Disponibilidad</span>
-              </a>
+              </button>
             </motion.div>
           </div>
         )}

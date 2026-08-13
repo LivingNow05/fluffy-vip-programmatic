@@ -9,9 +9,10 @@ import {
 
 interface Props {
   cities: FluffyStoryRow[];
+  onOpenQuiz?: (city: string) => void;
 }
 
-export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
+export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const { slug } = useParams<{ slug: string }>();
   
   if (cities.length === 0) {
@@ -311,15 +312,13 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
               Escríbenos y un especialista te enviará al instante fotos, videos y precios de los cachorros disponibles para entrega en <strong className="text-obsidian dark:text-canvas">{cityName}</strong>.
             </p>
             
-            <a
-              href={`https://wa.me/573164822477?text=${encodeURIComponent(whatsappText)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 hover:-translate-y-1"
+            <button
+              onClick={() => onOpenQuiz && onOpenQuiz(cityName)}
+              className="group w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 hover:-translate-y-1 cursor-pointer"
             >
               <span>Contactar por WhatsApp</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </button>
             
             <div className="mt-8 flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
               <Lock className="w-3.5 h-3.5" />

@@ -9,6 +9,7 @@ import {
 
 interface Props {
   cities: FluffyStoryRow[];
+  onOpenQuiz?: (manto: string) => void;
 }
 
 export const MantoDetailPage: React.FC<Props> = () => {
