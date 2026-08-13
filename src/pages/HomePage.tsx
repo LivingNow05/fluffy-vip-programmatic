@@ -16,7 +16,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 lg:gap-12 relative z-10">
           
           {/* Columna Izquierda */}
-          <div className="w-full md:w-1/2 lg:w-1/2 text-left pr-0 lg:pr-8">
+          <div className="w-full md:w-7/12 lg:w-7/12 text-left pr-0 lg:pr-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-cornflower/20">
               <Sparkles className="w-4 h-4 text-cornflower" />
               <span>Criadero VIP Especializado</span>
@@ -65,7 +65,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           </div>
 
           {/* Columna Derecha (Visual Showcase) */}
-          <div className="w-full md:w-1/2 lg:w-1/2 flex-shrink-0 relative md:-mt-12 lg:-mt-16 z-10">
+          <div className="w-full md:w-5/12 lg:w-5/12 flex-shrink-0 relative md:-mt-12 lg:-mt-16 lg:-mr-8 z-10">
             <div className="relative aspect-[3/2] w-full rounded-3xl overflow-hidden shadow-2xl group border-4 border-white dark:border-gray-800">
               <img
                 src="/images/fluffy-showcase-hero-light.jpg"
