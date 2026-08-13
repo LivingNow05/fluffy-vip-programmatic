@@ -11,9 +11,6 @@ export const Footer: React.FC = () => {
           {/* Col 1 */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-cornflower text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
-                <Dog className="w-6 h-6" />
-              </div>
               <span className="font-header text-xl sm:text-2xl leading-none font-bold">
                 Dinastía <br/><span className="text-cornflower">Fluffy</span>
               </span>

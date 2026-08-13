@@ -45,9 +45,6 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 rounded-full bg-cornflower flex items-center justify-center text-white transition-colors shadow-sm group-hover:scale-105">
-            <Dog className="w-6 h-6" />
-          </div>
           <div className="flex flex-col">
             <h1 className="font-header text-xl sm:text-2xl font-black leading-none tracking-tight text-obsidian dark:text-canvas">
               Dinastía <span className="text-cornflower">Fluffy</span>
