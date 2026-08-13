@@ -22,8 +22,8 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               <span>Criadero VIP Especializado</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-header mb-6 leading-[1.1] text-obsidian dark:text-canvas text-balance">
-              Bulldog Francés <span className="text-indigo-500">Fluffy</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-header tracking-tight text-obsidian dark:text-canvas leading-[1.1] text-balance">
+              Bulldog Francés <span className="text-cornflower">Fluffy</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 max-w-xl">

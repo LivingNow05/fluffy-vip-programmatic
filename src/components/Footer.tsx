@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
                 <Dog className="w-6 h-6" />
               </div>
               <span className="font-header text-xl sm:text-2xl leading-none font-bold">
-                Dinastía <br/><span className="text-indigo-500">Fluffy</span>
+                Dinastía <br/><span className="text-cornflower">Fluffy</span>
               </span>
             </div>
             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 leading-relaxed">
