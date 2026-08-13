@@ -38,7 +38,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
 
   if (!city) return null;
 
-  const cityName = city.tituloH1.split('Fluffy')[1]?.trim() || city.pais;
+  const rawCity = city.tituloH1.split('Fluffy')[1]?.trim() || city.pais;
+  const cityName = rawCity.replace(/^en\s+/i, '').trim();
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
 
   return (
@@ -107,7 +108,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities }) => {
           </div>
 
           {/* Right Column: Visual */}
-          <div className="w-full md:w-5/12 flex-shrink-0 relative mt-4 md:mt-0">
+          <div className="w-full md:w-6/12 lg:w-6/12 flex-shrink-0 relative mt-6 md:mt-0">
             <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
                 src="/images/fluffy-showcase-hero.jpg" 
