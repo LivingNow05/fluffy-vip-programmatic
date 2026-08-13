@@ -308,9 +308,24 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             <h3 className="font-header font-bold text-2xl mb-3 text-obsidian dark:text-canvas">
               ¿Buscas un Fluffy VIP?
             </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm leading-relaxed">
+            <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
               Escríbenos y un especialista te enviará al instante fotos, videos y precios de los cachorros disponibles para entrega en <strong className="text-obsidian dark:text-canvas">{cityName}</strong>.
             </p>
+
+            <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-2xl p-5 mb-8 shadow-sm">
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider block mb-1">Inversión desde</span>
+              <div className="flex items-baseline gap-2 mb-3">
+                <span className="text-3xl font-black font-header text-obsidian dark:text-canvas">$4,500</span>
+                <span className="text-sm font-bold text-gray-400">USD</span>
+              </div>
+              <ul className="space-y-2 text-xs text-gray-600 dark:text-gray-300">
+                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-cornflower shrink-0" /> Incluye envío VIP a {cityName}</li>
+                <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-cornflower shrink-0" /> Gen L4/L1 + Garantía</li>
+              </ul>
+              <Link to="/precios" className="block text-center mt-4 text-[10px] font-bold text-cornflower hover:text-blue-700 uppercase tracking-widest transition-colors">
+                Ver Planes de Precios &rarr;
+              </Link>
+            </div>
             
             <button
               onClick={() => onOpenQuiz && onOpenQuiz(cityName)}

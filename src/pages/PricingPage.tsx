@@ -42,7 +42,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 min-h-[40px]">Genética L4/L1 en mantos sólidos (Fawn, Black).</p>
           <div className="mb-8">
             <span className="text-sm text-gray-500 font-bold uppercase">Desde</span>
-            <div className="text-4xl font-black text-obsidian dark:text-canvas my-1">$3,500 <span className="text-xl text-gray-400">USD</span></div>
+            <div className="text-4xl font-black text-obsidian dark:text-canvas my-1">$4,500 <span className="text-xl text-gray-400">USD</span></div>
           </div>
           <ul className="space-y-4 mb-8">
             {['Pedigree de pureza L4/L1', 'Garantía de salud viral (15 días)', 'Esquema de vacunas completo', 'Chip de identificación'].map((f, i) => (
@@ -74,7 +74,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <p className="text-sm text-gray-400 mb-6 min-h-[40px]">Colores exóticos con dilución (Blue, Lilac, Merle).</p>
           <div className="mb-8">
             <span className="text-sm text-gray-500 font-bold uppercase">Desde</span>
-            <div className="text-4xl font-black text-white my-1">$4,800 <span className="text-xl text-gray-400">USD</span></div>
+            <div className="text-4xl font-black text-white my-1">$6,000 <span className="text-xl text-gray-400">USD</span></div>
           </div>
           <ul className="space-y-4 mb-8">
             {['Todo lo del plan Signature', 'Exámenes de ADN estructural', 'Garantía congénita extendida (1 año)', 'Traslado aéreo nacional VIP (Cabina)'].map((f, i) => (
@@ -103,7 +103,7 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 min-h-[40px]">Isabella, Rojo Intenso y combinaciones únicas.</p>
           <div className="mb-8">
             <span className="text-sm text-gray-500 font-bold uppercase">Desde</span>
-            <div className="text-4xl font-black text-obsidian dark:text-canvas my-1">$6,500 <span className="text-xl text-gray-400">USD</span></div>
+            <div className="text-4xl font-black text-obsidian dark:text-canvas my-1">$8,500 <span className="text-xl text-gray-400">USD</span></div>
           </div>
           <ul className="space-y-4 mb-8">
             {['Todo lo del plan Exotic VIP', 'Selección prioritaria de camada', 'Kit de bienvenida Premium', 'Trámite de exportación internacional'].map((f, i) => (
