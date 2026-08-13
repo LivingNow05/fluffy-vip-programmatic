@@ -18,8 +18,14 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
         
         {/* HERO SECTION */}
         <section className="relative rounded-3xl overflow-hidden shadow-2xl mb-16 border border-gray-100 dark:border-gray-800 bg-obsidian text-canvas group">
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/80 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-obsidian/90 via-obsidian/70 to-transparent z-10" />
           
+          <img 
+            src="/images/fluffy-showcase-hero.jpg" 
+            alt="Logística y Entregas de Bulldog Fluffy" 
+            className="absolute inset-0 w-full h-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+          />
+
           <div className="relative z-20 p-10 sm:p-16 md:p-20 max-w-3xl">
             <span className="inline-block bg-cornflower/20 text-cornflower border border-cornflower/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
               Logística de Excelencia
@@ -38,9 +44,7 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
               Consulta tu Destino
             </button>
           </div>
-          
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cornflower via-obsidian to-obsidian pointer-events-none" />
+          {/* Background pattern (removed as we have image now) */}
         </section>
 
         {/* LOGISTICS & INFO CARDS */}
