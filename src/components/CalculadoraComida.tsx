@@ -47,7 +47,7 @@ export const CalculadoraComida: React.FC = () => {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
             }}
           >
-            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-rose-500 uppercase tracking-widest shadow-sm">
+            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-emerald-500 uppercase tracking-widest shadow-sm">
               <Utensils className="w-4 h-4" />
               <span>Nutrición Especializada Fluffy</span>
             </motion.div>
