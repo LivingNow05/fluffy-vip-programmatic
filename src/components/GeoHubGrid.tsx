@@ -38,7 +38,7 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity }) => {
           transition={{ duration: 0.8 }}
         >
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               <Globe className="w-4 h-4" />
               <span>Cobertura Nacional (102 Ciudades)</span>
             </div>

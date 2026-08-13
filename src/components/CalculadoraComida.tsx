@@ -32,7 +32,7 @@ export const CalculadoraComida: React.FC = () => {
   };
 
   return (
-    <section id="calculadora-nutricion" className="py-20 bg-cornflower/10 dark:bg-gray-900 relative overflow-hidden">
+    <section id="calculadora-nutricion" className="py-20 bg-blue-50 dark:bg-gray-900 relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
@@ -47,7 +47,7 @@ export const CalculadoraComida: React.FC = () => {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
             }}
           >
-            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-cornflower uppercase tracking-widest shadow-sm">
+            <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full text-[11px] font-bold text-rose-500 uppercase tracking-widest shadow-sm">
               <Utensils className="w-4 h-4" />
               <span>Nutrición Especializada Fluffy</span>
             </motion.div>
@@ -62,13 +62,13 @@ export const CalculadoraComida: React.FC = () => {
 
             <motion.div variants={fadeUpVariant} className="space-y-4 pt-4">
               <div className="flex items-start gap-4 p-5 playful-card">
-                <CheckCircle2 className="w-6 h-6 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-6 h-6 text-emerald-500 shrink-0" />
                 <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   <strong className="block text-gray-800 dark:text-gray-100 font-bold mb-1">Refuerzo Capilar:</strong> Ración rica en salmón y aceite de coco para estimular el crecimiento sano del folículo L4.
                 </div>
               </div>
               <div className="flex items-start gap-4 p-5 playful-card">
-                <CheckCircle2 className="w-6 h-6 text-cornflower shrink-0" />
+                <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
                 <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   <strong className="block text-gray-800 dark:text-gray-100 font-bold mb-1">Control Digestivo:</strong> Croqueta hidráulica o Dieta BARF adaptada a la mandíbula braquiocefálica.
                 </div>
@@ -86,7 +86,7 @@ export const CalculadoraComida: React.FC = () => {
           >
             <div className="playful-card p-8 sm:p-10">
               <h3 className="font-header text-2xl font-bold mb-8 flex items-center gap-3 text-gray-800 dark:text-gray-100">
-                <Scale className="w-6 h-6 text-cornflower" />
+                <Scale className="w-6 h-6 text-amber-500" />
                 Calcula la Ración Diaria
               </h3>
 
@@ -95,7 +95,7 @@ export const CalculadoraComida: React.FC = () => {
                 <div>
                   <div className="flex justify-between text-sm font-bold mb-4 uppercase tracking-wider">
                     <span className="text-gray-500 dark:text-gray-400">Peso del Fluffy</span>
-                    <span className="text-cornflower dark:text-cornflower">{peso} kg</span>
+                    <span className="text-amber-500 dark:text-amber-500">{peso} kg</span>
                   </div>
                   <input
                     type="range"
@@ -112,7 +112,7 @@ export const CalculadoraComida: React.FC = () => {
                 <div>
                   <div className="flex justify-between text-sm font-bold mb-4 uppercase tracking-wider">
                     <span className="text-gray-500 dark:text-gray-400">Edad del Cachorro/Adulto</span>
-                    <span className="text-cornflower dark:text-cornflower">{edadMeses} meses</span>
+                    <span className="text-amber-500 dark:text-amber-500">{edadMeses} meses</span>
                   </div>
                   <input
                     type="range"
@@ -157,7 +157,7 @@ export const CalculadoraComida: React.FC = () => {
                 </div>
 
                 {/* Calculated Results Block */}
-                <div className="bg-cornflower/10 dark:bg-gray-800 p-6 rounded-3xl border border-cornflower/20 dark:border-gray-700 mt-8 shadow-inner">
+                <div className="bg-blue-50 dark:bg-gray-800 p-6 rounded-3xl border border-blue-100 dark:border-gray-700 mt-8 shadow-inner">
                   <div className="grid grid-cols-2 gap-6 text-center divide-x divide-blue-200 dark:divide-gray-600">
                     <div>
                       <span className="text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold block mb-2">

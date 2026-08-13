@@ -33,7 +33,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             <div className="flex flex-wrap gap-4 mt-4">
               <a
                 href="#ciudades-hub"
-                className="btn-primary bg-cornflower hover:bg-cornflower/10 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-cornflower/30 hover:shadow-cornflower/50 transition-all duration-300 text-center flex items-center justify-center gap-2 hover:-translate-y-1 whitespace-nowrap"
+                className="btn-primary bg-cornflower hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-cornflower/30 hover:shadow-cornflower/50 transition-all duration-300 text-center flex items-center justify-center gap-2 hover:-translate-y-1 whitespace-nowrap"
               >
                 <span>Explorar por Ciudad</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -41,7 +41,7 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
               <button
                 onClick={onOpenQuiz}
-                className="group px-8 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:border-cornflower hover:text-indigo-500 dark:hover:border-cornflower dark:hover:text-indigo-500 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-transparent hover:bg-cornflower/10 dark:hover:bg-cornflower/10 whitespace-nowrap"
+                className="group px-8 py-4 rounded-full border-2 border-gray-200 dark:border-gray-700 font-bold text-gray-700 dark:text-gray-200 hover:border-cornflower hover:text-indigo-500 dark:hover:border-cornflower dark:hover:text-indigo-500 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 bg-transparent hover:bg-blue-50/50 dark:hover:bg-blue-900/10 whitespace-nowrap"
               >
                 Realizar Quiz Match 🐾
               </button>

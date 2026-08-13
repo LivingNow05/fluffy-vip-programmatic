@@ -94,15 +94,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             {/* Trust Pills */}
             <div className="flex gap-3 flex-wrap mt-8">
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <Dna className="w-4 h-4 text-cornflower" />
+                <Dna className="w-4 h-4 text-blue-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Pureza 100%</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <HeartHandshake className="w-4 h-4 text-cornflower" />
+                <HeartHandshake className="w-4 h-4 text-rose-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Ideal para Niños</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-5 py-2.5">
-                <ShieldCheck className="w-4 h-4 text-cornflower" />
+                <ShieldCheck className="w-4 h-4 text-amber-500" />
                 <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Garantía Escrita</span>
               </div>
             </div>
@@ -140,13 +140,13 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
         {/* TAXONOMY / DATA - Bento Grid */}
         <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/20 transition-all duration-300 group">
-            <FileText className="w-8 h-8 text-cornflower group-hover:text-cornflower mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-500/30 transition-all duration-300 group">
+            <FileText className="w-8 h-8 text-blue-400 group-hover:text-blue-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Registro</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Pedigree</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/20 transition-all duration-300 group">
-            <DollarSign className="w-8 h-8 text-cornflower group-hover:text-cornflower mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300 group">
+            <DollarSign className="w-8 h-8 text-emerald-400 group-hover:text-emerald-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Moneda</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">{city.moneda} / USD</p>
           </div>
@@ -155,13 +155,13 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Envío a {cityName}</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Aéreo VIP</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/20 transition-all duration-300 group">
-            <HeartHandshake className="w-8 h-8 text-cornflower group-hover:text-cornflower mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-rose-500/30 transition-all duration-300 group">
+            <HeartHandshake className="w-8 h-8 text-rose-400 group-hover:text-rose-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Entrega</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Personal</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/20 transition-all duration-300 group col-span-2 sm:col-span-1 md:col-span-1">
-            <Shield className="w-8 h-8 text-cornflower group-hover:text-cornflower mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-amber-500/30 transition-all duration-300 group col-span-2 sm:col-span-1 md:col-span-1">
+            <Shield className="w-8 h-8 text-amber-400 group-hover:text-amber-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Garantía</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Genética L4</p>
           </div>
@@ -185,7 +185,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
             {/* HISTORIA LOCAL (Dinámica) */}
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl p-6 mt-4 playful-card">
-              <div className="inline-block px-4 py-1.5 bg-cornflower/10 text-cornflower rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+              <div className="inline-block px-4 py-1.5 bg-amber-500/10 text-amber-500 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
                 Historia Local
               </div>
               <p className="text-base font-medium text-gray-600 dark:text-gray-300 italic">
@@ -194,7 +194,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             </div>
 
             {/* ADAPTABILIDAD */}
-            <div className="bg-cornflower/10 dark:bg-cornflower/10 border border-cornflower/20 dark:border-cornflower/20 rounded-3xl p-6 mt-4">
+            <div className="bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-3xl p-6 mt-4">
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="text-4xl bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-sm"><Sun className="w-8 h-8 text-yellow-500" /></div>
                 <div>
@@ -228,15 +228,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                   <h4 className="font-bold mb-2 text-obsidian dark:text-canvas">Exige Siempre:</h4>
                   <ul className="list-none space-y-2 text-base text-gray-600 dark:text-gray-400">
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Pruebas de ADN (Gen L4/L1)</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Pedigree Internacional</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-cornflower shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                       <span>Contrato con Garantía Congénita</span>
                     </li>
                   </ul>
@@ -257,35 +257,35 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             <div className="mt-8">
               <div className="flex justify-between items-end mb-6">
                 <div>
-                  <span className="text-cornflower font-bold text-sm tracking-widest uppercase mb-1 block">Sanidad Garantizada</span>
+                  <span className="text-blue-500 font-bold text-sm tracking-widest uppercase mb-1 block">Sanidad Garantizada</span>
                   <h3 className="font-header font-bold text-2xl text-obsidian dark:text-canvas">Panel de Salud y Vacunas</h3>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="bg-cornflower/10 dark:bg-cornflower/10 text-cornflower dark:text-cornflower text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">VIP Verificado</span>
+                  <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">VIP Verificado</span>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg transition-all group">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Syringe className="text-cornflower" /></div>
+                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Syringe className="text-rose-500" /></div>
                     <div>
                       <h4 className="font-bold text-sm text-obsidian dark:text-canvas">Vacunación</h4>
                       <p className="text-xs text-gray-400">Esquema Completo</p>
                     </div>
                   </div>
-                  <div className="bg-cornflower/10 dark:bg-cornflower/10 text-cornflower dark:text-cornflower text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
+                  <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg transition-all group">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Stethoscope className="text-cornflower" /></div>
+                    <div className="p-3 bg-gray-50 dark:bg-gray-900 rounded-xl group-hover:scale-110 transition-transform"><Stethoscope className="text-cyan-500" /></div>
                     <div>
                       <h4 className="font-bold text-sm text-obsidian dark:text-canvas">Examen Físico</h4>
                       <p className="text-xs text-gray-400">Veterinario Avalado</p>
                     </div>
                   </div>
-                  <div className="bg-cornflower/10 dark:bg-cornflower/10 text-cornflower dark:text-cornflower text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
+                  <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
                 </div>
               </div>
             </div>
@@ -322,7 +322,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                 <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" /> Incluye envío VIP a {cityName}</li>
                 <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" /> Gen L4/L1 + Garantía</li>
               </ul>
-              <Link to="/precios" className="block text-center mt-4 text-[10px] font-bold text-indigo-500 hover:text-cornflower uppercase tracking-widest transition-colors">
+              <Link to="/precios" className="block text-center mt-4 text-[10px] font-bold text-indigo-500 hover:text-blue-700 uppercase tracking-widest transition-colors">
                 Ver Planes de Precios &rarr;
               </Link>
             </div>

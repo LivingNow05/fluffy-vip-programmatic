@@ -144,7 +144,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
 
                 {/* Column 4: Cobertura Global */}
-                <div className="bg-cornflower/10 dark:bg-gray-700 p-5 rounded-2xl flex flex-col justify-between border border-cornflower/20 dark:border-gray-600">
+                <div className="bg-blue-50 dark:bg-gray-700 p-5 rounded-2xl flex flex-col justify-between border border-blue-100 dark:border-gray-600">
                   <div>
                     <span className="text-xs font-bold text-gray-800 dark:text-gray-100 block mb-2 uppercase tracking-widest">
                       ✈️ Global

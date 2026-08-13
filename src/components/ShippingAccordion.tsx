@@ -33,7 +33,7 @@ export const ShippingAccordion: React.FC<Props> = ({ currentCity }) => {
   ];
 
   return (
-    <section className="py-20 bg-cornflower/10 dark:bg-gray-900">
+    <section className="py-20 bg-blue-50 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 
