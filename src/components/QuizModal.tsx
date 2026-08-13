@@ -346,30 +346,30 @@ Quisiera ver fotos y conocer disponibilidad.`;
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => handleAnswer('gender', 'Macho')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-[#25D366] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-[#25D366]">Macho ♂️</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-[#25D366]">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Macho ♂️</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>
                   
                   <button 
                     onClick={() => handleAnswer('gender', 'Hembra')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-[#25D366] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-[#25D366]">Hembra ♀️</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-[#25D366]">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Hembra ♀️</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>
 
                   <button 
                     onClick={() => handleAnswer('gender', 'Indiferente')}
-                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-[#25D366] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-all group text-left"
+                    className="flex items-center justify-between p-5 border-2 border-gray-100 dark:border-gray-700 rounded-2xl hover:border-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-900/10 transition-all group text-left"
                   >
-                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-[#25D366]">Me es indiferente 🐾</span>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-[#25D366]">
+                    <span className="font-bold text-obsidian dark:text-canvas group-hover:text-violet-500">Me es indiferente 🐾</span>
+                    <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-xl group-hover:bg-violet-500">
                       <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </div>
                   </button>

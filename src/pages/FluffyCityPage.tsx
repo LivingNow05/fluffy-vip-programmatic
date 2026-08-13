@@ -126,7 +126,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
             {/* Decorative element */}
             <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-gray-100 dark:border-gray-700 hidden md:block z-10">
               <div className="flex items-center gap-3">
-                <div className="bg-green-100 dark:bg-green-900/30 text-[#25D366] p-3 rounded-full">
+                <div className="bg-amber-100 dark:bg-amber-900/30 text-amber-500 p-3 rounded-full">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div>
@@ -228,15 +228,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                   <h4 className="font-bold mb-2 text-obsidian dark:text-canvas">Exige Siempre:</h4>
                   <ul className="list-none space-y-2 text-base text-gray-600 dark:text-gray-400">
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                       <span>Pruebas de ADN (Gen L4/L1)</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                       <span>Pedigree Internacional</span>
                     </li>
                     <li className="flex gap-2 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-[#25D366] shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
                       <span>Contrato con Garantía Congénita</span>
                     </li>
                   </ul>
@@ -261,7 +261,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                   <h3 className="font-header font-bold text-2xl text-obsidian dark:text-canvas">Panel de Salud y Vacunas</h3>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="bg-green-100 dark:bg-green-900/30 text-[#25D366] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Verificado</span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">VIP Verificado</span>
                 </div>
               </div>
               
@@ -274,7 +274,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                       <p className="text-xs text-gray-400">Esquema Completo</p>
                     </div>
                   </div>
-                  <div className="bg-green-50 dark:bg-green-900/20 text-[#25D366] text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
+                  <div className="bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ AL DÍA</div>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg transition-all group">
@@ -285,7 +285,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                       <p className="text-xs text-gray-400">Veterinario Avalado</p>
                     </div>
                   </div>
-                  <div className="bg-green-50 dark:bg-green-900/20 text-[#25D366] text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
+                  <div className="bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-500 text-xs font-bold px-3 py-1 rounded-full inline-block">✓ APROBADO</div>
                 </div>
               </div>
             </div>
@@ -301,9 +301,9 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
         {/* RIGHT COLUMN (Sidebar) */}
         <div className="relative">
-          <div className="bg-gradient-to-b from-white to-blue-50/50 dark:from-gray-800 dark:to-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-[2rem] p-8 sticky top-[100px] shadow-xl">
-            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6">
-              <Phone className="w-6 h-6 text-[#25D366]" />
+          <div className="bg-gradient-to-b from-white to-amber-50/50 dark:from-gray-800 dark:to-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-[2rem] p-8 sticky top-[100px] shadow-xl">
+            <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-2xl flex items-center justify-center mb-6">
+              <Phone className="w-6 h-6 text-amber-500" />
             </div>
             <h3 className="font-header font-bold text-2xl mb-3 text-obsidian dark:text-canvas">
               ¿Buscas un Fluffy VIP?
