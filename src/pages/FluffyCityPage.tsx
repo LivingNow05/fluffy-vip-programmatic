@@ -60,7 +60,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         <div className="flex flex-col-reverse md:flex-row items-center gap-10 lg:gap-16">
           
           {/* Left Column: Typography & Content */}
-          <div className="w-full md:w-7/12 lg:w-7/12 flex flex-col justify-center pr-0 lg:pr-8">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center pr-0 lg:pr-8">
             <div className="mb-6">
               <span className="bg-[#FFB800] text-black text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 inline-block shadow-sm">
                 Disponible en {cityName}
@@ -109,8 +109,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
           </div>
 
           {/* Right Column: Visual */}
-          <div className="w-full md:w-5/12 lg:w-5/12 flex-shrink-0 relative mt-6 md:-mt-12 lg:-mt-16 lg:-mr-8 z-10">
-            <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex-shrink-0 relative mt-6 md:-mt-4 lg:-mt-8 lg:-mr-4 z-10">
+            <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
                 src="/images/fluffy-showcase-hero-light.jpg" 
                 alt="Bulldog Fluffy"
