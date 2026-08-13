@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-canvas text-obsidian dark:bg-obsidian dark:text-canvas transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .pill-button-primary {
+    @apply bg-obsidian text-canvas dark:bg-canvas dark:text-obsidian px-6 py-3 rounded-pill font-medium hover:scale-[0.98] transition-transform flex items-center justify-center gap-2;
+  }
+  
+  .pill-button-ghost {
+    @apply bg-transparent text-obsidian dark:text-canvas border border-obsidian dark:border-canvas px-6 py-3 rounded-pill font-medium hover:bg-obsidian hover:text-canvas dark:hover:bg-canvas dark:hover:text-obsidian transition-all;
+  }
+
+  .pill-button-accent {
+    @apply bg-lavender-mist text-obsidian px-6 py-3 rounded-pill font-medium hover:scale-[0.98] transition-transform flex items-center justify-center gap-2;
+  }
+
+  /* Cards */
+  .editorial-card-dark {
+    @apply bg-obsidian text-canvas rounded-card-lg p-6 lg:p-10 border-none shadow-none;
+  }
+
+  .editorial-card-lavender {
+    @apply bg-lavender-mist text-obsidian rounded-card-lg p-6 lg:p-10 border-none shadow-none;
+  }
+
+  .editorial-card-light {
+    @apply bg-canvas text-obsidian dark:bg-carbon dark:text-canvas rounded-card p-6 border border-ash-gray/20 dark:border-obsidian shadow-none;
+  }
+  
+  /* Sections */
+  .section-light {
+    @apply bg-canvas text-obsidian dark:bg-obsidian dark:text-canvas w-full py-16 md:py-24;
+  }
+  
+  .section-dark {
+    @apply bg-obsidian text-canvas dark:bg-carbon dark:text-canvas w-full py-16 md:py-24;
+  }
+
+  /* Typography */
+  .editorial-display {
+    @apply font-serif text-[48px] md:text-[80px] lg:text-[120px] leading-[0.85] tracking-tighter;
+  }
+}
+
+/* Custom Scrollbar for Horizontal Scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
