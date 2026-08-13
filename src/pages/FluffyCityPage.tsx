@@ -140,28 +140,28 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
         {/* TAXONOMY / DATA - Bento Grid */}
         <div className="mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
-            <FileText className="w-8 h-8 text-cornflower/60 group-hover:text-indigo-500 mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-500/30 transition-all duration-300 group">
+            <FileText className="w-8 h-8 text-blue-400 group-hover:text-blue-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Registro</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Pedigree</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
-            <DollarSign className="w-8 h-8 text-cornflower/60 group-hover:text-indigo-500 mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300 group">
+            <DollarSign className="w-8 h-8 text-emerald-400 group-hover:text-emerald-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Moneda</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">{city.moneda} / USD</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
-            <Plane className="w-8 h-8 text-cornflower/60 group-hover:text-indigo-500 mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-500/30 transition-all duration-300 group">
+            <Plane className="w-8 h-8 text-indigo-400 group-hover:text-indigo-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Envío a {cityName}</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Aéreo VIP</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group">
-            <HeartHandshake className="w-8 h-8 text-cornflower/60 group-hover:text-indigo-500 mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-rose-500/30 transition-all duration-300 group">
+            <HeartHandshake className="w-8 h-8 text-rose-400 group-hover:text-rose-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Entrega</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Personal</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-cornflower/30 transition-all duration-300 group col-span-2 sm:col-span-1 md:col-span-1">
-            <Shield className="w-8 h-8 text-cornflower/60 group-hover:text-indigo-500 mb-4 transition-colors" />
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-amber-500/30 transition-all duration-300 group col-span-2 sm:col-span-1 md:col-span-1">
+            <Shield className="w-8 h-8 text-amber-400 group-hover:text-amber-600 mb-4 transition-colors" />
             <p className="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Garantía</p>
             <p className="text-lg font-black text-obsidian dark:text-canvas">Genética L4</p>
           </div>
