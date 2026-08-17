@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, CheckCircle2, Sparkles, Star, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { FluffyStoryRow } from '../types/fluffy';
 
 interface Props {
@@ -10,7 +11,13 @@ interface Props {
 
 export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
   return (
-    <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
+    <>
+      <Helmet>
+        <title>Precios y Exclusividad | Dinastía Fluffy VIP</title>
+        <meta name="description" content="Conoce los precios y opciones de inversión para tu cachorro Bulldog Francés Fluffy. Linaje genético puro, certificados y garantías VIP." />
+        <link rel="canonical" href="https://frenchbulldogfluffy.com/precios" />
+      </Helmet>
+      <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 pt-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 text-indigo-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
@@ -135,5 +142,6 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
       </div>
 
     </main>
+    </>
   );
 };

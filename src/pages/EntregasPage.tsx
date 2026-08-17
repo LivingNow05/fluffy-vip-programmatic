@@ -10,8 +10,9 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
   return (
     <>
       <Helmet>
-        <title>Entregas y Logística VIP | Dinastía Fluffy</title>
+        <title>Entregas y Logística VIP | Dinastía Fluffy VIP</title>
         <meta name="description" content="Conoce nuestro proceso de envíos internacionales y nacionales. Entregas seguras en cabina, garantías genéticas y de salud para tu cachorro Bulldog Fluffy." />
+        <link rel="canonical" href="https://frenchbulldogfluffy.com/entregas" />
       </Helmet>
 
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
