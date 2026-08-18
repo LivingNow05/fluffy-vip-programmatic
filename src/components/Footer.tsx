@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
               Atención personalizada y reservas directas a través de nuestro equipo oficial.
             </p>
             <a
-              href="https://wa.me/573164822477?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP"
+              href="https://wa.me/573128375043?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white py-4 w-full justify-center shadow-none text-sm border-transparent"

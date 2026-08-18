@@ -40,7 +40,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, man
 
   if (!isOpen) return null;
 
-  const phoneNumber = "573164822477";
+  const phoneNumber = "573128375043";
 
   const stepsConfig = ['city'];
   if (!manto) {
