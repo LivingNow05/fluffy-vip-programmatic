@@ -1,7 +1,38 @@
 import React, { useState } from 'react';
 import { Sun, Moon, Menu, X, ChevronDown, Phone, MapPin, Sparkles, Dog } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FluffyStoryRow } from '../types/fluffy';
+
+const HeaderInteractiveLetter: React.FC<{ char: string; isAccent?: boolean }> = ({ char, isAccent }) => {
+  return (
+    <motion.span
+      className={`inline-block select-none will-change-transform transition-colors duration-200 ${
+        isAccent
+          ? 'text-cornflower hover:text-emerald-400 dark:hover:text-emerald-300'
+          : 'text-obsidian dark:text-canvas hover:text-cornflower'
+      }`}
+      whileHover={{
+        y: -5,
+        scale: 1.2,
+        rotate: (Math.random() - 0.5) * 12,
+        transition: { type: 'spring', stiffness: 500, damping: 10 }
+      }}
+    >
+      {char === ' ' ? '\u00A0' : char}
+    </motion.span>
+  );
+};
+
+const HeaderInteractiveWord: React.FC<{ word: string; isAccent?: boolean }> = ({ word, isAccent }) => {
+  return (
+    <span className="inline-block whitespace-nowrap">
+      {word.split('').map((char, i) => (
+        <HeaderInteractiveLetter key={i} char={char} isAccent={isAccent} />
+      ))}
+    </span>
+  );
+};
 
 interface HeaderProps {
   darkMode: boolean;
@@ -44,10 +75,11 @@ export const Header: React.FC<HeaderProps> = ({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group" aria-label="Dinastía Fluffy">
           <div className="flex flex-col">
-            <div className="font-header text-2xl sm:text-3xl font-black leading-none tracking-tight text-obsidian dark:text-canvas">
-              Dinastía <span className="text-cornflower">Fluffy</span>
+            <div className="font-header text-2xl sm:text-3xl font-black leading-none tracking-tight">
+              <HeaderInteractiveWord word="Dinastía" />{' '}
+              <HeaderInteractiveWord word="Fluffy" isAccent={true} />
             </div>
             <span className="text-xs tracking-wider uppercase font-bold text-gray-500 mt-0.5">
               VIP Exotic Kennel
