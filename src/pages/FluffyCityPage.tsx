@@ -49,6 +49,31 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const currentUrl = `https://frenchbulldogfluffy.com/${city.slug}`;
   const ogImage = `https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg`;
 
+  const countryCodeMap: Record<string, string> = {
+    'Colombia': 'CO',
+    'México': 'MX',
+    'Estados Unidos': 'US',
+    'España': 'ES',
+    'Costa Rica': 'CR',
+    'El Salvador': 'SV',
+    'Guatemala': 'GT',
+    'Honduras': 'HN',
+    'Nicaragua': 'NI',
+    'Panamá': 'PA',
+    'República Dominicana': 'DO',
+    'Argentina': 'AR',
+    'Bolivia': 'BO',
+    'Brasil': 'BR',
+    'Chile': 'CL',
+    'Ecuador': 'EC',
+    'Paraguay': 'PY',
+    'Perú': 'PE',
+    'Uruguay': 'UY',
+    'Venezuela': 'VE'
+  };
+  const targetCountryCode = countryCodeMap[city.pais] || 'CO';
+  const isDomestic = targetCountryCode === 'CO';
+
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -64,7 +89,42 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
       "priceCurrency": "USD",
       "price": "4500",
       "availability": "https://schema.org/InStock",
-      "url": currentUrl
+      "url": currentUrl,
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": targetCountryCode
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": isDomestic ? 3 : 10,
+            "maxValue": isDomestic ? 5 : 15,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 2,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": targetCountryCode,
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 15,
+        "returnMethod": "https://schema.org/ReturnInStore",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     }
   };
 
