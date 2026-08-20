@@ -3,10 +3,42 @@ import { Link } from 'react-router-dom';
 import { Sparkles, ShieldCheck, HeartHandshake, Dna, MapPin, ArrowRight, Phone, CheckCircle2 } from 'lucide-react';
 import { FluffyStoryRow } from '../types/fluffy';
 
+import { motion } from 'framer-motion';
+
 interface Props {
   cities: FluffyStoryRow[];
   onOpenQuiz: () => void;
 }
+
+const InteractiveLetter: React.FC<{ char: string; isAccent?: boolean }> = ({ char, isAccent }) => {
+  return (
+    <motion.span
+      className={`inline-block select-none cursor-default will-change-transform transition-colors duration-200 ${
+        isAccent
+          ? 'text-cornflower hover:text-emerald-400 dark:hover:text-emerald-300'
+          : 'text-obsidian dark:text-canvas hover:text-cornflower'
+      }`}
+      whileHover={{
+        y: -12,
+        scale: 1.2,
+        rotate: (Math.random() - 0.5) * 14,
+        transition: { type: 'spring', stiffness: 500, damping: 10 }
+      }}
+    >
+      {char === ' ' ? '\u00A0' : char}
+    </motion.span>
+  );
+};
+
+const InteractiveWord: React.FC<{ word: string; isAccent?: boolean }> = ({ word, isAccent }) => {
+  return (
+    <span className="inline-block whitespace-nowrap">
+      {word.split('').map((char, i) => (
+        <InteractiveLetter key={i} char={char} isAccent={isAccent} />
+      ))}
+    </span>
+  );
+};
 
 export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   return (
@@ -22,8 +54,13 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               <span>Criadero VIP Especializado</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-header tracking-tight text-obsidian dark:text-canvas leading-[1.1] text-balance">
-              Bulldog Francés <span className="text-cornflower">Fluffy</span>
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-header tracking-tight leading-[1.1] text-balance mb-6"
+              aria-label="Bulldog Francés Fluffy"
+            >
+              <InteractiveWord word="Bulldog" />{' '}
+              <InteractiveWord word="Francés" />{' '}
+              <InteractiveWord word="Fluffy" isAccent={true} />
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 max-w-xl">
