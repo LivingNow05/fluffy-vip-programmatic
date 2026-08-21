@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { MANTOS_FLUFFY } from "../data/mantos";
 import { FluffyStoryRow } from "../types/fluffy";
+import { AnimatedHeading } from "../components/AnimatedHeading";
 import { 
   Dna, ShieldCheck, CheckCircle2, 
   HeartHandshake, Award, Phone, ChevronRight
@@ -19,47 +21,60 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
   if (!manto) {
     return (
       <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-4xl font-header font-bold mb-4">Variedad no encontrada</h1>
-        <p className="text-gray-500 mb-8">No pudimos encontrar la variedad o manto seleccionado.</p>
+        <h1 className="text-4xl font-header font-bold mb-4">Color no encontrado</h1>
+        <p className="text-gray-500 mb-8">No pudimos encontrar el color o variedad seleccionada.</p>
         <Link to="/" className="btn-primary inline-block">Volver al Inicio</Link>
       </div>
     );
   }
 
   const otrosMantos = MANTOS_FLUFFY.filter(m => m.id !== manto.id);
-  const whatsappText = "Hola, quisiera información VIP y disponibilidad sobre la variedad " + manto.nombre + " (" + manto.genetica + ")";
+  const whatsappText = "Hola, quisiera información VIP y disponibilidad sobre " + manto.nombre + " (" + manto.genetica + ")";
+  const currentUrl = `https://frenchbulldogfluffy.com/color/${manto.id}`;
 
   return (
-    <main className="max-w-[1100px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
-      <div className="py-3 text-sm font-medium border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 mb-6 flex gap-2 items-center">
-        <Link to="/" className="hover:text-indigo-500 transition-colors">Inicio</Link>
-        <span>/</span>
-        <span className="text-gray-400">Mantos & Variedades</span>
-        <span>/</span>
-        <span className="text-indigo-500 font-bold">{manto.nombre}</span>
-      </div>
+    <>
+      <Helmet>
+        <title>{manto.nombre} | Criadero Dinastía Fluffy VIP</title>
+        <meta name="description" content={`Cachorros ${manto.nombre} con genética certificada (${manto.genetica}), pedigree internacional y envíos VIP en cabina.`} />
+        <link rel="canonical" href={currentUrl} />
+      </Helmet>
 
-      <article className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
-        <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 group">
-          <img
-            src={manto.imagen}
-            alt={manto.nombre}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute top-4 left-4 bg-cornflower text-white px-4 py-1.5 rounded-full text-xs uppercase font-bold tracking-widest shadow-md">
-            {manto.popularidad}
-          </div>
+      <main className="max-w-[1100px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
+        <div className="py-3 text-sm font-medium border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 mb-6 flex gap-2 items-center">
+          <Link to="/" className="hover:text-indigo-500 transition-colors">Inicio</Link>
+          <span>/</span>
+          <span className="text-gray-400">Colores & Variedades</span>
+          <span>/</span>
+          <span className="text-indigo-500 font-bold">{manto.nombre}</span>
         </div>
 
-        <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 text-blue-500 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
-            <Dna className="w-4 h-4" />
-            <span>Genética Exótica Certificada</span>
+        <article className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
+          <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 group">
+            <img
+              src={manto.imagen}
+              alt={manto.nombre}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute top-4 left-4 bg-cornflower text-white px-4 py-1.5 rounded-full text-xs uppercase font-bold tracking-widest shadow-md">
+              {manto.popularidad}
+            </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-black font-header mb-4 text-obsidian dark:text-canvas">
-            {manto.nombre}
-          </h1>
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 text-blue-500 rounded-full text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
+              <Dna className="w-4 h-4" />
+              <span>Genética Exótica Certificada</span>
+            </div>
+
+            <div className="mb-4">
+              <AnimatedHeading
+                text={manto.nombre}
+                as="h1"
+                className="text-4xl sm:text-5xl font-black font-header text-obsidian dark:text-canvas leading-tight"
+                accentWords={['Merle', 'Isabella', 'Blue', 'Solid', 'Chocolate', 'Lilac', 'Fluffy']}
+              />
+            </div>
 
           <div className="inline-block bg-lavender-mist dark:bg-gray-800 text-blue-500 dark:text-blue-300 font-mono font-bold text-sm px-4 py-2 rounded-xl mb-6 border border-blue-500/20">
             {manto.genetica}
@@ -129,7 +144,12 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
         <div className="flex justify-between items-end mb-8">
           <div>
             <span className="text-xs font-bold text-indigo-500 uppercase tracking-widest block mb-1">Colección Fluffy</span>
-            <h3 className="text-3xl font-header font-bold text-obsidian dark:text-canvas">Otras Variedades Populares</h3>
+            <AnimatedHeading
+              text="Otras Variedades Populares"
+              as="h3"
+              className="text-3xl font-header font-bold text-obsidian dark:text-canvas"
+              accentWords={['Variedades', 'Populares']}
+            />
           </div>
           <Link to="/" className="text-indigo-500 font-bold text-sm hover:underline flex items-center gap-1">
             <span>Ver Todo</span>
@@ -139,7 +159,7 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {otrosMantos.map((m) => (
-            <Link key={m.id} to={"/manto/" + m.id} className="group block">
+            <Link key={m.id} to={"/color/" + m.id} className="group block">
               <div className="aspect-square rounded-2xl overflow-hidden mb-3 relative shadow-sm border border-gray-200 dark:border-gray-700">
                 <img
                   src={m.imagen}
@@ -156,5 +176,6 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
         </div>
       </section>
     </main>
+    </>
   );
 };

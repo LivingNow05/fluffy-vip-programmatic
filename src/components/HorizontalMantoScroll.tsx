@@ -58,7 +58,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           {marqueeItems.map((manto, idx) => (
             <div key={`${manto.id}-${idx}`} className="px-3 shrink-0 w-[280px] sm:w-[320px]">
               <Link
-                to={"/manto/" + manto.id}
+                to={"/color/" + manto.id}
                 className="cursor-pointer group/card block"
               >
                 {/* Photo Showcase Container */}
@@ -93,7 +93,7 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
           {marqueeItems.map((manto, idx) => (
             <div key={`dup-${manto.id}-${idx}`} className="px-3 shrink-0 w-[280px] sm:w-[320px]">
               <Link
-                to={"/manto/" + manto.id}
+                to={"/color/" + manto.id}
                 className="cursor-pointer group/card block"
               >
                 <div className="aspect-[4/5] sm:aspect-square rounded-3xl overflow-hidden mb-4 relative shadow-md">

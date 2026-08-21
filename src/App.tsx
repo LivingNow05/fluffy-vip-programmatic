@@ -23,7 +23,7 @@ import { Phone, CheckCircle2, X } from "lucide-react";
 
 const ConditionalMantoScroll = ({ onSelectManto }: { onSelectManto: (m: FluffyManto) => void }) => {
   const location = useLocation();
-  if (location.pathname.startsWith("/manto/")) {
+  if (location.pathname.startsWith("/color/") || location.pathname.startsWith("/manto/")) {
     return null;
   }
   return <HorizontalMantoScroll onSelectManto={onSelectManto} />;
@@ -87,6 +87,7 @@ export const App: React.FC = () => {
 
         <Routes>
           <Route path="/" element={<HomePage cities={cities} onOpenQuiz={() => handleOpenQuiz()} />} />
+          <Route path="/color/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
           <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
           <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz(manto ? { manto } : undefined)} />} />
           <Route path="/entregas" element={<EntregasPage onOpenQuiz={() => handleOpenQuiz()} />} />
