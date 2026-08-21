@@ -36,7 +36,7 @@ const containerVariants = (staggerDelay: number): Variants => ({
     opacity: 1,
     transition: {
       staggerChildren: staggerDelay,
-      delayChildren: 0.08
+      delayChildren: 0.04
     }
   }
 });
@@ -46,34 +46,38 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   as = 'h2',
   className = '',
   accentWords = [],
-  staggerDelay = 0.022,
+  staggerDelay = 0.02,
   bounceOnHover = true
 }) => {
-  const words = text.split(' ');
-  const normalizedAccents = accentWords.map(w => w.toLowerCase().trim());
+  const words = text ? text.split(' ') : [];
+  
+  // Expand multi-word accents so all words within the city name (e.g. "Ciudad", "de", "Panamá") are recognized
+  const normalizedAccents = accentWords
+    .flatMap(w => w.split(' '))
+    .map(w => w.replace(/[^\wáéíóúÁÉÍÓÚñÑüÜ]/gi, '').toLowerCase().trim())
+    .filter(Boolean);
 
   const Tag = motion[as] as React.ElementType;
 
   return (
     <Tag
+      key={text}
       className={`inline-block text-balance ${className}`}
       aria-label={text}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-40px' }}
+      animate="visible"
       variants={containerVariants(staggerDelay)}
     >
       {words.map((word, wordIndex) => {
-        // Strip out punctuation for matching accent words
         const cleanWord = word.replace(/[^\wáéíóúÁÉÍÓÚñÑüÜ]/gi, '').toLowerCase();
         const isAccent = normalizedAccents.includes(cleanWord);
 
         return (
-          <React.Fragment key={wordIndex}>
+          <React.Fragment key={`${text}-w-${wordIndex}`}>
             <span className="inline-block whitespace-nowrap">
               {word.split('').map((char, charIndex) => (
                 <motion.span
-                  key={charIndex}
+                  key={`${text}-c-${wordIndex}-${charIndex}`}
                   variants={letterVariants}
                   whileHover={
                     bounceOnHover
