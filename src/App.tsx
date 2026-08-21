@@ -10,6 +10,7 @@ import { CalculadoraEdad } from "./components/CalculadoraEdad";
 import { QuizModal } from "./components/QuizModal";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { EeatSection } from "./components/EeatSection";
+import { TestimoniosMarquee } from "./components/TestimoniosMarquee";
 import { GeoHubGrid } from "./components/GeoHubGrid";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
@@ -102,6 +103,7 @@ export const App: React.FC = () => {
         <CalculadoraComida />
         <CalculadoraEdad />
         <EeatSection />
+        <TestimoniosMarquee />
         
         <GeoHubGrid
           cities={cities}
