@@ -4,6 +4,7 @@ import { Sparkles } from "lucide-react";
 import { FluffyManto } from "../types/fluffy";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { AnimatedHeading } from "./AnimatedHeading";
 
 interface Props {
   onSelectManto: (manto: FluffyManto) => void;
@@ -29,9 +30,14 @@ export const HorizontalMantoScroll: React.FC<Props> = ({ onSelectManto }) => {
               <Sparkles className="w-4 h-4" />
               <span>Colección Exclusiva por Color</span>
             </div>
-            <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
-              Mantos & Variedades
-            </h2>
+            <div>
+              <AnimatedHeading
+                text="Mantos & Variedades"
+                as="h2"
+                className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100"
+                accentWords={['Variedades']}
+              />
+            </div>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 font-medium max-w-2xl leading-relaxed">
               Explora nuestra selección. Haz clic en cualquier variedad para ver su ficha genética y disponibilidad.
             </p>

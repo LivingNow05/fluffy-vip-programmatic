@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, CheckCircle2, Plane, HeartPulse, Stethoscope, FileText, Gift, Info, Phone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async'; 
+import { Helmet } from 'react-helmet-async';
+import { AnimatedHeading } from '../components/AnimatedHeading';
 
 interface Props {
   onOpenQuiz: () => void;
@@ -31,9 +32,14 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
             <span className="inline-block bg-cornflower/20 text-cornflower border border-cornflower/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
               Logística de Excelencia
             </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-header font-black leading-tight mb-6 tracking-tight text-balance">
-              Entregas Seguras ✈️
-            </h1>
+            <div className="mb-6">
+              <AnimatedHeading
+                text="Entregas Seguras ✈️"
+                as="h1"
+                className="text-5xl md:text-6xl lg:text-7xl font-header font-black leading-tight tracking-tight text-white"
+                accentWords={['Seguras']}
+              />
+            </div>
             <p className="text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-xl mb-8">
               Transparencia en procesos, logística VIP en cabina y la tranquilidad de familias que ya tienen a su cachorro Bulldog Francés Fluffy.
             </p>
@@ -52,9 +58,12 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
         <section className="mb-20">
           <div className="text-center mb-12">
             <span className="text-cornflower font-bold text-xs tracking-widest uppercase mb-3 block">Todo lo que debes saber</span>
-            <h2 className="font-header font-black text-4xl sm:text-5xl text-obsidian dark:text-canvas">
-              Información Importante
-            </h2>
+            <AnimatedHeading
+              text="Información Importante"
+              as="h2"
+              className="font-header font-black text-4xl sm:text-5xl text-obsidian dark:text-canvas"
+              accentWords={['Importante']}
+            />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -131,9 +140,14 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
 
         {/* INCLUDED IN DELIVERY SECTION */}
         <section className="bg-gray-50 dark:bg-gray-900 rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-gray-100 dark:border-gray-800 text-center mb-20 shadow-inner">
-          <h2 className="font-header font-black text-3xl sm:text-4xl text-obsidian dark:text-canvas mb-4">
-            Entregamos cachorros de alta pureza 🧬
-          </h2>
+          <div className="mb-4">
+            <AnimatedHeading
+              text="Entregamos cachorros de alta pureza 🧬"
+              as="h2"
+              className="font-header font-black text-3xl sm:text-4xl text-obsidian dark:text-canvas"
+              accentWords={['pureza', 'alta']}
+            />
+          </div>
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-medium">
             Bienvenido al universo Dinastía Fluffy. Criamos bajo estándares de excelencia internacional para que tu mascota sea perfecta.
           </p>
@@ -169,9 +183,12 @@ export const EntregasPage: React.FC<Props> = ({ onOpenQuiz }) => {
         <section className="mb-20">
           <div className="text-center mb-12">
             <span className="text-cornflower font-bold text-xs tracking-widest uppercase mb-3 block">Familias Felices</span>
-            <h2 className="font-header font-black text-4xl sm:text-5xl text-obsidian dark:text-canvas">
-              Testimonios Reales
-            </h2>
+            <AnimatedHeading
+              text="Testimonios Reales"
+              as="h2"
+              className="font-header font-black text-4xl sm:text-5xl text-obsidian dark:text-canvas"
+              accentWords={['Reales']}
+            />
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center">

@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FluffyStoryRow } from '../types/fluffy';
+import { AnimatedHeading } from '../components/AnimatedHeading';
 import { ShippingAccordion } from '../components/ShippingAccordion';
 import { 
   ShieldCheck, Plane, DollarSign, Sparkles, Phone, Dna, CheckCircle2,
@@ -177,9 +178,14 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               <span className="bg-[#FFB800] text-black text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 inline-block shadow-sm">
                 Disponible en {cityName}
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-black font-header mb-5 leading-[1.1] tracking-tight text-obsidian dark:text-canvas">
-                {city.tituloH1 || 'Cachorros Bulldog Francés Fluffy'}
-              </h1>
+              <div className="mb-5">
+                <AnimatedHeading
+                  text={city.tituloH1 || 'Cachorros Bulldog Francés Fluffy'}
+                  as="h1"
+                  className="text-4xl sm:text-5xl lg:text-[4rem] font-black font-header leading-[1.1] tracking-tight text-obsidian dark:text-canvas"
+                  accentWords={['Fluffy', cityName]}
+                />
+              </div>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed max-w-2xl">
                 {city.metaDescripcion || 'Criadero especializado en ejemplares de Bulldog Francés Fluffy con pedigree.'}
               </p>
@@ -287,9 +293,14 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         
         {/* LEFT COLUMN */}
         <div>
-          <h2 className="font-header font-bold text-3xl mb-6 text-obsidian dark:text-canvas">
-            Encuentra el mejor Fluffy VIP en {cityName}
-          </h2>
+          <div className="mb-6">
+            <AnimatedHeading
+              text={`Encuentra el mejor Fluffy VIP en ${cityName}`}
+              as="h2"
+              className="font-header font-bold text-3xl text-obsidian dark:text-canvas"
+              accentWords={['Fluffy', 'VIP', cityName]}
+            />
+          </div>
           <div className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg flex flex-col gap-6">
             <p>
               Buscar un cachorro <strong>Bulldog Francés Fluffy</strong> es una decisión importante que requiere considerar el bienestar, la genética y la garantía de salud. Hemos preparado una logística exclusiva para que recibas a tu nuevo miembro de la familia en {cityName} cumpliendo con los estándares más altos.

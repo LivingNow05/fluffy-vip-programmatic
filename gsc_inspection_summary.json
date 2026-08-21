@@ -1,0 +1,114 @@
+[
+  {
+    "url": "https://frenchbulldogfluffy.com/",
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "crawl_time": "2026-08-15T18:00:35Z",
+    "google_canonical": "https://frenchbulldogfluffy.com/"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/entregas",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/precios",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/sobre-nosotros",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-bogota",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-medellin",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-cali",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-barranquilla",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-cartagena",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-cdmx",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-guadalajara",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-monterrey",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-miami",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-lima",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-santiago",
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  },
+  {
+    "url": "https://frenchbulldogfluffy.com/bulldog-frances-fluffy-buenos-aires",
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "crawl_time": "Pendiente",
+    "google_canonical": "N/A"
+  }
+]

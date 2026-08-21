@@ -2,43 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ShieldCheck, HeartHandshake, Dna, MapPin, ArrowRight, Phone, CheckCircle2 } from 'lucide-react';
 import { FluffyStoryRow } from '../types/fluffy';
-
-import { motion } from 'framer-motion';
+import { AnimatedHeading } from '../components/AnimatedHeading';
 
 interface Props {
   cities: FluffyStoryRow[];
   onOpenQuiz: () => void;
 }
-
-const InteractiveLetter: React.FC<{ char: string; isAccent?: boolean }> = ({ char, isAccent }) => {
-  return (
-    <motion.span
-      className={`inline-block select-none cursor-default will-change-transform transition-colors duration-200 ${
-        isAccent
-          ? 'text-cornflower hover:text-emerald-400 dark:hover:text-emerald-300'
-          : 'text-obsidian dark:text-canvas hover:text-cornflower'
-      }`}
-      whileHover={{
-        y: -12,
-        scale: 1.2,
-        rotate: (Math.random() - 0.5) * 14,
-        transition: { type: 'spring', stiffness: 500, damping: 10 }
-      }}
-    >
-      {char === ' ' ? '\u00A0' : char}
-    </motion.span>
-  );
-};
-
-const InteractiveWord: React.FC<{ word: string; isAccent?: boolean }> = ({ word, isAccent }) => {
-  return (
-    <span className="inline-block whitespace-nowrap">
-      {word.split('').map((char, i) => (
-        <InteractiveLetter key={i} char={char} isAccent={isAccent} />
-      ))}
-    </span>
-  );
-};
 
 export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   return (
@@ -54,14 +23,14 @@ export const HomePage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               <span>Criadero VIP Especializado</span>
             </div>
 
-            <h1
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-header tracking-tight leading-[1.1] text-balance mb-6"
-              aria-label="Bulldog Francés Fluffy"
-            >
-              <InteractiveWord word="Bulldog" />{' '}
-              <InteractiveWord word="Francés" />{' '}
-              <InteractiveWord word="Fluffy" isAccent={true} />
-            </h1>
+            <div className="mb-6">
+              <AnimatedHeading
+                text="Bulldog Francés Fluffy"
+                as="h1"
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-header tracking-tight leading-[1.1] text-obsidian dark:text-canvas"
+                accentWords={['Fluffy']}
+              />
+            </div>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 max-w-xl">
               <strong className="font-semibold text-gray-800 dark:text-gray-200">Dinastía Fluffy VIP es un criadero especializado en cachorros Bulldog Francés de pelo largo (Fluffy).</strong> Entregamos ejemplares puros con genética certificada (gen L4/L1), pedigree internacional y logística de transporte VIP a más de 100 ciudades.

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, ShieldAlert, Heart, Dna } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { AnimatedHeading } from './AnimatedHeading';
 
 export const EeatSection: React.FC = () => {
   const fadeUpVariant = {
@@ -28,9 +29,14 @@ export const EeatSection: React.FC = () => {
               <span>Criadero de Autoridad & Excelencia</span>
             </div>
           </motion.div>
-          <motion.h2 variants={fadeUpVariant} className="font-header font-extrabold text-4xl sm:text-5xl mb-4 text-gray-800 dark:text-gray-100">
-            Respaldo <span className="text-blue-500">Genético</span> & Compromiso Veterinario
-          </motion.h2>
+          <div className="mb-4">
+            <AnimatedHeading
+              text="Respaldo Genético & Compromiso Veterinario"
+              as="h2"
+              className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100"
+              accentWords={['Genético', 'Veterinario']}
+            />
+          </div>
           <motion.p variants={fadeUpVariant} className="text-lg text-gray-600 dark:text-gray-400 font-medium max-w-xl mx-auto">
             Garantizamos la máxima pureza de raza, crianza ética y bienestar integral para cada ejemplar Bulldog Francés Fluffy.
           </motion.p>

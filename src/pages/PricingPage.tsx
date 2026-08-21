@@ -3,6 +3,7 @@ import { ShieldCheck, CheckCircle2, Sparkles, Star, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FluffyStoryRow } from '../types/fluffy';
+import { AnimatedHeading } from '../components/AnimatedHeading';
 
 interface Props {
   cities: FluffyStoryRow[];
@@ -24,9 +25,14 @@ export const PricingPage: React.FC<Props> = ({ onOpenQuiz }) => {
           <Sparkles className="w-4 h-4" />
           <span>Inversión Transparente</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-header mb-6 leading-[1.1] text-obsidian dark:text-canvas text-balance">
-          Valor y Exclusividad <span className="text-indigo-500">Garantizada</span>
-        </h1>
+        <div className="mb-6">
+          <AnimatedHeading
+            text="Valor y Exclusividad Garantizada"
+            as="h1"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black font-header leading-[1.1] text-obsidian dark:text-canvas"
+            accentWords={['Garantizada', 'Exclusividad']}
+          />
+        </div>
         <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8">
           Adquirir un Fluffy no es solo comprar un perro, es integrar a un miembro VIP a tu familia. Conoce nuestras categorías genéticas.
         </p>

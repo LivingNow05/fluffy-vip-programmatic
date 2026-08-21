@@ -54,15 +54,19 @@ def append_indexed_log(url):
 def main():
     creds = get_credentials()
     urls = get_all_urls()
-    already_indexed = load_indexed_log()
+    import sys
+    force = '--force' in sys.argv
+    if force and os.path.exists(LOG_FILE):
+        os.remove(LOG_FILE)
+        already_indexed = set()
     
-    pending_urls = [u for u in urls if u not in already_indexed]
+    pending_urls = urls if force else [u for u in urls if u not in already_indexed]
     print(f"📊 Total URLs detectadas: {len(urls)}")
     print(f"✅ Ya indexadas previamente: {len(already_indexed)}")
     print(f"🚀 Pendientes por indexar hoy: {len(pending_urls)}")
     
     if not pending_urls:
-        print("🎉 ¡Todas las URLs ya fueron notificadas a Google!")
+        print("🎉 ¡Todas las URLs ya fueron notificadas a Google! (Usa --force para reenviar)")
         return
 
     success_count = 0

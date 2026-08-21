@@ -3,6 +3,7 @@ import { MapPin, Search, Globe, ChevronRight } from 'lucide-react';
 import { FluffyStoryRow } from '../types/fluffy';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { AnimatedHeading } from './AnimatedHeading';
 
 interface Props {
   cities: FluffyStoryRow[];
@@ -42,9 +43,14 @@ export const GeoHubGrid: React.FC<Props> = ({ cities, selectedCity }) => {
               <Globe className="w-4 h-4" />
               <span>Cobertura Nacional (102 Ciudades)</span>
             </div>
-            <h2 className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100">
-              Disponibilidad & Envíos
-            </h2>
+            <div>
+              <AnimatedHeading
+                text="Disponibilidad & Envíos"
+                as="h2"
+                className="font-header font-extrabold text-4xl sm:text-5xl text-gray-800 dark:text-gray-100"
+                accentWords={['Envíos']}
+              />
+            </div>
             <p className="text-lg text-gray-600 dark:text-gray-400 font-medium mt-4 leading-relaxed">
               Selecciona tu ciudad para consultar historias locales, aeropuertos y precios de envío garantizado.
             </p>
