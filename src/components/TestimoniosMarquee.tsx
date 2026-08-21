@@ -37,7 +37,7 @@ export const TestimoniosMarquee: React.FC<Props> = ({ className = '' }) => {
       {/* Infinite Horizontal Marquee Track */}
       <div className="w-full relative flex group overflow-hidden py-4">
         {/* Track 1 */}
-        <div className="flex animate-marquee group-hover:[animation-play-state:paused] shrink-0 gap-6">
+        <div className="flex animate-marquee-slow group-hover:[animation-play-state:paused] shrink-0 gap-6">
           {marqueeList.map((t, idx) => (
             <div
               key={`${t.id}-${idx}`}
@@ -97,7 +97,7 @@ export const TestimoniosMarquee: React.FC<Props> = ({ className = '' }) => {
         </div>
 
         {/* Track 2 (Duplicate for seamless continuous loop) */}
-        <div className="flex animate-marquee group-hover:[animation-play-state:paused] shrink-0 gap-6" aria-hidden="true">
+        <div className="flex animate-marquee-slow group-hover:[animation-play-state:paused] shrink-0 gap-6" aria-hidden="true">
           {marqueeList.map((t, idx) => (
             <div
               key={`dup-${t.id}-${idx}`}
