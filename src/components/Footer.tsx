@@ -1,8 +1,12 @@
 import React from 'react';
-import { Dog, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenQuiz?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenQuiz }) => {
   return (
     <footer className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-20 border-t border-gray-100 dark:border-gray-800">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,14 +28,14 @@ export const Footer: React.FC = () => {
           {/* Col 2 */}
           <div>
             <h4 className="font-bold text-[10px] uppercase tracking-widest text-gray-500 mb-6">
-              Variedades Exóticas
+              Colores & Variedades
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600 dark:text-gray-400">
-              <li><a href="#variedades" className="hover:text-indigo-500 transition-colors">Isabella Fluffy</a></li>
-              <li><a href="#variedades" className="hover:text-indigo-500 transition-colors">Blue Fluffy Signature</a></li>
-              <li><a href="#variedades" className="hover:text-indigo-500 transition-colors">Fluffy Cocoa Velvet</a></li>
-              <li><a href="#variedades" className="hover:text-indigo-500 transition-colors">Lilac Fluffy Imperial</a></li>
-              <li><a href="#variedades" className="hover:text-indigo-500 transition-colors">Fluffy Merle Exotic</a></li>
+              <li><Link to="/color/isabella" className="hover:text-cornflower transition-colors">Bulldog Fluffy Isabella</Link></li>
+              <li><Link to="/color/blue-solid" className="hover:text-cornflower transition-colors">Bulldog Fluffy Blue Solid</Link></li>
+              <li><Link to="/color/chocolate" className="hover:text-cornflower transition-colors">Bulldog Fluffy Chocolate</Link></li>
+              <li><Link to="/color/lilac" className="hover:text-cornflower transition-colors">Bulldog Fluffy Lilac</Link></li>
+              <li><Link to="/color/merle" className="hover:text-cornflower transition-colors">Bulldog Fluffy Merle</Link></li>
             </ul>
           </div>
 
@@ -41,11 +45,12 @@ export const Footer: React.FC = () => {
               Herramientas & Salud
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600 dark:text-gray-400">
-              <li><a href="#calculadora-nutricion" className="hover:text-indigo-500 transition-colors">Calculadora Nutricional</a></li>
-              <li><a href="#eeat-garantia" className="hover:text-indigo-500 transition-colors">Garantía Veterinaria & ADN</a></li>
-              <li><a href="#ciudades-hub" className="hover:text-indigo-500 transition-colors">Destinos & Aeropuertos</a></li>
-              <li><Link to="/precios" className="hover:text-indigo-500 transition-colors">Precios VIP</Link></li>
-              <li><Link to="/entregas" className="hover:text-indigo-500 transition-colors">Logística & Entregas</Link></li>
+              <li><a href="#calculadora-nutricion" className="hover:text-cornflower transition-colors">Calculadora Nutricional</a></li>
+              <li><a href="#eeat-garantia" className="hover:text-cornflower transition-colors">Garantía Veterinaria & ADN</a></li>
+              <li><a href="#testimonios-vip" className="hover:text-cornflower transition-colors">Testimonios VIP</a></li>
+              <li><a href="#ciudades-hub" className="hover:text-cornflower transition-colors">Destinos & Aeropuertos</a></li>
+              <li><Link to="/precios" className="hover:text-cornflower transition-colors">Precios VIP</Link></li>
+              <li><Link to="/entregas" className="hover:text-cornflower transition-colors">Logística & Entregas</Link></li>
             </ul>
           </div>
 
@@ -57,15 +62,13 @@ export const Footer: React.FC = () => {
             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 leading-relaxed">
               Atención personalizada y reservas directas a través de nuestro equipo oficial.
             </p>
-            <a
-              href="https://wa.me/573233182651?text=Hola,%20quisiera%20informaci%C3%B3n%20VIP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white py-4 w-full justify-center shadow-none text-sm border-transparent"
+            <button
+              onClick={() => onOpenQuiz && onOpenQuiz()}
+              className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white py-4 w-full justify-center shadow-none text-sm border-transparent cursor-pointer flex items-center gap-2 rounded-xl font-bold transition-all"
             >
               <Phone className="w-4 h-4" />
               <span>WhatsApp Directo VIP</span>
-            </a>
+            </button>
           </div>
 
         </div>

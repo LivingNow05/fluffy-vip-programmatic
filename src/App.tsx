@@ -111,7 +111,7 @@ export const App: React.FC = () => {
           onSelectCityBySlug={() => {}}
         />
 
-        <Footer />
+        <Footer onOpenQuiz={() => handleOpenQuiz()} />
 
         <FloatingWhatsApp onClick={() => handleOpenQuiz()} />
 
