@@ -95,7 +95,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         "@type": "OfferShippingDetails",
         "shippingRate": {
           "@type": "MonetaryAmount",
-          "value": "0",
+          "value": isDomestic ? "0" : "800",
           "currency": "USD"
         },
         "shippingDestination": {
@@ -121,10 +121,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
         "applicableCountry": targetCountryCode,
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 15,
-        "returnMethod": "https://schema.org/ReturnInStore",
-        "returnFees": "https://schema.org/FreeReturn"
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 15
       }
     }
   };

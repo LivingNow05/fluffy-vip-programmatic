@@ -49,6 +49,8 @@ export const TestimoniosMarquee: React.FC<Props> = ({ className = '' }) => {
                   <img
                     src={t.foto}
                     alt={`${t.nombre} con su cachorro Fluffy`}
+                    width={370}
+                    height={277}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
                     loading="lazy"
                   />
