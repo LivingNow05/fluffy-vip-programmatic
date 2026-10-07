@@ -18,6 +18,8 @@ import { PricingPage } from "./pages/PricingPage";
 import { FluffyCityPage } from "./pages/FluffyCityPage";
 import { MantoDetailPage } from "./pages/MantoDetailPage";
 import { EntregasPage } from "./pages/EntregasPage";
+import { BlogIndexPage } from "./pages/BlogIndexPage";
+import { BlogPostPage } from "./pages/BlogPostPage";
 import { motion } from "framer-motion";
 import { Phone, CheckCircle2, X } from "lucide-react";
 
@@ -92,6 +94,8 @@ export const App: React.FC = () => {
           <Route path="/manto/:id" element={<MantoDetailPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz({ manto })} />} />
           <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz(manto ? { manto } : undefined)} />} />
           <Route path="/entregas" element={<EntregasPage onOpenQuiz={() => handleOpenQuiz()} />} />
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => {
             const country = cities.find(c => c.tituloH1.replace("Bulldog Francés Fluffy en ", "") === city)?.pais;
             handleOpenQuiz({ city, country });

@@ -51,6 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuiz }) => {
               <li><a href="#ciudades-hub" className="hover:text-cornflower transition-colors">Destinos & Aeropuertos</a></li>
               <li><Link to="/precios" className="hover:text-cornflower transition-colors">Precios VIP</Link></li>
               <li><Link to="/entregas" className="hover:text-cornflower transition-colors">Logística & Entregas</Link></li>
+              <li><Link to="/blog" className="hover:text-cornflower transition-colors">Blog & Guías VIP</Link></li>
             </ul>
           </div>
 

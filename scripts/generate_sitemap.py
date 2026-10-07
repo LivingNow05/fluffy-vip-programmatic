@@ -1,21 +1,45 @@
 import csv
+import json
 import os
 from datetime import datetime, timezone
 
 DOMAIN = 'https://frenchbulldogfluffy.com'
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_PATH = os.path.join(ROOT_DIR, 'public', 'dataset_fluffy_stories.csv')
+ARTICLES_FILE = os.path.join(ROOT_DIR, 'blog_articles.json')
 PUBLIC_DIR = os.path.join(ROOT_DIR, 'public')
 TODAY = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 def generate_sitemaps():
     urls = [
         {'loc': f'{DOMAIN}/', 'priority': '1.0', 'changefreq': 'daily'},
-        {'loc': f'{DOMAIN}/entregas', 'priority': '0.9', 'changefreq': 'weekly'},
         {'loc': f'{DOMAIN}/precios', 'priority': '0.9', 'changefreq': 'weekly'},
-        {'loc': f'{DOMAIN}/sobre-nosotros', 'priority': '0.8', 'changefreq': 'monthly'},
+        {'loc': f'{DOMAIN}/entregas', 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': f'{DOMAIN}/blog', 'priority': '0.9', 'changefreq': 'daily'},
+        {'loc': f'{DOMAIN}/color/merle', 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': f'{DOMAIN}/color/isabella', 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': f'{DOMAIN}/color/blue-solid', 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': f'{DOMAIN}/color/chocolate', 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': f'{DOMAIN}/color/lilac', 'priority': '0.9', 'changefreq': 'weekly'},
     ]
 
+    # Add blog articles
+    if os.path.exists(ARTICLES_FILE):
+        try:
+            with open(ARTICLES_FILE, 'r', encoding='utf-8') as f:
+                articles = json.load(f)
+                for art in articles:
+                    slug = art.get('slug', '').strip()
+                    if slug:
+                        urls.append({
+                            'loc': f'{DOMAIN}/blog/{slug}',
+                            'priority': '0.85',
+                            'changefreq': 'monthly'
+                        })
+        except Exception as e:
+            print(f"⚠️ Error cargando blog_articles.json: {e}")
+
+    # Add 100 city pages
     if os.path.exists(CSV_PATH):
         with open(CSV_PATH, mode='r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
@@ -51,29 +75,7 @@ def generate_sitemaps():
     with open(os.path.join(PUBLIC_DIR, 'sitemap-0.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap_xml)
 
-    # 2. Generate sitemap-index.xml (Astro / Google standard)
-    sitemap_index = f'''<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>{DOMAIN}/sitemap-0.xml</loc>
-    <lastmod>{TODAY}</lastmod>
-  </sitemap>
-</sitemapindex>
-'''
-    with open(os.path.join(PUBLIC_DIR, 'sitemap-index.xml'), 'w', encoding='utf-8') as f:
-        f.write(sitemap_index)
-
-    # 3. Generate robots.txt
-    robots_content = f'''User-agent: *
-Allow: /
-
-Sitemap: {DOMAIN}/sitemap-index.xml
-Sitemap: {DOMAIN}/sitemap.xml
-'''
-    with open(os.path.join(PUBLIC_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
-        f.write(robots_content)
-
-    print(f'✅ Astro-style sitemaps generated with {len(urls)} URLs!')
+    print(f"✅ Sitemap generado con éxito. Total URLs: {len(urls)}")
 
 if __name__ == '__main__':
     generate_sitemaps()

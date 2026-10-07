@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "topic": "Genética del Bulldog Francés Fluffy: Guía Veterinaria del Gen FGF5 (L1/L4) y Cuidados del Pelaje Largo",
+    "source_url": "https://www.veterinarygenetics.org/french-bulldog-long-hair-fgf5",
+    "target_category": "salud",
+    "suggested_slug": "genetica-bulldog-frances-fluffy-gen-fgf5",
+    "status": "completed",
+    "added_at": "2026-10-07",
+    "completed_at": "2026-10-07"
+  },
+  {
+    "id": 2,
+    "topic": "Guía Completa de Cuidados del Manto Fluffy: Cepillado, Higiene de Pliegues y Prevención de Dermatitis",
+    "source_url": "https://competitor.com/cuidados-manto-fluffy",
+    "target_category": "cuidados",
+    "suggested_slug": "guia-cuidados-manto-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-07"
+  }
+]
