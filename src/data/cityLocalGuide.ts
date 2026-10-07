@@ -537,6 +537,75 @@ const curatedCityData: Record<string, CityLocalGuide> = {
         destacado: 'Paseo Residencial Sombreado'
       }
     ]
+  },
+
+  // GUATEMALA
+  'Ciudad de Guatemala': {
+    clima: {
+      tipoClima: 'Templado de Altura (Eterna Primavera)',
+      tempPromedio: '16°C - 25°C (Altitud: 1,500 msnm)',
+      adaptacionFluffy: 'La capital guatemalteca goza de uno de los climas más benignos de Centroamérica para el Bulldog Francés Fluffy. Las temperaturas estables de zonas residenciales como Zona 14, Zona 10 y Zona 16 permiten caminatas agradables sin riesgo de sobrecalentamiento.',
+      horarioPaseo: '7:30 AM - 10:00 AM y 4:00 PM - 6:30 PM',
+      consejosTermicos: [
+        'En época de lluvia (mayo a octubre), secar el pelaje tras el paseo para evitar nudos y humedad en pliegues.',
+        'La temperatura templada favorece paseos en terrazas de cafés pet-friendly.',
+        'Excelente tolerancia al ejercicio moderado gracias a la altitud y brisas de valle.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Paseo Cayalá',
+        zona: 'Zona 16, Ciudad de Guatemala',
+        descripcion: 'El complejo urbano abierto más exclusivo del país, con bulevares adoquinados planos, plazas con fuentes, amplias áreas verdes y decenas de terrazas 100% pet-friendly.',
+        destacado: 'Bulevar Exclusivo & Terrazas Pet-Friendly'
+      },
+      {
+        nombre: 'Parque Las Américas (Avenida Las Américas)',
+        zona: 'Zona 14 / Zona 13',
+        descripcion: 'Extenso camellón central arbolado y llano que conecta las zonas residenciales más prestigiosas de la capital, con sombra continua y fuentes de agua.',
+        destacado: 'Circuito Residencial Arbolado'
+      },
+      {
+        nombre: 'Parque Ecológico La Asunción',
+        zona: 'Zona 5 / Vista Hermosa',
+        descripcion: 'Reserva ecológica urbana con senderos naturales de tierra suave entre pinos y encinos, ideal para caminatas tranquilas sin impacto articular.',
+        destacado: 'Senderos Naturales entre Pinos'
+      }
+    ]
+  },
+
+  'Antigua': {
+    clima: {
+      tipoClima: 'Templado Andino Colonial',
+      tempPromedio: '15°C - 23°C (Brisa fresca de los volcanes)',
+      adaptacionFluffy: 'Antigua Guatemala ofrece un clima fresco y apacible que armoniza perfectamente con el pelaje largo del Fluffy. La sombra de sus casonas coloniales y el aire limpio de montaña mantienen al perro cómodo todo el día.',
+      horarioPaseo: '8:00 AM - 10:30 AM y 3:30 PM - 6:00 PM',
+      consejosTermicos: [
+        'Las calles empedradas históricas requieren ritmo de paseo pausado para proteger las almohadillas.',
+        'El pelaje Fluffy lo abriga naturalmente durante las noches frescas coloniales.',
+        'Disfruta de una cultura pet-friendly total en patios coloniales y jardines históricos.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Parque Central de Antigua',
+        zona: 'Centro Histórico de Antigua',
+        descripcion: 'Plaza mayor rodeada de arquitectura colonial y jacarandas sombreadas, con una emblemática fuente y ambiente sereno para socialización canina.',
+        destacado: 'Plaza Histórica Sombreada'
+      },
+      {
+        nombre: 'Cerro de la Cruz (Mirador)',
+        zona: 'Acceso Norte, Antigua',
+        descripcion: 'Paseo peatonal asfaltado y arborizado con vista directa al Volcán de Agua, ideal para caminatas matutinas frescas con correa.',
+        destacado: 'Paseo Panorámico Fresco'
+      },
+      {
+        nombre: 'Paseo de la Alameda',
+        zona: 'Alameda de Santa Rosa',
+        descripcion: 'Calle ancha y arbolada con aceras lisas, lejos del tráfico intenso, perfecta para paseos diarios de bajo impacto.',
+        destacado: 'Aceras Planas & Tranquilidad'
+      }
+    ]
   }
 };
 
