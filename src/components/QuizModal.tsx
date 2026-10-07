@@ -42,6 +42,20 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, man
 
   const phoneNumber = "573170911033";
 
+  const getEstimatedPrice = (mantoStr: string): string => {
+    if (!mantoStr) return 'Desde $3,800 USD';
+    const m = mantoStr.toLowerCase();
+    if (m.includes('ultra rare') || m.includes('rojo')) return 'Desde $8,500 USD';
+    if (m.includes('exotic vip')) return 'Desde $6,000 USD';
+    if (m.includes('signature')) return 'Desde $4,500 USD';
+    if (m.includes('merle')) return '$5,000 USD';
+    if (m.includes('isabella')) return '$4,500 USD';
+    if (m.includes('lilac')) return '$4,800 USD';
+    if (m.includes('chocolate') || m.includes('cocoa')) return '$4,200 USD';
+    if (m.includes('blue')) return '$3,800 USD';
+    return 'Desde $3,800 USD';
+  };
+
   const stepsConfig = ['city'];
   if (!manto) {
     stepsConfig.push('manto');
@@ -58,18 +72,29 @@ export const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose, city, man
     if (stepIndex < totalSteps - 1) {
       setStepIndex(prev => prev + 1);
     } else {
-      // Build WhatsApp message
-      const mantoText = finalAnswers.mantoPref ? ` variedad ${finalAnswers.mantoPref}` : '';
+      // Build WhatsApp message including price
+      const selectedManto = finalAnswers.mantoPref || manto || '';
+      const priceText = getEstimatedPrice(selectedManto);
+      const mantoText = selectedManto ? ` variedad ${selectedManto}` : '';
       const cityText = finalAnswers.cityPref ? ` con envío a ${finalAnswers.cityPref}` : '';
+
+      const experienceMap: Record<string, string> = {
+        'principiante': 'Principiante',
+        'intermedio': 'Intermedio',
+        'avanzado': 'Avanzado'
+      };
+      const experienceText = experienceMap[finalAnswers.experience] || finalAnswers.experience;
+
       const text = `¡Hola! Me interesa un cachorro Fluffy VIP${mantoText}${cityText}.
       
-*Mi perfil:*
-🏠 Vivienda: ${finalAnswers.housing === 'casa' ? 'Casa' : 'Apartamento'}
+*Mi perfil y cotización:*
+🏠 Vivienda: ${finalAnswers.housing === 'casa' ? 'Casa / Finca' : 'Apartamento'}
 👶 Niños: ${finalAnswers.kids === 'si' ? 'Sí' : 'No'}
-⭐ Experiencia: ${finalAnswers.experience}
+⭐ Experiencia: ${experienceText}
 🐾 Preferencia: ${finalAnswers.gender}
+💰 Inversión estimada: ${priceText}
 
-Quisiera ver fotos y conocer disponibilidad.`;
+Quisiera ver fotos, disponibilidad y confirmar el valor final.`;
       
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
