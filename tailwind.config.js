@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,json}",
+    "./blog_articles.json",
   ],
   darkMode: 'class',
   theme: {
