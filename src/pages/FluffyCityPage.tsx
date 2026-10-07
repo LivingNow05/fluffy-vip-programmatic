@@ -6,8 +6,10 @@ import { AnimatedHeading } from '../components/AnimatedHeading';
 import { ShippingAccordion } from '../components/ShippingAccordion';
 import { 
   ShieldCheck, Plane, DollarSign, Sparkles, Phone, Dna, CheckCircle2,
-  FileText, HeartHandshake, Sun, Home, AlertTriangle, Shield, Syringe, Stethoscope, Lock, ArrowRight
+  FileText, HeartHandshake, Sun, Home, AlertTriangle, Shield, Syringe, Stethoscope, Lock, ArrowRight,
+  ThermometerSun, Trees, Clock, MapPin, Droplets, Footprints
 } from 'lucide-react';
+import { getCityLocalGuide } from '../data/cityLocalGuide';
 
 interface Props {
   cities: FluffyStoryRow[];
@@ -44,6 +46,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const rawCity = city.tituloH1.split('Fluffy')[1]?.trim() || city.pais;
   const cityName = rawCity.replace(/^en\s+/i, '').trim();
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
+  const localGuide = getCityLocalGuide(cityName, city.pais);
 
   const seoTitle = `Bulldog Francés Fluffy en ${cityName} | Dinastía Fluffy VIP`;
   const seoDescription = `Criadero exclusivo de Bulldog Francés Fluffy con entrega VIP en ${cityName}, ${city.pais}. Certificados de genética L4 y logística de mascotas garantizada.`;
@@ -127,6 +130,62 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
     }
   };
 
+  const schemaBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://frenchbulldogfluffy.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": city.pais,
+        "item": `https://frenchbulldogfluffy.com/${city.slug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `Bulldog Francés Fluffy en ${cityName}`,
+        "item": currentUrl
+      }
+    ]
+  };
+
+  const schemaLocalFAQ = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `¿Cómo se adapta el Bulldog Francés Fluffy al clima de ${cityName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${localGuide.clima.adaptacionFluffy} En ${cityName} se recomienda pasear en los horarios de ${localGuide.clima.horarioPaseo}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `¿Cuáles son los mejores parques pet-friendly para un Bulldog Fluffy en ${cityName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Entre los mejores parques en ${cityName} destacan ${localGuide.parques.map(p => `${p.nombre} (${p.zona})`).join(', ')}, gracias a sus senderos planos y sombra protectora.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `¿Cómo se realiza la entrega de un cachorro Fluffy en ${cityName}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `El cachorro es transportado personalmente por un escolta cinológico en cabina climatizada hasta el ${city.aeropuerto}, entregándose con certificado de ADN del gen FGF5, vacunas al día y garantía genética escrita.`
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -149,9 +208,15 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
         <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image" content={ogImage} />
 
-        {/* Schema.org JSON-LD */}
+        {/* Schema.org JSON-LD (Product, Breadcrumbs, Local FAQ) */}
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSONLD)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaBreadcrumbs)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaLocalFAQ)}
         </script>
       </Helmet>
 
@@ -314,30 +379,125 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
               </p>
             </div>
 
-            {/* ADAPTABILIDAD */}
-            <div className="bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-3xl p-6 mt-4">
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <div className="text-4xl bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-sm"><Sun className="w-8 h-8 text-yellow-500" /></div>
-                <div>
-                  <h3 className="font-header font-bold text-2xl mb-2 text-obsidian dark:text-canvas">Clima y Adaptabilidad</h3>
-                  <p className="text-base text-gray-600 dark:text-gray-400 mb-4">
-                    El Bulldog Francés Fluffy se adapta perfectamente a la vida en interiores y al clima de {cityName}. Su pelaje largo (Gen L4) requiere cepillado regular, pero los mantiene cómodos. Es crucial mantenerlos frescos en días calurosos.
+            {/* ADAPTABILIDAD Y CLIMA LOCAL */}
+            <div className="bg-gradient-to-br from-blue-50/80 to-emerald-50/40 dark:from-blue-950/20 dark:to-emerald-950/10 border border-blue-100 dark:border-blue-900/40 rounded-3xl p-6 sm:p-8 mt-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row items-start gap-5">
+                <div className="p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-blue-100 dark:border-gray-700 text-blue-500 shrink-0">
+                  <ThermometerSun className="w-8 h-8" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 bg-blue-100/70 dark:bg-blue-900/40 px-3 py-1 rounded-full">
+                      {localGuide.clima.tipoClima}
+                    </span>
+                    <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700">
+                      Promedio: {localGuide.clima.tempPromedio}
+                    </span>
+                  </div>
+                  
+                  <h3 className="font-header font-bold text-2xl mb-3 text-obsidian dark:text-canvas">
+                    ¿Es el Bulldog Francés Fluffy ideal para el clima de {cityName}?
+                  </h3>
+                  
+                  <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    {localGuide.clima.adaptacionFluffy}
                   </p>
+
+                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-4 border border-blue-100/80 dark:border-gray-700 mb-4">
+                    <div className="flex items-center gap-2 text-sm font-bold text-obsidian dark:text-canvas mb-1">
+                      <Clock className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>Horario de paseo recomendado en {cityName}:</span>
+                    </div>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 pl-6">
+                      {localGuide.clima.horarioPaseo}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                      Pautas veterinarias para {cityName}:
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                      {localGuide.clima.consejosTermicos.map((tip, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                          <span>{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
 
+            {/* PARQUES PET-FRIENDLY RECOMENDADOS */}
+            <div className="mt-8">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2.5 bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 rounded-xl">
+                  <Trees className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 block">
+                    Rutas y Esparcimiento Canino
+                  </span>
+                  <h3 className="font-header font-bold text-2xl text-obsidian dark:text-canvas">
+                    Parques Pet-Friendly Recomendados en {cityName}
+                  </h3>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 max-w-2xl">
+                Seleccionamos las mejores áreas verdes con senderos planos, sombra protectora y condiciones idóneas para cuidar las articulaciones y el ritmo respiratorio de tu Fluffy en {cityName}:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {localGuide.parques.map((park, pIdx) => (
+                  <div 
+                    key={pIdx}
+                    className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition-all flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-start justify-between gap-2 mb-2">
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4 text-rose-500 shrink-0" />
+                          <h4 className="font-bold text-base text-obsidian dark:text-canvas">
+                            {park.nombre}
+                          </h4>
+                        </div>
+                      </div>
+                      
+                      <p className="text-xs font-semibold text-indigo-500 dark:text-indigo-400 mb-2">
+                        {park.zona}
+                      </p>
+
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        {park.descripcion}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-gray-100 dark:border-gray-700/60">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 rounded-full">
+                        <Footprints className="w-3 h-3" />
+                        <span>{park.destacado}</span>
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* ESTILO DE VIDA */}
-            <div className="mt-4 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="mt-8 flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex-1">
-                <h3 className="font-header font-bold text-2xl mb-4 text-obsidian dark:text-canvas">Estilo de Vida y Espacios</h3>
-                <p className="text-base text-gray-600 dark:text-gray-400">
-                  Son perros de compañía por excelencia. No necesitan grandes patios ni ejercicio extremo. Con paseos cortos diarios y mucho amor dentro de casa, tu Fluffy será inmensamente feliz.
+                <h3 className="font-header font-bold text-2xl mb-4 text-obsidian dark:text-canvas">Estilo de Vida y Espacios en {cityName}</h3>
+                <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Los Bulldogs Franceses Fluffy son perros de compañía por excelencia. No demandan grandes extensiones de terreno ni ejercicio de alto impacto. Con dos paseos diarios de 20 minutos en los parques de {cityName} y un entorno interior confortable, tu cachorro crecerá equilibrado, dócil y profundamente apegado a la familia.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 min-w-[200px] text-center shadow-sm">
+              <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 min-w-[200px] text-center shadow-sm shrink-0">
                 <div className="flex justify-center mb-2"><Home className="w-8 h-8 text-indigo-500" /></div>
-                <span className="block font-bold text-obsidian dark:text-canvas">Apto para Apartamento</span>
+                <span className="block font-bold text-obsidian dark:text-canvas">100% Apto para Apartamento</span>
+                <span className="text-xs text-gray-400 mt-1 block">Ideal en {cityName}</span>
               </div>
             </div>
 
