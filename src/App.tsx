@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { parseFluffyCSV } from "./utils/csvParser";
+import { parseFluffyCSV, FLUFFY_CITIES_SYNC } from "./utils/csvParser";
 import { FluffyStoryRow, FluffyManto } from "./types/fluffy";
 import { Header } from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
@@ -34,7 +34,7 @@ const ConditionalMantoScroll = ({ onSelectManto }: { onSelectManto: (m: FluffyMa
 
 export const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [cities, setCities] = useState<FluffyStoryRow[]>([]);
+  const [cities, setCities] = useState<FluffyStoryRow[]>(FLUFFY_CITIES_SYNC);
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
   const [quizContext, setQuizContext] = useState<{city?: string, manto?: string, country?: string}>({});
   const [selectedMantoModal, setSelectedMantoModal] = useState<FluffyManto | null>(null);

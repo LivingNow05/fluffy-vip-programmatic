@@ -44,7 +44,7 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   if (!city) return null;
 
   const rawCity = city.tituloH1.split('Fluffy')[1]?.trim() || city.pais;
-  const cityName = rawCity.replace(/^en\s+/i, '').trim();
+  const cityName = rawCity.replace(/^(en|em|no|na)\s+/i, '').trim();
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
   const localGuide = getCityLocalGuide(cityName, city.pais);
 

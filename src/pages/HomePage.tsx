@@ -11,6 +11,37 @@ interface Props {
 }
 
 export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
+  const homeFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Los cachorros Bulldog Francés Fluffy tienen certificación genética?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Cada ejemplar cuenta con su panel de pruebas genéticas de ADN emitido por un laboratorio certificado internacional, acreditando la portación real del gen de pelaje largo (L4/L1)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué garantía de salud ofrecen por los cachorros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Respaldamos la salud de tu cachorro mediante un contrato legal por escrito frente a enfermedades virales, genéticas o hereditarias, acompañado de su esquema de vacunación completo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tienen cobertura de envíos para los Bulldogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, contamos con logística de transporte VIP para entrega internacional a más de 100 ciudades, garantizando el bienestar del ejemplar durante el trayecto."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -28,6 +59,10 @@ export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
         <meta name="twitter:title" content="Bulldog Francés Fluffy VIP | Criadero Exclusivo" />
         <meta name="twitter:description" content="Criadero exclusivo de cachorros Bulldog Francés Fluffy con entrega VIP en cabina." />
         <meta name="twitter:image" content="https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify(homeFaqSchema)}
+        </script>
       </Helmet>
 
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">

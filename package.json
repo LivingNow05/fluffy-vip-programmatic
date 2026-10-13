@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "node scripts/sync-data.mjs && vite",
+    "build": "node scripts/sync-data.mjs && tsc && vite build && node scripts/prerender-dist.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

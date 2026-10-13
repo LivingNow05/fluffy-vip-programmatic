@@ -606,6 +606,177 @@ const curatedCityData: Record<string, CityLocalGuide> = {
         destacado: 'Aceras Planas & Tranquilidad'
       }
     ]
+  },
+
+  // CIUDADES ADICIONALES CURADAS (MÉXICO, PANAMÁ, ARGENTINA, HONDURAS, CHILE)
+  'Aguascalientes': {
+    clima: {
+      tipoClima: 'Templado Semiseco de Meseta',
+      tempPromedio: '14°C - 26°C (Altitud: 1,880 msnm)',
+      adaptacionFluffy: 'El clima semiseco y soleado de Aguascalientes es sumamente noble para el Bulldog Francés Fluffy. La baja humedad ambiental evita problemas dermatológicos en los pliegues y permite que su manto largo (gen FGF5) se mantenga esponjoso en zonas residenciales como Bosques del Prado y Campestre.',
+      horarioPaseo: '7:30 AM - 10:00 AM y 5:30 PM - 8:30 PM (disfrutando de los famosos atardeceres hidrocálidos)',
+      consejosTermicos: [
+        'Hidratar con agua fresca antes y después del paseo debido al ambiente semiseco del Bajío.',
+        'Evitar el sol cenital entre 12:00 PM y 4:00 PM durante los meses de abril y mayo.',
+        'Cepillado suave para mantener el brillo natural del pelaje tras pasear en áreas arboladas.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Jardín de San Marcos',
+        zona: 'Barrio de San Marcos, Centro',
+        descripcion: 'Histórico jardín cercado por balaustrada neoclásica con frondosos álamos y fresnos que proyectan sombra fresca y andadores planos de cantera.',
+        destacado: 'Sombra Tradicional & Andadores Planos'
+      },
+      {
+        nombre: 'Parque Tres Centurias',
+        zona: 'Barrio de la Estación / Alameda',
+        descripcion: 'Amplio complejo cultural y recreativo con explanadas niveladas, fuentes danzarinas y excelente ventilación para caminatas tranquilas con correa.',
+        destacado: 'Explanadas Niveladas & Fuentes'
+      },
+      {
+        nombre: 'Corredor Verde Alameda / Campestre',
+        zona: 'Zona Norte / Campestre',
+        descripcion: 'Camellones arbolados en la zona residencial norte de Aguascalientes, ideales para paseos matutinos seguros de bajo impacto articular.',
+        destacado: 'Entorno Residencial Seguro'
+      }
+    ]
+  },
+
+  'Colón': {
+    clima: {
+      tipoClima: 'Tropical Costero Caribeño',
+      tempPromedio: '26°C - 31°C (Brisa constante del Mar Caribe)',
+      adaptacionFluffy: 'En la costa atlántica panameña de Colón, el Bulldog Francés Fluffy requiere interiores climatizados con aire acondicionado (22°C-24°C) durante el día, reservando sus paseos para las horas en que la brisa marina del Caribe refresca los paseos costeros.',
+      horarioPaseo: '6:00 AM - 7:30 AM y 6:30 PM - 8:30 PM (bajo la brisa fresca del Atlántico)',
+      consejosTermicos: [
+        'Secar cuidadosamente los pliegues faciales y orejas para prevenir humedad por el clima costero.',
+        'Realizar caminatas cortas de 15 a 20 minutos en superficies frescas y sombreadas.',
+        'Mantener siempre agua fresca disponible en casa y durante el paseo.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Paseo Washington',
+        zona: 'Sector Costero / Cristo junto al Mar',
+        descripcion: 'Paseo peatonal frente a la bahía y el Mar Caribe donde la brisa marina circula de forma ininterrumpida, manteniendo una sensación térmica agradable al atardecer.',
+        destacado: 'Brisa Marina Directa del Caribe'
+      },
+      {
+        nombre: 'Parque de la Juventud (Paseo Marino)',
+        zona: 'Entrada de Colón / Paseo Marino',
+        descripcion: 'Espacio recreativo abierto frente a la costa con senderos pavimentados llanos, áreas verdes y brisa oceánica.',
+        destacado: 'Senderos Planos Frente al Mar'
+      },
+      {
+        nombre: 'Parque 5 de Noviembre',
+        zona: 'Centro Histórico de Colón',
+        descripcion: 'Plaza tradicional arbolada con bancas y sombra natural para recorridos breves en horarios matutinos.',
+        destacado: 'Plaza Arbolada Tradicional'
+      }
+    ]
+  },
+
+  'Córdoba': {
+    clima: {
+      tipoClima: 'Templado Pampeano con Influencia Serrana',
+      tempPromedio: '12°C - 26°C (Inviernos secos y frescos, primaveras templadas)',
+      adaptacionFluffy: 'La Docta ofrece un clima ideal para el Bulldog Francés Fluffy. Su pelaje largo L4/L1 le brinda abrigo natural en los inviernos frescos de Nueva Córdoba, Cerro de las Rosas o Villa Allende, mientras que el aire seco serrano favorece una respiración limpia.',
+      horarioPaseo: '8:00 AM - 10:30 AM y 5:00 PM - 8:00 PM',
+      consejosTermicos: [
+        'Durante los días cálidos de enero y febrero, elegir los senderos arbolados del Parque Sarmiento.',
+        'En invierno y otoño, su manto sedoso lo protege naturalmente de la brisa fresca de las sierras.',
+        'Cepillar después de paseos por parques con hojas secas de tipas y jacarandas.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Parque Sarmiento',
+        zona: 'Nueva Córdoba',
+        descripcion: 'El parque histórico más grande de Córdoba, diseñado por Carlos Thays, con rosedal, laguna, extensas praderas y arboledas centenarias a pasos de Nueva Córdoba.',
+        destacado: 'Pulmón Verde en Nueva Córdoba'
+      },
+      {
+        nombre: 'Parque del Kempes',
+        zona: 'Chateau Carreras / Zona Noroeste',
+        descripcion: 'Más de 80 hectáreas de naturaleza ribereña junto al río Suquía con senderos llanos de asfalto, estaciones de descanso y gran espacio para pasear con correa.',
+        destacado: 'Senderos Llanos Junto al Río'
+      },
+      {
+        nombre: 'Parque de las Naciones',
+        zona: 'Cerro de las Rosas',
+        descripcion: 'Parque moderno y seguro en el corazón de la zona norte residencial, muy concurrido por familias con mascotas de raza.',
+        destacado: 'Ambiente Residencial Norte'
+      }
+    ]
+  },
+
+  'San Pedro Sula': {
+    clima: {
+      tipoClima: 'Tropical Cálido del Valle de Sula',
+      tempPromedio: '24°C - 32°C (Brisa fresca vespertina desde la Cordillera del Merendón)',
+      adaptacionFluffy: 'En la capital industrial de Honduras, el Bulldog Francés Fluffy prospera en residencias y condominios climatizados de zonas como Río de Piedras, Los Andes o El Pedregal, disfrutando de paseos cuando baja el aire fresco desde la montaña del Merendón.',
+      horarioPaseo: '6:00 AM - 7:30 AM y 6:00 PM - 8:30 PM (cuando desciende la brisa del Merendón)',
+      consejosTermicos: [
+        'Evitar estrictamente las salidas en horas de sol intenso al mediodía.',
+        'Preferir las zonas altas cercanas al pie del Merendón donde la temperatura es hasta 4°C más fresca.',
+        'Mantener limpio y seco el contorno de los pliegues nasales.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Bulevar Los Próceres / Pie del Merendón',
+        zona: 'Oeste Residencial / El Pedregal',
+        descripcion: 'Corredor verde al pie de la Cordillera del Merendón con abundante vegetación tropical, sombra densa y corrientes de aire fresco de montaña.',
+        destacado: 'Microclima Fresco del Merendón'
+      },
+      {
+        nombre: 'Parque Infantil Presentación Centeno (Alrededores)',
+        zona: 'Barrio Río de Piedras / Los Andes',
+        descripcion: 'Entorno arbolado con caobas y almendros en una de las zonas residenciales más tradicionales y tranquilas para caminatas matutinas.',
+        destacado: 'Arboleda de Sombra Profunda'
+      },
+      {
+        nombre: 'Parque Central Luis Alonso Barahona',
+        zona: 'Centro de San Pedro Sula',
+        descripcion: 'Plaza peatonal arborizada con pérgolas y senderos planos de concreto liso.',
+        destacado: 'Senderos Planos & Pérgolas'
+      }
+    ]
+  },
+
+  'La Serena': {
+    clima: {
+      tipoClima: 'Desértico Costero con Nubosidad Matinal (Camanchaca)',
+      tempPromedio: '12°C - 21°C (Clima templado marítimo todo el año)',
+      adaptacionFluffy: 'La Serena posee uno de los mejores climas de Chile para el Bulldog Francés Fluffy: temperaturas suaves todo el año sin calor extremo ni heladas. La brisa fresca del Pacífico y las mañanas templadas cuidan sus vías respiratorias y su pelaje largo.',
+      horarioPaseo: '8:30 AM - 11:30 AM y 4:30 PM - 7:30 PM',
+      consejosTermicos: [
+        'Secar suavemente el manto si se pasea muy temprano durante la vaguada costera (camanchaca).',
+        'Evitar caminar sobre arena seca caliente al mediodía; preferir las veredas del paseo costero.',
+        'Su pelaje Fluffy lo abriga de forma ideal frente a la brisa marina vespertina.'
+      ]
+    },
+    parques: [
+      {
+        nombre: 'Parque Japonés (Kokoro No Niwa)',
+        zona: 'Centro / Eduardo de la Barra',
+        descripcion: 'Jardín paisajístico tranquilo con laguna, senderos cuidados y microclima fresco en el corazón de La Serena.',
+        destacado: 'Entorno Sereno & Paisajismo'
+      },
+      {
+        nombre: 'Parque Pedro de Valdivia',
+        zona: 'Casco Histórico Norte',
+        descripcion: 'Extenso parque tradicional con grandes arboledas de eucaliptos y praderas planas ideales para caminatas relajadas.',
+        destacado: 'Arboledas Frescas & Praderas'
+      },
+      {
+        nombre: 'Paseo Peatonal Avenida del Mar',
+        zona: 'Costanera de La Serena / El Faro',
+        descripcion: 'Vereda costera completamente plana frente al Océano Pacífico con brisa marina constante y ambiente familiar pet-friendly.',
+        destacado: 'Paseo Costero Plano sin Pendientes'
+      }
+    ]
   }
 };
 
