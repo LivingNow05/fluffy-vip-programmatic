@@ -34,7 +34,11 @@ export const BlogIndexPage: React.FC = () => {
 
   const filteredArticles = selectedCat === 'todos' 
     ? articles 
-    : articles.filter(a => a.cat === selectedCat);
+    : articles.filter(a => {
+        if (selectedCat === 'salud') return a.cat === 'salud' || a.cat === 'genetica';
+        if (selectedCat === 'nutricion') return a.cat === 'nutricion' || a.cat === 'alimentacion';
+        return a.cat === selectedCat;
+      });
 
   return (
     <>

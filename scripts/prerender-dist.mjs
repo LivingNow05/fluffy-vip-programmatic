@@ -328,7 +328,7 @@ for (const art of blogArticles) {
     extraJsonLd: [articleSchema],
     bodyHtml: `<main><article><h1>${escapeHtml(art.title)}</h1><p>${escapeHtml(
       art.desc
-    )}</p></article></main>`,
+    )}</p>${art.content || ''}</article></main>`,
   });
   writeHtmlFile(`blog/${art.slug}.html`, html);
   generatedCount++;

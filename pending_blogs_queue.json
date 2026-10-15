@@ -18,5 +18,97 @@
     "status": "completed",
     "added_at": "2026-10-07",
     "completed_at": "2026-10-08"
+  },
+  {
+    "id": 3,
+    "topic": "Colores Exóticos del Bulldog Francés Fluffy: Genética del Manto Isabella, Lilac, Blue y Merle",
+    "source_url": "autocomplete",
+    "target_category": "colores",
+    "suggested_slug": "colores-exoticos-bulldog-frances-fluffy",
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-15"
+  },
+  {
+    "id": 4,
+    "topic": "Alimentación del Bulldog Francés Fluffy: Cantidad por Edad, Dieta BARF vs Concentrado y Alergias",
+    "source_url": "autocomplete",
+    "target_category": "alimentacion",
+    "suggested_slug": "alimentacion-bulldog-frances-fluffy-guia-nutricional",
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-15"
+  },
+  {
+    "id": 5,
+    "topic": "Síndrome Braquicéfalo (BOAS) y Respiración en el Bulldog Francés Fluffy: Cuidados, Ejercicio y Termorregulación",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "sindrome-braquicefalo-respiracion-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 6,
+    "topic": "Tabla de Peso, Tamaño y Crecimiento del Bulldog Francés Fluffy Mes a Mes: De Cachorro a Adulto",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "tabla-peso-crecimiento-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 7,
+    "topic": "Bulldog Francés Fluffy vs Bulldog Francés Tradicional: Diferencias de Pelaje, Genética, Muda y Mantenimiento",
+    "source_url": "autocomplete",
+    "target_category": "curiosidades",
+    "suggested_slug": "bulldog-frances-fluffy-vs-tradicional-diferencias",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 8,
+    "topic": "Alergias Cutáneas y Dermatitis Atópica en el Bulldog Francés Fluffy: Síntomas, Causas y Tratamiento Veterinario",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "alergias-cutaneas-dermatitis-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 9,
+    "topic": "Primeros 30 Días de tu Cachorro Bulldog Francés Fluffy en Casa: Sueño, Socialización, Vacunas y Rutina",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "primeros-dias-cachorro-bulldog-frances-fluffy-en-casa",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 10,
+    "topic": "Genética Big Rope y Fluffy en el Bulldog Francés: Qué Es el Pliegue Nasal Pronunciado y Cómo Cuidarlo",
+    "source_url": "autocomplete",
+    "target_category": "genetica",
+    "suggested_slug": "genetica-big-rope-bulldog-frances-fluffy-cuidados",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 11,
+    "topic": "Cómo Viajar en Avión en Cabina con un Bulldog Francés Fluffy: Requisitos, Transportín y Seguridad Veterinaria",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "viajar-en-avion-cabina-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-15"
+  },
+  {
+    "id": 12,
+    "topic": "Salud Ocular en el Bulldog Francés Fluffy: Ojo de Cereza, Úlceras Corneales y Limpieza de Lagrimal",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "salud-ocular-ojos-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-15"
   }
 ]
