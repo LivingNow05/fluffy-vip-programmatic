@@ -45,8 +45,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "sindrome-braquicefalo-respiracion-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-16"
   },
   {
     "id": 6,
@@ -54,8 +55,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "tabla-peso-crecimiento-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-16"
   },
   {
     "id": 7,
