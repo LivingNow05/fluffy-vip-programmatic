@@ -91,15 +91,14 @@ export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-3.5 mt-4">
-                <a
-                  href="https://wa.me/573170911033?text=Hola,%20quisiera%20consultar%20disponibilidad%20inmediata%20de%20cachorros%20Bulldog%20Franc%C3%A9s%20Fluffy"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={onOpenQuiz}
                   className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 px-7 rounded-full shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transition-all duration-300 text-center flex items-center justify-center gap-2 hover:-translate-y-0.5 whitespace-nowrap cursor-pointer text-sm sm:text-base border-transparent"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Ver Disponibilidad WhatsApp</span>
-                </a>
+                </button>
 
                 <button
                   onClick={onOpenQuiz}

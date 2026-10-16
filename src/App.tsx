@@ -77,7 +77,20 @@ export const App: React.FC = () => {
   return (
     <BrowserRouter>
         <ScrollToTop />
-      <div className="min-h-screen bg-canvas dark:bg-obsidian text-obsidian dark:text-canvas transition-colors duration-300 font-sans">
+      <div
+        className="min-h-screen bg-canvas dark:bg-obsidian text-obsidian dark:text-canvas transition-colors duration-300 font-sans"
+        onClickCapture={(e) => {
+          const target = e.target as HTMLElement | null;
+          if (!target) return;
+          const trigger = target.closest('a[href*="wa.me"], a[href*="whatsapp.com"], [data-open-quiz]');
+          if (trigger) {
+            e.preventDefault();
+            e.stopPropagation();
+            const mantoAttr = trigger.getAttribute('data-quiz-manto') || undefined;
+            handleOpenQuiz(mantoAttr ? { manto: mantoAttr } : {});
+          }
+        }}
+      >
         
         <Header
           darkMode={darkMode}
@@ -95,7 +108,7 @@ export const App: React.FC = () => {
           <Route path="/precios" element={<PricingPage cities={cities} onOpenQuiz={(manto) => handleOpenQuiz(manto ? { manto } : undefined)} />} />
           <Route path="/entregas" element={<EntregasPage onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/blog" element={<BlogIndexPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage onOpenQuiz={() => handleOpenQuiz()} />} />
           <Route path="/:slug" element={<FluffyCityPage cities={cities} onOpenQuiz={(city) => {
             const country = cities.find(c => c.tituloH1.replace("Bulldog Francés Fluffy en ", "") === city)?.pais;
             handleOpenQuiz({ city, country });

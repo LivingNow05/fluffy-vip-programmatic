@@ -18,7 +18,11 @@ interface BlogArticle {
   content: string;
 }
 
-export const BlogPostPage: React.FC = () => {
+interface BlogPostPageProps {
+  onOpenQuiz?: () => void;
+}
+
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({ onOpenQuiz }) => {
   const { slug } = useParams<{ slug: string }>();
   const articles: BlogArticle[] = articlesData as BlogArticle[];
   const article = articles.find(a => a.slug === slug);
@@ -152,6 +156,16 @@ export const BlogPostPage: React.FC = () => {
             prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-100 dark:prose-h2:border-gray-800 prose-h2:pb-3
             prose-p:mb-5 prose-p:leading-relaxed
             prose-strong:font-bold prose-strong:text-obsidian dark:prose-strong:text-canvas"
+          onClick={(e) => {
+            const target = e.target as HTMLElement | null;
+            if (!target) return;
+            const trigger = target.closest('a[href*="wa.me"], a[href*="whatsapp.com"], [data-open-quiz]');
+            if (trigger) {
+              e.preventDefault();
+              e.stopPropagation();
+              onOpenQuiz?.();
+            }
+          }}
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
 
@@ -165,15 +179,14 @@ export const BlogPostPage: React.FC = () => {
             <span>Ver más artículos del Blog</span>
           </Link>
 
-          <a
-            href="https://wa.me/573170911033?text=Hola,%20quisiera%20asesor%C3%ADa%20personalizada%20sobre%20cachorros%20Bulldog%20Fluffy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3 px-6 rounded-full text-sm inline-flex items-center gap-2 shadow-lg shadow-[#25D366]/20 border-transparent"
+          <button
+            type="button"
+            onClick={() => onOpenQuiz?.()}
+            className="btn-primary bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3 px-6 rounded-full text-sm inline-flex items-center gap-2 shadow-lg shadow-[#25D366]/20 border-transparent cursor-pointer"
           >
             <MessageCircle className="w-4 h-4" />
             <span>Consultar por WhatsApp</span>
-          </a>
+          </button>
         </div>
       </main>
     </>
