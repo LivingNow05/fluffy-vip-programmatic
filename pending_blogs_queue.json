@@ -65,8 +65,9 @@
     "source_url": "autocomplete",
     "target_category": "curiosidades",
     "suggested_slug": "bulldog-frances-fluffy-vs-tradicional-diferencias",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-18"
   },
   {
     "id": 8,
@@ -74,8 +75,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "alergias-cutaneas-dermatitis-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-18"
   },
   {
     "id": 9,
@@ -112,5 +114,23 @@
     "suggested_slug": "salud-ocular-ojos-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-15"
+  },
+  {
+    "id": 13,
+    "topic": "Salud Espinal y Columna en el Bulldog Francés Fluffy: Hemivértebras, IVDD y Prevención de Lesiones",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "problemas-columna-ivdd-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-18"
+  },
+  {
+    "id": 14,
+    "topic": "Golpe de Calor y Termorregulación en el Bulldog Francés Fluffy: Cómo Proteger su Pelaje y Respiración en Verano",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "golpe-de-calor-termorregulacion-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-18"
   }
 ]
