@@ -85,8 +85,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "primeros-dias-cachorro-bulldog-frances-fluffy-en-casa",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-20"
   },
   {
     "id": 10,
@@ -94,8 +95,9 @@
     "source_url": "autocomplete",
     "target_category": "genetica",
     "suggested_slug": "genetica-big-rope-bulldog-frances-fluffy-cuidados",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-20"
   },
   {
     "id": 11,
@@ -132,5 +134,23 @@
     "suggested_slug": "golpe-de-calor-termorregulacion-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-18"
+  },
+  {
+    "id": 15,
+    "topic": "Bulldog Francés Fluffy Blue y Lilac: Diferencias Genéticas en Dilución d/d y co/co del Manto",
+    "source_url": "autocomplete",
+    "target_category": "colores",
+    "suggested_slug": "bulldog-frances-fluffy-blue-lilac-diferencias-geneticas",
+    "status": "pending",
+    "added_at": "2026-10-20"
+  },
+  {
+    "id": 16,
+    "topic": "Limpieza e Higiene de Orejas y Conducto Auditivo en el Bulldog Francés Fluffy: Prevención de Otitis",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "limpieza-orejas-oidos-bulldog-frances-fluffy-otitis",
+    "status": "pending",
+    "added_at": "2026-10-20"
   }
 ]
