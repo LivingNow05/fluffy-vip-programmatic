@@ -105,8 +105,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "viajar-en-avion-cabina-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-22"
   },
   {
     "id": 12,
@@ -114,8 +115,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "salud-ocular-ojos-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-15"
+    "status": "completed",
+    "added_at": "2026-10-15",
+    "completed_at": "2026-10-22"
   },
   {
     "id": 13,
@@ -152,5 +154,23 @@
     "suggested_slug": "limpieza-orejas-oidos-bulldog-frances-fluffy-otitis",
     "status": "pending",
     "added_at": "2026-10-20"
+  },
+  {
+    "id": 17,
+    "topic": "Por Qué tu Bulldog Francés Fluffy Respira Rápido: Causas, Síntomas de Alarma y Protocolo Veterinario",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "bulldog-frances-fluffy-respiracion-rapida-causas-alarma",
+    "status": "pending",
+    "added_at": "2026-10-22"
+  },
+  {
+    "id": 18,
+    "topic": "Genética del Color Merle en el Bulldog Francés Fluffy: Patrones de Pigmentación, Ojos Azules y Cruces Éticos",
+    "source_url": "autocomplete",
+    "target_category": "colores",
+    "suggested_slug": "bulldog-frances-fluffy-merle-genetica-patrones-cuidados",
+    "status": "pending",
+    "added_at": "2026-10-22"
   }
 ]
