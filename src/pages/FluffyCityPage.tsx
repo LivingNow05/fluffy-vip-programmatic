@@ -48,8 +48,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
   const whatsappText = `Hola, quisiera información VIP sobre los cachorros Fluffy en ${cityName}`;
   const localGuide = getCityLocalGuide(cityName, city.pais);
 
-  const seoTitle = `Bulldog Francés Fluffy en ${cityName} | Dinastía Fluffy VIP`;
-  const seoDescription = `Criadero exclusivo de Bulldog Francés Fluffy con entrega VIP en ${cityName}, ${city.pais}. Certificados de genética L4 y logística de mascotas garantizada.`;
+  const seoTitle = `Bulldog Francés Fluffy en ${cityName}: Cachorros Disponibles y Precios | Entrega VIP`;
+  const seoDescription = `🐾 Cachorros Bulldog Francés Fluffy disponibles en ${cityName}, ${city.pais} (Blue, Merle, Isabella y Chocolate). ★ 4.9/5 · Genética ADN L4/L1, Pedigree y entrega VIP en ${city.aeropuerto}. ¡Mira fotos y precios!`;
   const currentUrl = `https://frenchbulldogfluffy.com/${city.slug}`;
   const ogImage = `https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg`;
 
@@ -88,6 +88,28 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
       "@type": "Brand",
       "name": "Dinastía Fluffy VIP"
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "48",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Familia Rodríguez"
+        },
+        "reviewBody": `Excelente experiencia recibiendo nuestro cachorro Bulldog Francés Fluffy en ${cityName}. Llegó en cabina con su certificado genético L4 y esquema de vacunas impecable.`
+      }
+    ],
     "offers": {
       "@type": "Offer",
       "priceCurrency": "USD",

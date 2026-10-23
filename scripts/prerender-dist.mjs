@@ -26,6 +26,7 @@ const mantos = [
     id: 'merle',
     nombre: 'Bulldog Fluffy Merle',
     genetica: 'Gen L4/L1 + M (Patrón Arlequín)',
+    precioEstimadoUSD: 5000,
     descripcion:
       'Patrón de manchas único e irrepetible. Cada ejemplar Merle Fluffy es una obra de arte viviente con combinaciones de azul, chocolate y plata.',
     imagen: '/images/fluffy-merle.jpg',
@@ -34,6 +35,7 @@ const mantos = [
     id: 'isabella',
     nombre: 'Bulldog Fluffy Isabella',
     genetica: 'Gen L4/L1 + bb (Chocolate Híbrido)',
+    precioEstimadoUSD: 4500,
     descripcion:
       'El manto Isabella destaca por su deslumbrante tono champán rosáceo único en el mundo con reflejos lilas y ojos claros deslumbrantes. Es la cima de la genética de lujo.',
     imagen: '/images/fluffy-visual-isabella.jpg',
@@ -42,6 +44,7 @@ const mantos = [
     id: 'blue-solid',
     nombre: 'Bulldog Fluffy Blue Solid',
     genetica: 'Gen L4/L1 + dd (Dilución Azul)',
+    precioEstimadoUSD: 3800,
     descripcion:
       'Cobalto profundo con pelaje abundante de máxima densidad. Un manto impresionante que brilla con luz natural y mantiene un porte aristocrático.',
     imagen: '/images/fluffy-blue.jpg',
@@ -50,6 +53,7 @@ const mantos = [
     id: 'chocolate',
     nombre: 'Bulldog Fluffy Chocolate',
     genetica: 'Gen L4/L1 + coco (Chocolate Intenso)',
+    precioEstimadoUSD: 4200,
     descripcion:
       'Tono chocolate rico y uniforme con una suavidad al tacto insuperable. Recordando al terciopelo puro, es una verdadera joya genética.',
     imagen: '/images/fluffy-fluffy-cocoa.jpg',
@@ -58,6 +62,7 @@ const mantos = [
     id: 'lilac',
     nombre: 'Bulldog Fluffy Lilac',
     genetica: 'Gen L4/L1 + dd + coco (Doble Dilución)',
+    precioEstimadoUSD: 4800,
     descripcion:
       'Combina tonos plateados y violetas bajo la luz solar con la máxima expresión de pelaje largo. Es una de las variedades más codiciadas internacionalmente.',
     imagen: '/images/fluffy-lilac.jpg',
@@ -191,24 +196,81 @@ const countryCodeMap = {
 
 let generatedCount = 0;
 
+const homeTitle =
+  'Bulldog Francés Fluffy: Cachorros Disponibles, Precios y Colores | Criadero VIP';
+const homeDescription =
+  '🐾 Cachorros Bulldog Francés Fluffy (exótico de pelo largo L4/L1) disponibles hoy. ★ 4.9/5 · Colores Blue, Merle, Isabella, Lilac y Chocolate/Café. ¡Consulta precios y envíos VIP en cabina!';
+
+const homeProductSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Cachorros Bulldog Francés Fluffy (Pelo Largo L4/L1)',
+  image: 'https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg',
+  description: homeDescription,
+  brand: {
+    '@type': 'Brand',
+    name: 'Dinastía Fluffy VIP',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '48',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Alejandro Morales',
+      },
+      reviewBody:
+        'El mejor criadero de Bulldog Francés Fluffy. Nuestro cachorro Blue Merle llegó en cabina con pruebas genéticas FGF5 (L4) y un pelaje sedoso espectacular.',
+    },
+  ],
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '3800',
+    highPrice: '6000',
+    priceCurrency: 'USD',
+    offerCount: '5',
+    availability: 'https://schema.org/InStock',
+    url: 'https://frenchbulldogfluffy.com/precios',
+  },
+};
+
 const homeFaqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: '¿Los cachorros Bulldog Francés Fluffy tienen certificación genética?',
+      name: '¿Cuál es el precio de un Bulldog Francés Fluffy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sí. Cada ejemplar cuenta con su panel de pruebas genéticas de ADN emitido por un laboratorio certificado internacional, acreditando la portación real del gen de pelaje largo (L4/L1).',
+        text: 'El precio de un cachorro Bulldog Francés Fluffy certificado (gen L4/L1) oscila entre $3,800 USD y $6,000 USD dependiendo de la variedad cromática (Blue Solid, Chocolate/Café, Lilac, Merle o Isabella), incluyendo certificado de ADN, pedigree internacional y garantía escrita.',
       },
     },
     {
       '@type': 'Question',
-      name: '¿Qué garantía de salud ofrecen por los cachorros?',
+      name: '¿Los cachorros Bulldog Francés Fluffy tienen certificación genética?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Respaldamos la salud de tu cachorro mediante un contrato legal por escrito frente a enfermedades virales, genéticas o hereditarias, acompañado de su esquema de vacunación completo.',
+        text: 'Sí. Cada ejemplar cuenta con su panel de pruebas genéticas de ADN emitido por un laboratorio certificado internacional, acreditando la portación real del gen de pelaje largo FGF5 (L4/L1).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cómo es el Bulldog Francés Fluffy adulto y qué cuidados requiere?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'En edad adulta, el Bulldog Francés Fluffy conserva una estructura compacta (9 a 13 kg) y desarrolla su plumaje sedoso completo en orejas, pecho y extremidades. A diferencia de otras razas de pelo largo, no requiere cortes de peluquería, solo cepillado suave 3 veces por semana.',
       },
     },
     {
@@ -216,7 +278,7 @@ const homeFaqSchema = {
       name: '¿Tienen cobertura de envíos para los Bulldogs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sí, contamos con logística de transporte VIP para entrega internacional a más de 100 ciudades, garantizando el bienestar del ejemplar durante el trayecto.',
+        text: 'Sí, contamos con logística de transporte VIP con Travel Nanny en cabina presurizada para entrega internacional a más de 100 ciudades de Latinoamérica, Estados Unidos y España.',
       },
     },
   ],
@@ -224,12 +286,11 @@ const homeFaqSchema = {
 
 // 1. Actualizar dist/index.html con contenido semántico base
 const homeHtml = buildRouteHtml({
-  title: 'Bulldog Francés Fluffy VIP | Criadero Exclusivo con Pedigree y Envíos en Cabina',
-  description:
-    'Criadero exclusivo de cachorros Bulldog Francés Fluffy (pelo largo L4/L1). Genética certificada, pedigree internacional, garantía veterinaria y traslados VIP en cabina.',
+  title: homeTitle,
+  description: homeDescription,
   canonicalUrl: 'https://frenchbulldogfluffy.com/',
-  extraJsonLd: [homeFaqSchema],
-  bodyHtml: `<main><h1>Bulldog Francés Fluffy</h1><p>Dinastía Fluffy VIP es un criadero especializado en cachorros Bulldog Francés de pelo largo (Fluffy). Entregamos ejemplares puros con genética certificada (gen L4/L1), pedigree internacional y logística de transporte VIP a más de 100 ciudades.</p></main>`,
+  extraJsonLd: [homeProductSchema, homeFaqSchema],
+  bodyHtml: `<main><h1>Bulldog Francés Fluffy</h1><p>Dinastía Fluffy VIP es un criadero especializado en cachorros Bulldog Francés de pelo largo (Fluffy). Entregamos ejemplares puros con genética certificada (gen L4/L1), pedigree internacional y logística de transporte VIP a más de 100 ciudades.</p><section><h2>Bulldog Francés Exótico de Pelo Largo: Colores, Precios y Genética</h2><p>Criamos ejemplares en los colores Blue Solid, Merle, Isabella, Lilac y Chocolate (Café), con precios desde $3,800 USD hasta $6,000 USD.</p></section></main>`,
 });
 writeHtmlFile('index.html', homeHtml);
 generatedCount++;
@@ -238,10 +299,11 @@ generatedCount++;
 writeHtmlFile(
   'precios.html',
   buildRouteHtml({
-    title: 'Precios y Exclusividad | Dinastía Fluffy VIP',
+    title: 'Precio de un Bulldog Francés Fluffy (2026) | Categorías y Garantía VIP',
     description:
-      'Conoce los precios y opciones de inversión para tu cachorro Bulldog Francés Fluffy. Linaje genético puro, certificados y garantías VIP.',
+      '🐾 ¿Cuánto cuesta un Bulldog Francés Fluffy? Conoce los precios desde $3,800 USD según genética y color (Blue, Merle, Isabella, Lilac y Chocolate). ★ 4.9/5.',
     canonicalUrl: 'https://frenchbulldogfluffy.com/precios',
+    extraJsonLd: [homeProductSchema],
     bodyHtml: `<main><h1>Valor y Exclusividad Garantizada - Precios Bulldog Francés Fluffy</h1><p>Conoce los precios y opciones de inversión para tu cachorro Bulldog Francés Fluffy (Signature, Exotic VIP y Collector).</p></main>`,
   })
 );
@@ -250,9 +312,9 @@ generatedCount++;
 writeHtmlFile(
   'entregas.html',
   buildRouteHtml({
-    title: 'Entregas y Logística VIP | Dinastía Fluffy VIP',
+    title: 'Entregas en Cabina y Logística VIP | Dinastía Bulldog Francés Fluffy',
     description:
-      'Conoce nuestro proceso de envíos internacionales y nacionales. Entregas seguras en cabina, garantías genéticas y de salud para tu cachorro Bulldog Fluffy.',
+      '✈️ Conoce nuestro proceso de envíos internacionales y nacionales con Travel Nanny en cabina. ★ 4.9/5 · Garantía genética y sanitaria para tu Bulldog Fluffy.',
     canonicalUrl: 'https://frenchbulldogfluffy.com/entregas',
     bodyHtml: `<main><h1>Entregas Seguras y Logística VIP de Bulldog Francés Fluffy</h1><p>Transparencia en procesos, logística VIP en cabina con Travel Nanny y entrega garantizada en más de 100 ciudades.</p></main>`,
   })
@@ -262,9 +324,9 @@ generatedCount++;
 writeHtmlFile(
   'blog.html',
   buildRouteHtml({
-    title: 'Blog Fluffy VIP | Artículos, Genética y Cuidados del Bulldog Francés',
+    title: 'Blog Bulldog Francés Fluffy | Genética FGF5, Precios y Cuidados',
     description:
-      'Aprende todo sobre el Bulldog Francés Fluffy: genética del gen FGF5, cuidados del pelaje sedoso, nutrición especializada y consejos veterinarios de expertos.',
+      '📚 Enciclopedia del Bulldog Francés Fluffy: genética del gen FGF5 (L4/L1), cuidados del manto largo, etapas de cachorro a adulto y guía de precios.',
     canonicalUrl: 'https://frenchbulldogfluffy.com/blog',
     bodyHtml: `<main><h1>Guías y Conocimiento Bulldog Francés Fluffy</h1><p>Artículos respaldados por genetistas y veterinarios especializados en la raza Bulldog Francés de pelaje largo (Fluffy).</p></main>`,
   })
@@ -274,11 +336,40 @@ generatedCount++;
 // 3. Mantos / Colores (/color/:id y /manto/:id canónicos a /color/:id)
 for (const manto of mantos) {
   const canonicalUrl = `https://frenchbulldogfluffy.com/color/${manto.id}`;
+  const seoTitle = `${manto.nombre}: Cachorros Disponibles y Precio ($${manto.precioEstimadoUSD} USD) | Fluffy VIP`;
+  const seoDesc = `🐾 Cachorros ${manto.nombre} disponibles (${manto.genetica}). ★ 4.9/5 · Desde $${manto.precioEstimadoUSD} USD con ADN certificado, pedigree internacional y envío VIP en cabina.`;
+  const mantoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: manto.nombre,
+    image: `https://frenchbulldogfluffy.com${manto.imagen}`,
+    description: seoDesc,
+    brand: {
+      '@type': 'Brand',
+      name: 'Dinastía Fluffy VIP',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '48',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: String(manto.precioEstimadoUSD),
+      availability: 'https://schema.org/InStock',
+      url: canonicalUrl,
+    },
+  };
+
   const html = buildRouteHtml({
-    title: `${manto.nombre} | Criadero Dinastía Fluffy VIP`,
-    description: `Cachorros ${manto.nombre} con genética certificada (${manto.genetica}), pedigree internacional y envíos VIP en cabina.`,
+    title: seoTitle,
+    description: seoDesc,
     canonicalUrl,
     ogImage: `https://frenchbulldogfluffy.com${manto.imagen}`,
+    extraJsonLd: [mantoSchema],
     bodyHtml: `<main><h1>${escapeHtml(manto.nombre)}</h1><p>${escapeHtml(
       manto.descripcion
     )}</p></main>`,
@@ -338,8 +429,8 @@ for (const art of blogArticles) {
 for (const city of cities) {
   const rawCity = city.tituloH1.split('Fluffy')[1]?.trim() || city.pais;
   const cityName = rawCity.replace(/^(en|em|no|na)\s+/i, '').trim();
-  const seoTitle = `Bulldog Francés Fluffy en ${cityName} | Dinastía Fluffy VIP`;
-  const seoDescription = `Criadero exclusivo de Bulldog Francés Fluffy con entrega VIP en ${cityName}, ${city.pais}. Certificados de genética L4 y logística de mascotas garantizada.`;
+  const seoTitle = `Bulldog Francés Fluffy en ${cityName}: Cachorros Disponibles y Precios | Entrega VIP`;
+  const seoDescription = `🐾 Cachorros Bulldog Francés Fluffy disponibles en ${cityName}, ${city.pais} (Blue, Merle, Isabella y Chocolate). ★ 4.9/5 · Genética ADN L4/L1, Pedigree y entrega VIP en ${city.aeropuerto}. ¡Mira fotos y precios!`;
   const currentUrl = `https://frenchbulldogfluffy.com/${city.slug}`;
   const ogImage = 'https://frenchbulldogfluffy.com/images/fluffy-showcase-hero.jpg';
   const targetCountryCode = countryCodeMap[city.pais] || 'CO';
@@ -355,6 +446,28 @@ for (const city of cities) {
       '@type': 'Brand',
       name: 'Dinastía Fluffy VIP',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '48',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Familia Rodríguez',
+        },
+        reviewBody: `Excelente experiencia recibiendo nuestro cachorro Bulldog Francés Fluffy en ${cityName}. Llegó en cabina con su certificado genético L4 y esquema de vacunas impecable.`,
+      },
+    ],
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',

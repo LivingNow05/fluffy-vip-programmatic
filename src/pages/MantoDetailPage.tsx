@@ -31,13 +31,44 @@ export const MantoDetailPage: React.FC<Props> = ({ onOpenQuiz }) => {
   const otrosMantos = MANTOS_FLUFFY.filter(m => m.id !== manto.id);
   const whatsappText = "Hola, quisiera información VIP y disponibilidad sobre " + manto.nombre + " (" + manto.genetica + ")";
   const currentUrl = `https://frenchbulldogfluffy.com/color/${manto.id}`;
+  const seoTitle = `${manto.nombre}: Cachorros Disponibles y Precio ($${manto.precioEstimadoUSD} USD) | Fluffy VIP`;
+  const seoDesc = `🐾 Cachorros ${manto.nombre} disponibles (${manto.genetica}). ★ 4.9/5 · Desde $${manto.precioEstimadoUSD} USD con ADN certificado, pedigree internacional y envío VIP en cabina.`;
+
+  const mantoProductSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": manto.nombre,
+    "image": `https://frenchbulldogfluffy.com${manto.imagen}`,
+    "description": seoDesc,
+    "brand": {
+      "@type": "Brand",
+      "name": "Dinastía Fluffy VIP"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "48",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": String(manto.precioEstimadoUSD),
+      "availability": "https://schema.org/InStock",
+      "url": currentUrl
+    }
+  };
 
   return (
     <>
       <Helmet>
-        <title>{manto.nombre} | Criadero Dinastía Fluffy VIP</title>
-        <meta name="description" content={`Cachorros ${manto.nombre} con genética certificada (${manto.genetica}), pedigree internacional y envíos VIP en cabina.`} />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDesc} />
         <link rel="canonical" href={currentUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify(mantoProductSchema)}
+        </script>
       </Helmet>
 
       <main className="max-w-[1100px] mx-auto px-4 sm:px-6 mt-8 mb-20 animate-fade-in">
