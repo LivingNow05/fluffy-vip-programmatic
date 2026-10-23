@@ -125,8 +125,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "problemas-columna-ivdd-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-18"
+    "status": "completed",
+    "added_at": "2026-10-18",
+    "completed_at": "2026-10-23"
   },
   {
     "id": 14,
@@ -134,8 +135,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "golpe-de-calor-termorregulacion-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-18"
+    "status": "completed",
+    "added_at": "2026-10-18",
+    "completed_at": "2026-10-23"
   },
   {
     "id": 15,
@@ -172,5 +174,23 @@
     "suggested_slug": "bulldog-frances-fluffy-merle-genetica-patrones-cuidados",
     "status": "pending",
     "added_at": "2026-10-22"
+  },
+  {
+    "id": 19,
+    "topic": "Bulldog Francés Fluffy Adulto: Evolución del Pelaje, Maduración Ósea y Cuidados en la Etapa Madura",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "bulldog-frances-fluffy-adulto-evolucion-pelaje-cuidados",
+    "status": "pending",
+    "added_at": "2026-10-23"
+  },
+  {
+    "id": 20,
+    "topic": "Dieta Natural y Alimentos Prohibidos para el Bulldog Francés Fluffy: Nutrición Celular y Sensibilidad Digestiva",
+    "source_url": "autocomplete",
+    "target_category": "alimentacion",
+    "suggested_slug": "dieta-natural-alimentos-prohibidos-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-23"
   }
 ]
