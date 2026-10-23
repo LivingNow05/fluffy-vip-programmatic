@@ -547,13 +547,53 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm border border-red-100 dark:border-red-900/30">
                   <div className="flex gap-2 text-red-500 font-bold mb-2 items-center">
                     <AlertTriangle className="w-5 h-5" />
-                    <span>Evita Estafas</span>
+                    <span>Evita Estafas en {cityName}</span>
                   </div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Desconfía de precios excesivamente bajos o criadores que no muestran a los padres ni ofrecen pruebas genéticas.
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    Como advierten en foros como Reddit (<code>r/Frenchbulldogs</code>), el 90% de anuncios entre $800 y $1,500 USD son estafas con fotos robadas o envíos peligrosos en bodega de carga.
                   </p>
+                  <Link
+                    to="/reddit"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-indigo-500 hover:underline"
+                  >
+                    <span>Ver Auditoría Anti-Estafas y Consenso en Reddit &rarr;</span>
+                  </Link>
                 </div>
               </div>
+
+              <div className="mt-6 overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr className="bg-gray-100 dark:bg-gray-900 text-obsidian dark:text-canvas border-b border-gray-200 dark:border-gray-700">
+                      <th className="p-3 font-bold">Criterio en {cityName}</th>
+                      <th className="p-3 font-bold text-red-500">Clasificados / Redes ($1,000 USD)</th>
+                      <th className="p-3 font-bold text-emerald-600 dark:text-emerald-400">Protocolo Fluffy VIP ($3,800–$6,000 USD)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-gray-600 dark:text-gray-300">
+                    <tr>
+                      <td className="p-3 font-semibold text-obsidian dark:text-canvas">Verificación y ADN</td>
+                      <td className="p-3">Sin videollamada ni certificado FGF5 (L4/L1).</td>
+                      <td className="p-3">Videollamada en vivo obligatoria + ADN certificado y revisión BOAS.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3 font-semibold text-obsidian dark:text-canvas">Vuelo a {city.aeropuerto}</td>
+                      <td className="p-3">Riesgo mortal en bodega de carga o falso flete.</td>
+                      <td className="p-3">100% en Cabina Presurizada con Travel Nanny humana hasta {cityName}.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <details className="mt-4 group bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
+                <summary className="cursor-pointer font-bold text-sm text-obsidian dark:text-canvas flex items-center justify-between list-none">
+                  <span>¿Cómo entregamos en {cityName} sin intermediarios (brokers) ni pagos a ciegas?</span>
+                  <span className="text-indigo-500 text-xs font-bold group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Todos nuestros cachorros nacen en nuestro criadero matriz bajo control veterinario y viajan directamente en cabina junto a nuestra escolta humana (Travel Nanny) hasta el <strong>{city.aeropuerto}</strong>. Antes de reservar, verificas a tu cachorro y sus padres en videollamada en vivo.
+                </p>
+              </details>
             </div>
 
             {/* HEALTH PANEL */}

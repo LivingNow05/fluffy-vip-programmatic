@@ -38,6 +38,7 @@ const today = new Date().toISOString().split('T')[0];
 
 const staticUrls = [
   { loc: 'https://frenchbulldogfluffy.com/', changefreq: 'daily', priority: '1.0' },
+  { loc: 'https://frenchbulldogfluffy.com/reddit', changefreq: 'weekly', priority: '0.95' },
   { loc: 'https://frenchbulldogfluffy.com/precios', changefreq: 'weekly', priority: '0.9' },
   { loc: 'https://frenchbulldogfluffy.com/entregas', changefreq: 'weekly', priority: '0.9' },
   { loc: 'https://frenchbulldogfluffy.com/blog', changefreq: 'daily', priority: '0.9' },

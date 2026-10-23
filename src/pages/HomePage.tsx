@@ -288,6 +288,64 @@ export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
               </Link>
             </article>
           </div>
+
+          {/* BLOQUE DE TRANSPARENCIA Y CONSENSO EN FOROS (REDDIT) CON TABLA NATIVA Y <DETAILS> */}
+          <div className="mt-10 bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-cornflower block mb-1">
+                  Transparencia Radical &amp; Auditoría Antifraude
+                </span>
+                <h3 className="font-header font-bold text-2xl text-obsidian dark:text-canvas">
+                  ¿Por qué en Reddit advierten sobre estafas al buscar un Bulldog Francés Fluffy?
+                </h3>
+              </div>
+              <Link
+                to="/reddit"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cornflower/10 text-cornflower font-bold text-xs uppercase tracking-wider hover:bg-cornflower hover:text-white transition-colors shrink-0"
+              >
+                <span>Leer Informe Completo (/reddit)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 mb-4">
+              <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-gray-50 dark:bg-gray-900 text-obsidian dark:text-canvas border-b border-gray-200 dark:border-gray-700">
+                    <th className="p-3.5 font-bold">Factor Crítico</th>
+                    <th className="p-3.5 font-bold text-red-600 dark:text-red-400">Anuncios Falsos ($800–$1,500 USD)</th>
+                    <th className="p-3.5 font-bold text-cornflower">Estándar Dinastía Fluffy VIP ($3,800–$6,000 USD)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-gray-600 dark:text-gray-300">
+                  <tr>
+                    <td className="p-3.5 font-bold text-obsidian dark:text-canvas">Prueba de Vida y Genética</td>
+                    <td className="p-3.5">Fotos robadas sin videollamada ni panel ADN FGF5 real.</td>
+                    <td className="p-3.5 font-medium text-obsidian dark:text-canvas">Videollamada en vivo obligatoria + Certificado ADN (L4/L1) y selección libre de BOAS.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3.5 font-bold text-obsidian dark:text-canvas">Transporte Internacional</td>
+                    <td className="p-3.5">Extorsión con falsas agencias de carga o bodega de avión.</td>
+                    <td className="p-3.5 font-medium text-obsidian dark:text-canvas">Viaje 100% en cabina presurizada con Travel Nanny humana (Cero bodega).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <details className="group bg-gray-50 dark:bg-gray-900/60 rounded-2xl p-4 border border-gray-200/70 dark:border-gray-700">
+              <summary className="cursor-pointer font-bold text-sm text-obsidian dark:text-canvas flex items-center justify-between list-none">
+                <span>¿Cómo verifico a mi cachorro en vivo antes de realizar cualquier reserva?</span>
+                <span className="text-cornflower text-xs font-bold group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                Antes de aceptar cualquier anticipo, realizamos una videollamada en directo desde nuestra maternidad donde ves al cachorro en tiempo real, verificamos su microchip ISO, te mostramos a sus padres y revisamos junto a tu veterinario los paneles genéticos <code>FGF5 (L4/L1)</code>. Consulta todas las pruebas y respuestas a foros en nuestra{' '}
+                <Link to="/reddit" className="text-cornflower underline font-semibold">
+                  Auditoría de Consenso en Reddit
+                </Link>.
+              </p>
+            </details>
+          </div>
         </section>
       </main>
     </>
