@@ -68,10 +68,10 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
       },
       {
         '@type': 'Question',
-        name: '¿Puedo verificar al cachorro en videollamada en vivo junto con mi propio veterinario antes de reservar?',
+        name: '¿Cómo verifico la autenticidad, salud y genética del cachorro antes de reservar?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No solo puedes, sino que es un requisito obligatorio de nuestro protocolo antifraude. Antes de recibir cualquier depósito, realizamos una videollamada en vivo donde ves al cachorro en tiempo real, verificamos su lectura de microchip ISO, te mostramos a sus padres y revisamos sus certificados genéticos.',
+          text: 'Nuestro protocolo antifraude incluye el envío de videos actualizados y personalizados del cachorro junto a sus padres, registro de microchip ISO de 15 dígitos, certificados de laboratorio del gen FGF5 (L4/L1), historial clínico de vacunación y contrato legal escrito con garantía viral y congénita.',
         },
       },
     ],
@@ -245,9 +245,9 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-1 shrink-0" />
                   <span>
-                    <strong>Videollamada en vivo obligatoria antes de pagar:</strong> Ves al
-                    cachorro moviéndose en vivo, escribimos tu nombre y fecha en una hoja junto a él
-                    y escaneamos su microchip ISO frente a la cámara.
+                    <strong>Videos personalizados y trazabilidad por microchip ISO:</strong>{' '}
+                    Recibes videos actualizados del cachorro, de sus padres y la lectura verificable
+                    de su microchip ISO de 15 dígitos junto con su expediente clínico.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -313,20 +313,20 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
                     1. Verificación del Cachorro y Padres
                   </td>
                   <td className="p-4 sm:p-5">
-                    Videos pregrabados robados de TikTok/Instagram. Se niegan a hacer videollamada en
-                    vivo con excusas.
+                    Fotos y videos robados de TikTok/Instagram sin registro ni respaldo documental
+                    verificable.
                   </td>
                   <td className="p-4 sm:p-5">
                     Muestran al cachorro pero ocultan al padre o carecen de identificación por
                     microchip verificable.
                   </td>
                   <td className="p-4 sm:p-5">
-                    &ldquo;Nunca envíes dinero sin ver al cachorro en videollamada en vivo con tu
-                    nombre escrito en papel.&rdquo;
+                    &ldquo;Exige siempre pruebas reales de propiedad, microchip ISO, padres a la
+                    vista y contrato legal.&rdquo;
                   </td>
                   <td className="p-4 sm:p-5 bg-cornflower/5 font-medium text-obsidian dark:text-canvas">
-                    <strong>Videollamada en vivo obligatoria</strong> con el cachorro, padres,
-                    cartel con fecha/nombre y lector de microchip ISO.
+                    <strong>Videos personalizados actualizados</strong> del cachorro, padres,
+                    registro de microchip ISO y expediente veterinario completo.
                   </td>
                 </tr>
 
@@ -457,9 +457,9 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
             <details className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 open:shadow-md transition-all">
               <summary className="flex items-center justify-between cursor-pointer font-header font-bold text-lg text-obsidian dark:text-canvas list-none">
                 <span className="flex items-center gap-3">
-                  <Video className="w-5 h-5 text-cornflower shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-cornflower shrink-0" />
                   <span>
-                    Acta #1: Transcripción del Protocolo de Videollamada Antifraude en Tiempo Real
+                    Acta #1: Protocolo de Trazabilidad, Microchip ISO y Verificación Documental
                   </span>
                 </span>
                 <span className="text-cornflower text-sm font-bold group-open:rotate-180 transition-transform">
@@ -468,28 +468,27 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
               </summary>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 text-sm text-gray-600 dark:text-gray-300 leading-relaxed space-y-3">
                 <p>
-                  <strong>Objetivo del protocolo:</strong> Eliminar el 100% de la asimetría de
-                  confianza antes de que la familia realice cualquier depósito de reserva.
+                  <strong>Objetivo del protocolo:</strong> Garantizar la trazabilidad total del
+                  ejemplar desde el área de maternidad hasta la entrega en manos de la familia.
                 </p>
                 <p>
-                  <strong>Paso 1 (Prueba de Vida y Sincronía):</strong> Conectamos por videollamada
-                  en WhatsApp o FaceTime desde el área de maternidad climatizada. El asesor escribe
-                  en vivo en una tarjeta física el nombre del comprador, la ciudad de destino y la
-                  hora exacta junto al cachorro seleccionado.
+                  <strong>Paso 1 (Videos Actualizados y Registro Individual):</strong> Enviamos por
+                  WhatsApp videos detallados y actualizados del cachorro seleccionado junto a la
+                  información de sus padres, mostrando su estructura, movimiento y manto en alta
+                  definición.
                 </p>
                 <p>
-                  <strong>Paso 2 (Escaneo de Microchip e Inspección Anatómica):</strong> Pasamos el
-                  lector universal de microchip ISO (15 dígitos) sobre el lomo del cachorro para que
-                  el comprador vea coincidir el código con su expediente clínico. Mostramos en
-                  primer plano la apertura de sus fosas nasales (narinas), la simetría mandibular,
-                  la densidad del plumaje en las orejas (indicador fenotípico temprano del gen{' '}
-                  <code>FGF5</code>) y la ausencia de hernias umbilicales.
+                  <strong>Paso 2 (Identificación por Microchip ISO e Inspección Anatómica):</strong>{' '}
+                  Cada ejemplar cuenta con un código único de microchip ISO (15 dígitos) vinculado a
+                  su expediente clínico. Evaluamos en detalle la apertura de sus fosas nasales
+                  (narinas), la simetría mandibular, la densidad del plumaje en las orejas
+                  (indicador fenotípico temprano del gen <code>FGF5</code>) y la ausencia de hernias
+                  umbilicales.
                 </p>
                 <p>
-                  <strong>Paso 3 (Revisión con tu Veterinario de Confianza):</strong> Invitamos a la
-                  familia a sumar a su propio médico veterinario a la videollamada para revisar en
-                  directo el carnet de vacunación, desparasitación y los certificados de ADN de los
-                  padres.
+                  <strong>Paso 3 (Expediente Clínico y Certificados de ADN):</strong> Entregamos el
+                  carnet de vacunación al día, desparasitación, certificado de salud veterinario y
+                  los paneles genéticos oficiales para revisión total por parte de la familia.
                 </p>
               </div>
             </details>
@@ -610,25 +609,23 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
           </div>
         </section>
 
-        {/* PILAR 5: CTA DE AUDITORÍA ANTIFRAUDE EN VIVO */}
+        {/* PILAR 5: CTA DE AUDITORÍA ANTIFRAUDE */}
         <section className="bg-gradient-to-br from-obsidian to-gray-900 text-white rounded-3xl p-8 sm:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cornflower/20 text-cornflower text-xs font-bold uppercase tracking-widest mb-5 border border-cornflower/30">
-              <AlertTriangle className="w-4 h-4" />
-              <span>Cero Reservas a Ciegas · Verificación en Vivo Primero</span>
+              <ShieldCheck className="w-4 h-4" />
+              <span>Garantía Genética y Sanitaria por Escrito</span>
             </div>
 
             <h2 className="font-header font-black text-3xl sm:text-4xl mb-4 leading-tight">
-              No confíes en capturas de pantalla. Solicita hoy tu Videollamada de Verificación en
-              Vivo y Audita Nuestros Certificados de ADN
+              Conoce los Cachorros Disponibles y Solicita Nuestros Certificados de ADN por WhatsApp
             </h2>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
               Si estás evaluando incorporar un <strong>Bulldog Francés Fluffy</strong> a tu familia,
-              te invitamos a comprobar personalmente nuestro protocolo clínico. Agenda una
-              videollamada sin costo ni compromiso para conocer a los cachorros disponibles, ver a
-              sus padres en tiempo real y revisar sus paneles genéticos <code>FGF5 (L4/L1)</code>{' '}
-              junto a tu veterinario.
+              escríbenos para recibir videos actualizados de los cachorros disponibles, conocer a
+              sus padres y revisar sus paneles genéticos <code>FGF5 (L4/L1)</code> junto con nuestro
+              contrato de garantía escrita.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
@@ -637,8 +634,8 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
                 onClick={onOpenQuiz}
                 className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 transition-all duration-300 flex items-center gap-3 cursor-pointer text-sm sm:text-base"
               >
-                <Video className="w-5 h-5" />
-                <span>Solicitar Videollamada y Certificados ADN por WhatsApp</span>
+                <ShieldCheck className="w-5 h-5" />
+                <span>Consultar Cachorros Disponibles y Certificados por WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -653,8 +650,8 @@ export const RedditConsensusPage: React.FC<RedditConsensusPageProps> = ({ onOpen
             <div className="mt-6 flex items-center gap-2 text-xs text-gray-400">
               <Lock className="w-3.5 h-3.5 text-cornflower" />
               <span>
-                Prohibimos cualquier pago o anticipo sin previa verificación por videollamada en
-                vivo.
+                Todos nuestros ejemplares se entregan con contrato legal, microchip ISO y garantía
+                genética escrita.
               </span>
             </div>
           </div>

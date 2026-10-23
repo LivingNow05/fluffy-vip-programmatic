@@ -573,8 +573,8 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-gray-600 dark:text-gray-300">
                     <tr>
                       <td className="p-3 font-semibold text-obsidian dark:text-canvas">Verificación y ADN</td>
-                      <td className="p-3">Sin videollamada ni certificado FGF5 (L4/L1).</td>
-                      <td className="p-3">Videollamada en vivo obligatoria + ADN certificado y revisión BOAS.</td>
+                      <td className="p-3">Sin registro ni certificado FGF5 (L4/L1).</td>
+                      <td className="p-3">Microchip ISO + ADN certificado, contrato escrito y revisión BOAS.</td>
                     </tr>
                     <tr>
                       <td className="p-3 font-semibold text-obsidian dark:text-canvas">Vuelo a {city.aeropuerto}</td>
@@ -587,11 +587,11 @@ export const FluffyCityPage: React.FC<Props> = ({ cities, onOpenQuiz }) => {
 
               <details className="mt-4 group bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
                 <summary className="cursor-pointer font-bold text-sm text-obsidian dark:text-canvas flex items-center justify-between list-none">
-                  <span>¿Cómo entregamos en {cityName} sin intermediarios (brokers) ni pagos a ciegas?</span>
+                  <span>¿Cómo entregamos en {cityName} sin intermediarios (brokers) y con garantía total?</span>
                   <span className="text-indigo-500 text-xs font-bold group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Todos nuestros cachorros nacen en nuestro criadero matriz bajo control veterinario y viajan directamente en cabina junto a nuestra escolta humana (Travel Nanny) hasta el <strong>{city.aeropuerto}</strong>. Antes de reservar, verificas a tu cachorro y sus padres en videollamada en vivo.
+                  Todos nuestros cachorros nacen en nuestro criadero matriz bajo control veterinario y viajan directamente en cabina junto a nuestra escolta humana (Travel Nanny) hasta el <strong>{city.aeropuerto}</strong>, entregándose con su certificado genético L4/L1, microchip ISO y contrato de garantía escrita.
                 </p>
               </details>
             </div>

@@ -320,9 +320,9 @@ export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-gray-600 dark:text-gray-300">
                   <tr>
-                    <td className="p-3.5 font-bold text-obsidian dark:text-canvas">Prueba de Vida y Genética</td>
-                    <td className="p-3.5">Fotos robadas sin videollamada ni panel ADN FGF5 real.</td>
-                    <td className="p-3.5 font-medium text-obsidian dark:text-canvas">Videollamada en vivo obligatoria + Certificado ADN (L4/L1) y selección libre de BOAS.</td>
+                    <td className="p-3.5 font-bold text-obsidian dark:text-canvas">Trazabilidad y Genética</td>
+                    <td className="p-3.5">Fotos robadas sin registro ni panel ADN FGF5 real.</td>
+                    <td className="p-3.5 font-medium text-obsidian dark:text-canvas">Videos personalizados + Certificado ADN (L4/L1), microchip ISO y selección libre de BOAS.</td>
                   </tr>
                   <tr>
                     <td className="p-3.5 font-bold text-obsidian dark:text-canvas">Transporte Internacional</td>
@@ -335,11 +335,11 @@ export const HomePage: React.FC<Props> = ({ onOpenQuiz }) => {
 
             <details className="group bg-gray-50 dark:bg-gray-900/60 rounded-2xl p-4 border border-gray-200/70 dark:border-gray-700">
               <summary className="cursor-pointer font-bold text-sm text-obsidian dark:text-canvas flex items-center justify-between list-none">
-                <span>¿Cómo verifico a mi cachorro en vivo antes de realizar cualquier reserva?</span>
+                <span>¿Cómo se respalda la autenticidad y garantía genética de cada cachorro?</span>
                 <span className="text-cornflower text-xs font-bold group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                Antes de aceptar cualquier anticipo, realizamos una videollamada en directo desde nuestra maternidad donde ves al cachorro en tiempo real, verificamos su microchip ISO, te mostramos a sus padres y revisamos junto a tu veterinario los paneles genéticos <code>FGF5 (L4/L1)</code>. Consulta todas las pruebas y respuestas a foros en nuestra{' '}
+                Cada ejemplar se entrega con registro de microchip ISO de 15 dígitos, videos actualizados personalizados desde nuestra maternidad, certificados genéticos <code>FGF5 (L4/L1)</code> y contrato legal con garantía escrita. Consulta todas las pruebas y respuestas a foros en nuestra{' '}
                 <Link to="/reddit" className="text-cornflower underline font-semibold">
                   Auditoría de Consenso en Reddit
                 </Link>.
