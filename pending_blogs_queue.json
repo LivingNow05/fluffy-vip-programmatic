@@ -145,8 +145,9 @@
     "source_url": "autocomplete",
     "target_category": "colores",
     "suggested_slug": "bulldog-frances-fluffy-blue-lilac-diferencias-geneticas",
-    "status": "pending",
-    "added_at": "2026-10-20"
+    "status": "completed",
+    "added_at": "2026-10-20",
+    "completed_at": "2026-10-24"
   },
   {
     "id": 16,
@@ -154,8 +155,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "limpieza-orejas-oidos-bulldog-frances-fluffy-otitis",
-    "status": "pending",
-    "added_at": "2026-10-20"
+    "status": "completed",
+    "added_at": "2026-10-20",
+    "completed_at": "2026-10-24"
   },
   {
     "id": 17,
@@ -192,5 +194,23 @@
     "suggested_slug": "dieta-natural-alimentos-prohibidos-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-23"
+  },
+  {
+    "id": 21,
+    "topic": "Flatulencias y Gases en el Bulldog Francés Fluffy: Causas Digestivas, Aerofagia y Dieta Adecuada",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "flatulencias-gases-bulldog-frances-fluffy-aerofagia-dieta",
+    "status": "pending",
+    "added_at": "2026-10-24"
+  },
+  {
+    "id": 22,
+    "topic": "Rutina de Ejercicio y Paseos Seguros para el Bulldog Francés Fluffy: Tiempo Diario, Arnés Adecuado y Clima",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "rutina-ejercicio-paseos-bulldog-frances-fluffy-arnes",
+    "status": "pending",
+    "added_at": "2026-10-24"
   }
 ]
