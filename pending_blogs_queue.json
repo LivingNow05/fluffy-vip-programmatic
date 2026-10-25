@@ -165,8 +165,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "bulldog-frances-fluffy-respiracion-rapida-causas-alarma",
-    "status": "pending",
-    "added_at": "2026-10-22"
+    "status": "completed",
+    "added_at": "2026-10-22",
+    "completed_at": "2026-10-25"
   },
   {
     "id": 18,
@@ -174,8 +175,9 @@
     "source_url": "autocomplete",
     "target_category": "colores",
     "suggested_slug": "bulldog-frances-fluffy-merle-genetica-patrones-cuidados",
-    "status": "pending",
-    "added_at": "2026-10-22"
+    "status": "completed",
+    "added_at": "2026-10-22",
+    "completed_at": "2026-10-25"
   },
   {
     "id": 19,
@@ -212,5 +214,23 @@
     "suggested_slug": "rutina-ejercicio-paseos-bulldog-frances-fluffy-arnes",
     "status": "pending",
     "added_at": "2026-10-24"
+  },
+  {
+    "id": 23,
+    "topic": "Higiene y Cuidado de los Pliegues Faciales en el Bulldog Francés Fluffy: Prevención de Piodermas y Hongos",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "cuidado-pliegues-faciales-arrugas-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-25"
+  },
+  {
+    "id": 24,
+    "topic": "Salud Articular en el Bulldog Francés Fluffy: Luxación Patelar, Displasia y Prevención Ortopédica",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "salud-articular-luxacion-patelar-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-25"
   }
 ]
