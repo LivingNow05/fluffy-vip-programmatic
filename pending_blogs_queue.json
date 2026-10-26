@@ -185,8 +185,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "bulldog-frances-fluffy-adulto-evolucion-pelaje-cuidados",
-    "status": "pending",
-    "added_at": "2026-10-23"
+    "status": "completed",
+    "added_at": "2026-10-23",
+    "completed_at": "2026-10-26"
   },
   {
     "id": 20,
@@ -194,8 +195,9 @@
     "source_url": "autocomplete",
     "target_category": "alimentacion",
     "suggested_slug": "dieta-natural-alimentos-prohibidos-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-23"
+    "status": "completed",
+    "added_at": "2026-10-23",
+    "completed_at": "2026-10-26"
   },
   {
     "id": 21,
@@ -232,5 +234,23 @@
     "suggested_slug": "salud-articular-luxacion-patelar-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-25"
+  },
+  {
+    "id": 25,
+    "topic": "Muda de Pelo en el Bulldog Francés Fluffy: Ciclos Estacionales, Cepillado de Deslanado y Salud Folicular",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "muda-de-pelo-bulldog-frances-fluffy-cepillado-deslanado",
+    "status": "pending",
+    "added_at": "2026-10-26"
+  },
+  {
+    "id": 26,
+    "topic": "Salud Dental en el Bulldog Francés Fluffy: Maloclusión Braquicéfala, Limpieza y Prevención de Sarro",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "salud-dental-dientes-bulldog-frances-fluffy-limpieza-sarro",
+    "status": "pending",
+    "added_at": "2026-10-26"
   }
 ]
