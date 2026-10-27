@@ -205,8 +205,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "flatulencias-gases-bulldog-frances-fluffy-aerofagia-dieta",
-    "status": "pending",
-    "added_at": "2026-10-24"
+    "status": "completed",
+    "added_at": "2026-10-24",
+    "completed_at": "2026-10-27"
   },
   {
     "id": 22,
@@ -214,8 +215,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "rutina-ejercicio-paseos-bulldog-frances-fluffy-arnes",
-    "status": "pending",
-    "added_at": "2026-10-24"
+    "status": "completed",
+    "added_at": "2026-10-24",
+    "completed_at": "2026-10-27"
   },
   {
     "id": 23,
@@ -252,5 +254,23 @@
     "suggested_slug": "salud-dental-dientes-bulldog-frances-fluffy-limpieza-sarro",
     "status": "pending",
     "added_at": "2026-10-26"
+  },
+  {
+    "id": 27,
+    "topic": "Heterocromía y Ojos Claros en el Bulldog Francés Fluffy: Genética Ocular, Alelo Merle y Salud Visual",
+    "source_url": "autocomplete",
+    "target_category": "genetica",
+    "suggested_slug": "heterocromia-ojos-claros-bulldog-frances-fluffy-genetica",
+    "status": "pending",
+    "added_at": "2026-10-27"
+  },
+  {
+    "id": 28,
+    "topic": "Bulldog Francés Fluffy New Shade Isabella y Platinum: Diferencias Genéticas y Rareza del Pelaje",
+    "source_url": "autocomplete",
+    "target_category": "colores",
+    "suggested_slug": "bulldog-frances-fluffy-new-shade-isabella-platinum-genetica",
+    "status": "pending",
+    "added_at": "2026-10-27"
   }
 ]
