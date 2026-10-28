@@ -225,8 +225,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "cuidado-pliegues-faciales-arrugas-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-25"
+    "status": "completed",
+    "added_at": "2026-10-25",
+    "completed_at": "2026-10-28"
   },
   {
     "id": 24,
@@ -234,8 +235,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "salud-articular-luxacion-patelar-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-25"
+    "status": "completed",
+    "added_at": "2026-10-25",
+    "completed_at": "2026-10-28"
   },
   {
     "id": 25,
@@ -272,5 +274,23 @@
     "suggested_slug": "bulldog-frances-fluffy-new-shade-isabella-platinum-genetica",
     "status": "pending",
     "added_at": "2026-10-27"
+  },
+  {
+    "id": 29,
+    "topic": "Calendario de Vacunación y Desparasitación en Cachorros Bulldog Francés Fluffy: Cronograma Inmunológico y Cuidados Post-Vacuna",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "calendario-vacunacion-cachorro-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-28"
+  },
+  {
+    "id": 30,
+    "topic": "Ansiedad por Separación y Comportamiento en el Bulldog Francés Fluffy: Socialización Temprana y Apego Seguro",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "ansiedad-separacion-comportamiento-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-28"
   }
 ]
