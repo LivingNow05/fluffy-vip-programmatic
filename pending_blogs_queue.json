@@ -245,8 +245,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "muda-de-pelo-bulldog-frances-fluffy-cepillado-deslanado",
-    "status": "pending",
-    "added_at": "2026-10-26"
+    "status": "completed",
+    "added_at": "2026-10-26",
+    "completed_at": "2026-10-30"
   },
   {
     "id": 26,
@@ -254,8 +255,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "salud-dental-dientes-bulldog-frances-fluffy-limpieza-sarro",
-    "status": "pending",
-    "added_at": "2026-10-26"
+    "status": "completed",
+    "added_at": "2026-10-26",
+    "completed_at": "2026-10-30"
   },
   {
     "id": 27,
@@ -292,5 +294,23 @@
     "suggested_slug": "ansiedad-separacion-comportamiento-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-28"
+  },
+  {
+    "id": 31,
+    "topic": "Microbiota y Probióticos en el Bulldog Francés Fluffy: Salud Intestinal, Inmunidad y Prevención de Diarreas",
+    "source_url": "autocomplete",
+    "target_category": "alimentacion",
+    "suggested_slug": "microbiota-probioticos-bulldog-frances-fluffy-salud-intestinal",
+    "status": "pending",
+    "added_at": "2026-10-30"
+  },
+  {
+    "id": 32,
+    "topic": "Protocolo de Baño y Secado en el Bulldog Francés Fluffy: Temperatura, Champús Dermocosméticos y Cuidado del Manto Largo",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "bano-secado-bulldog-frances-fluffy-manto-largo",
+    "status": "pending",
+    "added_at": "2026-10-30"
   }
 ]
