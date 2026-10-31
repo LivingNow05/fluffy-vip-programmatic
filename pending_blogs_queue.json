@@ -265,8 +265,9 @@
     "source_url": "autocomplete",
     "target_category": "genetica",
     "suggested_slug": "heterocromia-ojos-claros-bulldog-frances-fluffy-genetica",
-    "status": "pending",
-    "added_at": "2026-10-27"
+    "status": "completed",
+    "added_at": "2026-10-27",
+    "completed_at": "2026-10-31"
   },
   {
     "id": 28,
@@ -274,8 +275,9 @@
     "source_url": "autocomplete",
     "target_category": "colores",
     "suggested_slug": "bulldog-frances-fluffy-new-shade-isabella-platinum-genetica",
-    "status": "pending",
-    "added_at": "2026-10-27"
+    "status": "completed",
+    "added_at": "2026-10-27",
+    "completed_at": "2026-10-31"
   },
   {
     "id": 29,
@@ -312,5 +314,23 @@
     "suggested_slug": "bano-secado-bulldog-frances-fluffy-manto-largo",
     "status": "pending",
     "added_at": "2026-10-30"
+  },
+  {
+    "id": 33,
+    "topic": "Temperatura y Clima Caliente en el Bulldog Francés Fluffy: Estrategias de Enfriamiento, Termorregulación y Prevención Térmica",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "temperatura-clima-caliente-bulldog-frances-fluffy-cuidados",
+    "status": "pending",
+    "added_at": "2026-10-31"
+  },
+  {
+    "id": 34,
+    "topic": "Socialización y Estimulación Mental en Cachorros Bulldog Francés Fluffy: Juegos Cognitivos y Adaptación Ambiental",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "socializacion-estimulacion-mental-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-10-31"
   }
 ]
