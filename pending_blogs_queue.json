@@ -285,8 +285,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "calendario-vacunacion-cachorro-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-28"
+    "status": "completed",
+    "added_at": "2026-10-28",
+    "completed_at": "2026-11-01"
   },
   {
     "id": 30,
@@ -294,8 +295,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "ansiedad-separacion-comportamiento-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-28"
+    "status": "completed",
+    "added_at": "2026-10-28",
+    "completed_at": "2026-11-01"
   },
   {
     "id": 31,
@@ -332,5 +334,23 @@
     "suggested_slug": "socializacion-estimulacion-mental-bulldog-frances-fluffy",
     "status": "pending",
     "added_at": "2026-10-31"
+  },
+  {
+    "id": 35,
+    "topic": "Higiene y Limpieza de Oídos en el Bulldog Francés Fluffy: Anatomía Otológica, Prevención de Otitis y Productos Seguros",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "limpieza-oidos-prevencion-otitis-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-01"
+  },
+  {
+    "id": 36,
+    "topic": "Bulldog Francés Fluffy Big Rope: Qué es, Genética de Pliegues Nasales Extremos y Cuidados Dermatológicos Especiales",
+    "source_url": "autocomplete",
+    "target_category": "genetica",
+    "suggested_slug": "bulldog-frances-fluffy-big-rope-genetica-cuidados",
+    "status": "pending",
+    "added_at": "2026-11-01"
   }
 ]
