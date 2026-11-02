@@ -305,8 +305,9 @@
     "source_url": "autocomplete",
     "target_category": "alimentacion",
     "suggested_slug": "microbiota-probioticos-bulldog-frances-fluffy-salud-intestinal",
-    "status": "pending",
-    "added_at": "2026-10-30"
+    "status": "completed",
+    "added_at": "2026-10-30",
+    "completed_at": "2026-11-02"
   },
   {
     "id": 32,
@@ -314,8 +315,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "bano-secado-bulldog-frances-fluffy-manto-largo",
-    "status": "pending",
-    "added_at": "2026-10-30"
+    "status": "completed",
+    "added_at": "2026-10-30",
+    "completed_at": "2026-11-02"
   },
   {
     "id": 33,
@@ -323,7 +325,7 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "temperatura-clima-caliente-bulldog-frances-fluffy-cuidados",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-10-31"
   },
   {
@@ -341,7 +343,7 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "limpieza-oidos-prevencion-otitis-bulldog-frances-fluffy",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-01"
   },
   {
@@ -350,7 +352,61 @@
     "source_url": "autocomplete",
     "target_category": "genetica",
     "suggested_slug": "bulldog-frances-fluffy-big-rope-genetica-cuidados",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-01"
+  },
+  {
+    "id": 37,
+    "topic": "Cojinetes Plantares y Almohadillas en el Bulldog Francés Fluffy: Hidratación, Grietas, Hiperqueratosis y Cuidado Podal",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "cojinetes-almohadillas-bulldog-frances-fluffy-cuidado-podal",
+    "status": "pending",
+    "added_at": "2026-11-02"
+  },
+  {
+    "id": 38,
+    "topic": "Sueño, Posturas al Dormir y Descanso Ortopédico en el Bulldog Francés Fluffy: Por Qué Duermen Boca Arriba y Salud Respiratoria Nocturna",
+    "source_url": "autocomplete",
+    "target_category": "curiosidades",
+    "suggested_slug": "sueno-posturas-dormir-bulldog-frances-fluffy-descanso",
+    "status": "pending",
+    "added_at": "2026-11-02"
+  },
+  {
+    "id": 39,
+    "topic": "Coprología y Parásitos Intestinales en Cachorros Bulldog Francés Fluffy: Giardiasis, Coccidios y Protocolos Diagnósticos Fecales",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "parasitos-intestinales-giardia-cachorro-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-02"
+  },
+  {
+    "id": 40,
+    "topic": "Estenosis de Narinas y Cirugía de Vías Respiratorias en el Bulldog Francés Fluffy: Rinoplastia Temprana y Beneficios Clínicos",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "estenosis-narinas-cirugia-respiratoria-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-02"
+  },
+  {
+    "id": 41,
+    "topic": "Estimulación Olfativa y Juegos de Enriquecimiento Ambiental para el Bulldog Francés Fluffy: Beneficios Cognitivos sin Fatiga Física",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "estimulacion-olfativa-juegos-enriquecimiento-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-02"
+  },
+  {
+    "id": 42,
+    "topic": "Lágrimas, Epífora y Manchas Rojizas en el Bulldog Francés Fluffy: Porfirinas, Limpieza Periocular y Diagnóstico Clínico",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "manchas-lagrimales-epifora-bulldog-frances-fluffy-limpieza",
+    "status": "pending",
+    "added_at": "2026-11-02"
   }
 ]
