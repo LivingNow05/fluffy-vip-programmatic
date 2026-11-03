@@ -334,8 +334,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "socializacion-estimulacion-mental-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-10-31"
+    "status": "completed",
+    "added_at": "2026-10-31",
+    "completed_at": "2026-11-03"
   },
   {
     "id": 35,
@@ -361,8 +362,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "cojinetes-almohadillas-bulldog-frances-fluffy-cuidado-podal",
-    "status": "pending",
-    "added_at": "2026-11-02"
+    "status": "completed",
+    "added_at": "2026-11-02",
+    "completed_at": "2026-11-03"
   },
   {
     "id": 38,
@@ -408,5 +410,32 @@
     "suggested_slug": "manchas-lagrimales-epifora-bulldog-frances-fluffy-limpieza",
     "status": "pending",
     "added_at": "2026-11-02"
+  },
+  {
+    "id": 43,
+    "topic": "Dieta BARF vs Alimento Holístico en el Bulldog Francés Fluffy: Requerimientos Nutricionales para Pelaje Denso y Salud Digestiva",
+    "source_url": "autocomplete",
+    "target_category": "alimentacion",
+    "suggested_slug": "dieta-barf-vs-holistico-bulldog-frances-fluffy-nutricion",
+    "status": "pending",
+    "added_at": "2026-11-03"
+  },
+  {
+    "id": 44,
+    "topic": "Bulldog Francés Fluffy Blanco (Platinum y Crema): Genética del Color, Cuidados de Piel Sensible y Fotoprotección",
+    "source_url": "autocomplete",
+    "target_category": "colores",
+    "suggested_slug": "bulldog-frances-fluffy-blanco-platinum-genetica-cuidados",
+    "status": "pending",
+    "added_at": "2026-11-03"
+  },
+  {
+    "id": 45,
+    "topic": "Otitis Externa y Limpieza del Canal Auditivo en el Bulldog Francés Fluffy: Prevención de Levaduras y Conformación Anatómica",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "otitis-limpieza-oidos-bulldog-frances-fluffy-cuidados",
+    "status": "pending",
+    "added_at": "2026-11-03"
   }
 ]
