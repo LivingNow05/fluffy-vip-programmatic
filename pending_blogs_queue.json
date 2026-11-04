@@ -372,8 +372,9 @@
     "source_url": "autocomplete",
     "target_category": "curiosidades",
     "suggested_slug": "sueno-posturas-dormir-bulldog-frances-fluffy-descanso",
-    "status": "pending",
-    "added_at": "2026-11-02"
+    "status": "completed",
+    "added_at": "2026-11-02",
+    "completed_at": "2026-11-04"
   },
   {
     "id": 39,
@@ -381,8 +382,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "parasitos-intestinales-giardia-cachorro-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-11-02"
+    "status": "completed",
+    "added_at": "2026-11-02",
+    "completed_at": "2026-11-04"
   },
   {
     "id": 40,
