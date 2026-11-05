@@ -392,8 +392,9 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "estenosis-narinas-cirugia-respiratoria-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-11-02"
+    "status": "completed",
+    "added_at": "2026-11-02",
+    "completed_at": "2026-11-05"
   },
   {
     "id": 41,
@@ -401,8 +402,9 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "estimulacion-olfativa-juegos-enriquecimiento-bulldog-frances-fluffy",
-    "status": "pending",
-    "added_at": "2026-11-02"
+    "status": "completed",
+    "added_at": "2026-11-02",
+    "completed_at": "2026-11-05"
   },
   {
     "id": 42,
@@ -437,7 +439,44 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "otitis-limpieza-oidos-bulldog-frances-fluffy-cuidados",
+    "status": "skipped_cannibalization",
+    "added_at": "2026-11-03",
+    "notes": "Canibaliza con articulo 16 sobre limpieza de orejas y otitis"
+  },
+  {
+    "id": 46,
+    "topic": "Displasia de Cadera y Codo en el Bulldog Francés Fluffy: Diagnóstico Radiográfico, Escala BVA/OFA y Manejo Ortopédico",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "displasia-cadera-codo-bulldog-frances-fluffy-diagnostico",
     "status": "pending",
-    "added_at": "2026-11-03"
+    "added_at": "2026-11-05"
+  },
+  {
+    "id": 47,
+    "topic": "Dermatitis por Malassezia y Levaduras en el Bulldog Francés Fluffy: Síntomas en Pliegues, Oídos y Tratamiento Antifúngico",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "dermatitis-malassezia-levaduras-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-05"
+  },
+  {
+    "id": 48,
+    "topic": "Alergias Alimentarias y Proteína Hidrolizada en el Bulldog Francés Fluffy: Protocolo de Dieta de Eliminación y Diagnóstico",
+    "source_url": "autocomplete",
+    "target_category": "alimentacion",
+    "suggested_slug": "alergias-alimentarias-proteina-hidrolizada-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-05"
+  },
+  {
+    "id": 49,
+    "topic": "Bulldog Francés Fluffy Senior: Cuidados Geriátricos, Nutrición Articular y Esperanza de Vida en la Vejez",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "bulldog-frances-fluffy-senior-cuidados-geriatricos-longevidad",
+    "status": "pending",
+    "added_at": "2026-11-05"
   }
 ]
