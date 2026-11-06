@@ -412,7 +412,7 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "manchas-lagrimales-epifora-bulldog-frances-fluffy-limpieza",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-02"
   },
   {
@@ -421,7 +421,7 @@
     "source_url": "autocomplete",
     "target_category": "alimentacion",
     "suggested_slug": "dieta-barf-vs-holistico-bulldog-frances-fluffy-nutricion",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-03"
   },
   {
@@ -430,7 +430,7 @@
     "source_url": "autocomplete",
     "target_category": "colores",
     "suggested_slug": "bulldog-frances-fluffy-blanco-platinum-genetica-cuidados",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-03"
   },
   {
@@ -449,7 +449,7 @@
     "source_url": "autocomplete",
     "target_category": "salud",
     "suggested_slug": "displasia-cadera-codo-bulldog-frances-fluffy-diagnostico",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-05"
   },
   {
@@ -467,7 +467,7 @@
     "source_url": "autocomplete",
     "target_category": "alimentacion",
     "suggested_slug": "alergias-alimentarias-proteina-hidrolizada-bulldog-frances-fluffy",
-    "status": "pending",
+    "status": "skipped_cannibalization",
     "added_at": "2026-11-05"
   },
   {
@@ -476,7 +476,72 @@
     "source_url": "autocomplete",
     "target_category": "cuidados",
     "suggested_slug": "bulldog-frances-fluffy-senior-cuidados-geriatricos-longevidad",
+    "status": "completed",
+    "added_at": "2026-11-05",
+    "completed_at": "2026-11-06"
+  },
+  {
+    "id": 50,
+    "topic": "Bulldog Francés Fluffy Chocolate y Choco Tan: Diferencias Genéticas entre Cocoa (co) y Testable Chocolate (b), Colores y Cuidados",
+    "source_url": "autocomplete",
+    "target_category": "genetica",
+    "suggested_slug": "bulldog-frances-fluffy-chocolate-cocoa-testable-genetica",
+    "status": "completed",
+    "added_at": "2026-11-06",
+    "completed_at": "2026-11-06"
+  },
+  {
+    "id": 51,
+    "topic": "Temperamento y Carácter del Bulldog Francés Fluffy: Personalidad, Convivencia Familiar y Conducta con Niños",
+    "source_url": "autocomplete",
+    "target_category": "curiosidades",
+    "suggested_slug": "temperamento-caracter-bulldog-frances-fluffy-convivencia",
     "status": "pending",
-    "added_at": "2026-11-05"
+    "added_at": "2026-11-06"
+  },
+  {
+    "id": 52,
+    "topic": "Bulldog Francés Fluffy y el Agua: ¿Pueden Nadar? Riesgos Anatómicos, Densidad Corporal y Chalecos Salvavidas",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "bulldog-frances-fluffy-agua-nadar-seguridad-chaleco",
+    "status": "pending",
+    "added_at": "2026-11-06"
+  },
+  {
+    "id": 53,
+    "topic": "Bulldog Francés Fluffy en Invierno y Climas Fríos: Termorregulación del Pelaje Largo, Hipotermia y Protección",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "bulldog-frances-fluffy-clima-frio-invierno-termorregulacion",
+    "status": "pending",
+    "added_at": "2026-11-06"
+  },
+  {
+    "id": 54,
+    "topic": "Ladridos y Vocalización en el Bulldog Francés Fluffy: Por Qué Ladran Poco, Gruñidos y Comunicación Emocional",
+    "source_url": "autocomplete",
+    "target_category": "curiosidades",
+    "suggested_slug": "ladridos-vocalizacion-sonidos-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-06"
+  },
+  {
+    "id": 55,
+    "topic": "Celo y Reproducción en la Hembra Bulldog Francés Fluffy: Fases del Ciclo Estral, Cesárea y Crianza Ética",
+    "source_url": "autocomplete",
+    "target_category": "salud",
+    "suggested_slug": "ciclo-celo-reproduccion-hembra-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-06"
+  },
+  {
+    "id": 56,
+    "topic": "Etapa de Dentición y Mordisqueo en Cachorros Bulldog Francés Fluffy: Alivio Gingival y Juguetes Adecuados",
+    "source_url": "autocomplete",
+    "target_category": "cuidados",
+    "suggested_slug": "mordisqueo-denticion-cachorros-bulldog-frances-fluffy",
+    "status": "pending",
+    "added_at": "2026-11-06"
   }
 ]
